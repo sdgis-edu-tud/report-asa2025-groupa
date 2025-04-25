@@ -10,8 +10,8 @@ author:
     affiliation: "MSc Urbanism"
   - name: "Shreya Rajmane"
     affiliation: "MSc Urbanism"
-  - name: "Student 5"
-    affiliation: "MSc Landscape Architecture"
+  - name: "Vasileios Letsios"
+    affiliation: "MSc Urbanism"
 format: html
 ---
 
