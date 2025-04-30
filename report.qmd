@@ -1,17 +1,17 @@
 ---
 title: "Title of your report"
-subtitle: "Project report of Group #"
+subtitle: "Project report of Group A"
 author:
-  - name: "Student 1"
+  - name: "Vincent Vanderheeren"
     affiliation: "MSc Geomatics"
-  - name: "Student 2"
-    affiliation: "MSc Landscape Architecture"
-  - name: "Student 3"
+  - name: "Jasper Kooiker"
     affiliation: "MSc Urbanism"
-  - name: "Student 4"
+  - name: "Youjin Lee"
     affiliation: "MSc Urbanism"
-  - name: "Student 5"
-    affiliation: "MSc Landscape Architecture"
+  - name: "Shreya Rajmane"
+    affiliation: "MSc Urbanism"
+  - name: "Vasileios Letsios"
+    affiliation: "MSc Urbanism"
 format: html
 ---
 
@@ -50,6 +50,45 @@ and start the report from the Introduction section below.
 :::
 
 ## Introduction
+
+#### Role Distribution
+
+* **Project Coordinator**  
+ *organizes meetings and deadlines*
+    * Vincent
+   * Jasper
+   * Youjin
+   * Shreya
+   * Vasileios  
+  
+  
+* **Research Lead**  
+ *oversees background research*
+  * Jasper
+  
+* **Mapping Specialist**  
+ *creates maps and spatial visuals*
+  * Vincent
+  * Vasilius
+  
+* **Data Analyst**  
+ *analyzes collected data*
+  * Youjin 
+  * Vasilius
+  
+* **Writer/Editor**  
+ *drafts and edits project texts*
+  * Shreya
+  * Jasper
+  
+* **Presentation Lead**  
+ *prepares group presentations* 
+  * Vincent
+  
+* **Design Lead**  
+ *works on visual layouts and graphics*
+  * Youjin
+  * Shreya
 
 ## Methods
 
