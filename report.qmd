@@ -116,13 +116,37 @@ This green area value was then joined to the buffer layer, enabling the calculat
 
 (image to be inserted here)
 
-Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula: \>Normalized Value = (Green Area Percentage) / 30
+Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
+
+> Normalized value = (Percentage of green)/30
 
 To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:
 
 (image to be inserted here)
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
+
+###### **Biodiversity 1** \| Distance to green
+
+Apart from the amount of green space, the proximity of green space to the stream is also an important factor. Even if there is a considerable area of green space, it becomes difficult to associate it with the stream if it is located too far away. This is especially critical for small animals such as frogs, for which direct connection between the stream and nearby natural areas is essential.
+
+To address this, distance to green space is introduced as an additional criterion alongside the percentage of green area. While the percentage of green reflects the amount of natural habitat, the distance represents the connectivity between the stream and nearby green areas.
+
+In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool (tool name to be added), the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.
+
+Since longer distances indicate lower connectivity, this serves as a negative indicator. For normalization, the distance values were divided into ten quantile-based groups, meaning each group contains approximately the same number of units. A reversed score from 1.0 (closest) to 0.1 (farthest) was then assigned to each group. The group boundaries were slightly adjusted to better highlight differences between them. The resulting classification of stream units based on distance to the nearest green space is shown below:
+
+(image to be inserted here)
+
+By assigning reversed scores to each group, the normalized distance-based connectivity value for each unit is shown as follows:
+
+(image to be inserted here)
+
+However, this normalization method may need reconsideration. Since increased distance can result in significantly reduced connectivity, a different calculation approach may better capture this effect. One alternative is to use the following function:
+
+> Normalized value = 1 / (distance to nearest green space)
+
+To apply this formula, a distance of 0 must first be converted to 1 (or a small positive value) to avoid division errors. This approach may provide a more accurate representation of ecological connectivity between the stream and surrounding green spaces.
 
 ### Typology construction
 
