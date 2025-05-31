@@ -59,9 +59,13 @@ and start the report from the Introduction section below.
 -   **Project Coordinator**\
     *organizes meetings and deadlines*
     -   Vincent
+
     -   Jasper
+
     -   Youjin
+
     -   Shreya
+
     -   Vasileios
 -   **Research Lead**\
     *oversees background research*
@@ -69,14 +73,17 @@ and start the report from the Introduction section below.
 -   **Mapping Specialist**\
     *creates maps and spatial visuals*
     -   Vincent
+
     -   Vasilius
 -   **Data Analyst**\
     *analyzes collected data*
     -   Youjin
+
     -   Vasilius
 -   **Writer/Editor**\
     *drafts and edits project texts*
     -   Shreya
+
     -   Jasper
 -   **Presentation Lead**\
     *prepares group presentations*
@@ -84,38 +91,38 @@ and start the report from the Introduction section below.
 -   **Design Lead**\
     *works on visual layouts and graphics*
     -   Youjin
+
     -   Shreya
 
 ## Methods
 
 ### MCDA
 
-#### Units 
+#### Units
 
-#### Criteria 
+#### Criteria
 
-##### Biodiversity 
+##### Biodiversity
 
-To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur & Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor & McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present. 
+To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur & Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor & McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.
 
-###### **Biodiversity 1** | Percentage of green 
-The criterion used in this analysis is based on the Biophilic Planning Indicator (source to be added). The ratio of green space to total area serves as a proxy for assessing the amount of natural habitat near the Teplica stream. This method is also effective for comparing natural conditions across different spatial units. 
+###### **Biodiversity 1** \| Percentage of green
 
-To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas within this 500m buffer were intersected with the buffered spatial units, and a new column was created to represent the amount of green space within each unit. 
+The criterion used in this analysis is based on the Biophilic Planning Indicator (source to be added). The ratio of green space to total area serves as a proxy for assessing the amount of natural habitat near the Teplica stream. This method is also effective for comparing natural conditions across different spatial units.
 
-This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below: 
+To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas within this 500m buffer were intersected with the buffered spatial units, and a new column was created to represent the amount of green space within each unit.
 
-(image to be inserted here) 
+This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:
 
-Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula: 
- >Normalized Value = (Green Area Percentage) / 30 
+(image to be inserted here)
 
-To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below: 
+Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula: \>Normalized Value = (Green Area Percentage) / 30
 
-(image to be inserted here) 
+To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:
 
-However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit. 
+(image to be inserted here)
 
+However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
 ### Typology construction
 
