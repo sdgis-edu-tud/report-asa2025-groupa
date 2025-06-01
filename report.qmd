@@ -96,7 +96,7 @@ and start the report from the Introduction section below.
 
 ## Introduction
 
-#### **The case of Senica** 
+##### **The case of Senica** 
 
 Through the heart of the city of Senica (a Slovak city, close to the Czech border) flows the Teplica. Due to economic pressures the stream has been heavily altered and is rendered invisible and insignificant in the urban landscape. Currently the Teplica is struggling with several problems, like poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the 'ReBioClim-project'. This EU-project aims to restore urban streams while focusing on both biodiversity, climate change and liveability in cities (City of Senica, 2024a). \
  \
@@ -107,7 +107,7 @@ In order to bridge this gap and ensure a lasting impact of the urban stream rest
 
 -   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?  
 
-#### **Human-nature connectedness and its relevance to urban stream restoration** 
+##### **Human-nature connectedness and its relevance to urban stream restoration** 
 
 Human-nature connectedness challenges the idea of human superiority over nature, while strengthening the outlook that humankind is a part of nature. Research has shown that this sense of connectedness cannot be created through education only (Spiller, 2024). Spatial composition plays an important role in this process where people must come into direct contact to build a strong relationship with their natural environments.   
 
@@ -117,19 +117,21 @@ Biophilic design, based on the biophilia hypothesis focuses on reinforcing the r
 
 By determining how biophilic a place is, we can derive how much it improves the human-nature connectedness of the people living around it or visiting it. A biophilic place has a great impact on the people living around it, while a place that is not biophilic lacks this character. By determining the amount of biophilic integration, we can show which places have the largest need for improvement and which places are already performing well. 
 
-#### **How does biodiversity affect human-nature connectedness?** 
+##### **How does biodiversity affect human-nature connectedness?** 
 
 While biophilic integration mainly focusses on connecting people to nature, the importance of biodiversity cannot be overlooked (Lefosse et al., 2023). Streams are complex ecosystems and all the different present species contribute to the complex system that is this ecosystem (Bhaskar, 2023). Biodiversity therefore is of vital importance in protecting this ecosystem from collapse. In assessing the need for change in the areas around streams, it is therefore important to also look at indicators for biodiversity and ecosystem functionality. 
 
 By analysing biodiversity, we can determine where the creation or dedication of ecological networks is most necessary. So that they can provide more ecosystem services (Lefosse et al., 2023; Ranta et al., 2021a). Biophilic integration has shown great potential in reinforcing urban biomes that can act as biodiversity incubators through an increase in natural repopulation of plant and animal species (Bhaskar, 2023; Panlasigui et al., 2021).  
 
-#### **How does microclimate affect human-nature connectedness?** 
+##### **How does microclimate affect human-nature connectedness?** 
 
 Another way in which biodiversity and biophilic integration are linked is through microclimate ecosystem services (Lefosse et al., 2023). The amount of biophilic integration relies on the ecosystem services a local ecosystem can provide. Reinforcing ecological networks, increases ecosystem functionality and therefore the amount of biophilic integration. By having more diverse natural elements, both green and blue, containing multiple different species, the environmental impact of a place is enhanced. Different species have different cooling, air-, soil- and water purification, and wind regulating properties. With these species working together, and sometimes even positively affecting the properties of other species, their impact can grow even further. The more biodiverse a place is, the more biophilic it can be, and the more it can improve human-nature connectedness. By analyzing the performance of the existing microclimate we can again determine where action is needed most.  
 
 ## Methods
 
 ### MCDA
+
+![MCDA hierarchy tree](images/mcda tree.JPG)
 
 #### Units
 
