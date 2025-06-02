@@ -151,7 +151,7 @@ To calculate this ratio, the buffer distance is a crucial factor. A buffer of 50
 
 This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:
 
-![](images/clipboard-2339601913.png)
+![](image/02-06-percentage-1.png)
 
 Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
 
@@ -159,7 +159,7 @@ Since the green space percentages range approximately from 0% to 30%, the data w
 
 To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:
 
-![](images/clipboard-51655369.png)
+![](image/02-06-percentage-2.png)
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
@@ -170,6 +170,8 @@ Apart from the amount of green space, the proximity of green space to the stream
 To address this, distance to green space is introduced as an additional criterion alongside the percentage of green area. While the percentage of green reflects the amount of natural habitat, the distance represents the connectivity between the stream and nearby green areas.
 
 In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool (tool name to be added), the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.
+
+![](image/02-06-distance-1.png)
 
 Since longer distances indicate lower connectivity, this serves as a negative indicator. For normalization, the distance values were divided into ten quantile-based groups, meaning each group contains approximately the same number of units. A reversed score from 1.0 (closest) to 0.1 (farthest) was then assigned to each group. The group boundaries were slightly adjusted to better highlight differences between them. By assigning reversed scores to each group, the normalized distance-based connectivity value for each unit is shown as follows:
 
