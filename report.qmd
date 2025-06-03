@@ -4,12 +4,6 @@ subtitle: "Project report of Group A"
 author:
   - name: "Vincent Vanderheeren"
     affiliation: "MSc Geomatics"
-<<<<<<< HEAD
-  - name: "Vasilis Letsios"
-=======
-  - name: "Jasper Kooiker"
->>>>>>> 5fcc40a920b84fcaae8df649a55df95985c35e1e
-    affiliation: "MSc Urbanism"
   - name: "Youjin Lee"
     affiliation: "MSc Urbanism"
   - name: "Shreya Rajmane"
@@ -121,7 +115,7 @@ Biophilic design, based on the biophilia hypothesis focuses on reinforcing the r
 
 By determining how biophilic a place is, we can derive how much it improves the human-nature connectedness of the people living around it or visiting it. A biophilic place has a great impact on the people living around it, while a place that is not biophilic lacks this character. By determining the amount of biophilic integration, we can show which places have the largest need for improvement and which places are already performing well. 
 
-##### **How does biodiversity affect human-nature connectedness?** 
+##### **How does biodiversity affect human-nature connectedness?**
 
 While biophilic integration mainly focusses on connecting people to nature, the importance of biodiversity cannot be overlooked (Lefosse et al., 2023). Streams are complex ecosystems and all the different present species contribute to the complex system that is this ecosystem (Bhaskar, 2023). Biodiversity therefore is of vital importance in protecting this ecosystem from collapse. In assessing the need for change in the areas around streams, it is therefore important to also look at indicators for biodiversity and ecosystem functionality. 
 
@@ -135,7 +129,7 @@ Another way in which biodiversity and biophilic integration are linked is throug
 
 ### MCDA
 
-![MCDA hierarchy tree](images/mcda tree.JPG)
+![MCDA hierarchy tree](images/mcda%20tree.JPG)
 
 #### Units
 
@@ -155,7 +149,7 @@ To calculate this ratio, the buffer distance is a crucial factor. A buffer of 50
 
 This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:
 
-(image to be inserted here)
+![](image/02-06-percentage-1.png)
 
 Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
 
@@ -163,7 +157,7 @@ Since the green space percentages range approximately from 0% to 30%, the data w
 
 To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:
 
-(image to be inserted here)
+![](image/02-06-percentage-2.png)
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
@@ -175,11 +169,9 @@ To address this, distance to green space is introduced as an additional criterio
 
 In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool (tool name to be added), the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.
 
-Since longer distances indicate lower connectivity, this serves as a negative indicator. For normalization, the distance values were divided into ten quantile-based groups, meaning each group contains approximately the same number of units. A reversed score from 1.0 (closest) to 0.1 (farthest) was then assigned to each group. The group boundaries were slightly adjusted to better highlight differences between them. The resulting classification of stream units based on distance to the nearest green space is shown below:
+![](image/02-06-distance-1.png)
 
-(image to be inserted here)
-
-By assigning reversed scores to each group, the normalized distance-based connectivity value for each unit is shown as follows:
+Since longer distances indicate lower connectivity, this serves as a negative indicator. For normalization, the distance values were divided into ten quantile-based groups, meaning each group contains approximately the same number of units. A reversed score from 1.0 (closest) to 0.1 (farthest) was then assigned to each group. The group boundaries were slightly adjusted to better highlight differences between them. By assigning reversed scores to each group, the normalized distance-based connectivity value for each unit is shown as follows:
 
 (image to be inserted here)
 
@@ -195,12 +187,13 @@ It is worth noting that the presence of ecological corridors near or within urba
 
 A buffer of 2km is applied to this criterion considering the movement of fauna, which includes mammals and reptiles. This buffer area also includes parts of forest surrounding the east of Senica. Data on a total of 9 distinct faunal species (sourced from the Slovak atlas) was merged to form a layer containing count of each of the species. This was intersected with the spatial buffer to count the number of distinct species in each buffer unit. 9 indicates the highest diversity whereas 5 is the lowest count for diversity of species per unit. 
 
-![Biodiversity 3 \| Presence of species : Buffer of 2km](images/species numbers.png)
+![Biodiversity 3 \| Presence of species : Buffer of 2km](images/species%20numbers.png)
 
 Normalise value = (max count – min count)/ min count 
 
 The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest. The resulting classification is shown below.  
 
+<<<<<<< HEAD
 ![Biodiversity 3\| Presence of species : Normalised](images/species with stream.png)
 ###### Quality of Life
 
@@ -209,7 +202,8 @@ Proximity to Green Spaces
 Attractions between Activities and Parks
 Concentration of Points of Interest 
 
-
+![Biodiversity 3\| Presence of species : Normalised](images/species%20with%20stream.png)
+>>>>>>> 232db8c75fbeaf1d534f0b10da0a1ebf63ba588d
 
 ###### CRITERIA 1 Proximity to Green Spaces
 How active the area is in terms of natural areas (unit buffer: 1km) 
@@ -267,6 +261,8 @@ Finally, the results were normalized and the scale was inverted—so that higher
 In the following maps the red color indicates the paved area that is later isolated into black and white (white - presence of pixels, black - absence of pixels). In the final map the buffered area is shown along with the aggregation on stream.
 
 
+
+=======
 
 
 ### Typology construction
