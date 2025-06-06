@@ -181,7 +181,8 @@ Since the minimum distance was 0, the formula simplifies to:
 
 This method produces a normalized score between 0 and 1, where a value of 1 represents the shortest distance (i.e., highest potential connectivity), and values closer to 0 indicate increasing distance from green spaces. This approach directly reflects the inverse relationship between distance and ecological connectivity, where farther distances correspond to lower connectivity potential. Compared to the previous quantile-based method, this continuous normalization may better capture the steep decline in connectivity that occurs with increasing distance from green spaces.
 
-test
+The final map representing the connectivity to green from stream unit is shown below: 
+![](image/distance_2.png)
 
 ###### Biodiversity 3 \| Presence of species 
 
