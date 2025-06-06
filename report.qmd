@@ -137,6 +137,8 @@ For the MCDA, the analyses are split into three main categories: quality of life
 
 #### Units
 
+The units are chosen as 200m intervals on the stream
+
 ##### Biodiversity
 
 To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur & Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor & McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.
@@ -228,6 +230,20 @@ Permeability of the ground Flood risk Land SUrface Temperature
 How much space is paved around the stream (unit buffer: 200m)
 
 This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS. To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale. Using the Zonal Statistics tool, the proportion of permeable versus impermeable surfaces was calculated for different zones along the stream. This highlighted areas with higher degrees of paving, indicating lower permeability. Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis. In the following maps the red color indicates the paved area that is later isolated into black and white (white - presence of pixels, black - absence of pixels). In the final map the buffered area is shown along with the aggregation on stream.
+
+###### Criteria 2 Impact of flooding
+
+How many buildings are affected by q100 flood (unit buffer: 500m)
+
+To assess the impact of flooding, the amount of buildings affected by a q100 was estimated. First the flood risk map was retrieved from the mpt.svp.sk gis server. Multiple types of flood risk maps were available, namely the q10, q100 and q1000 maps. These respectively indicate the likeliness of such a flood, for example the q100 indicates a flood that would on average occur every 100 years. The q100 was chosen, since it is still a relatively common occurrence, and the impact is significant enough to take measures against. The flood basin reaches at most 500 meters away from the banks of the Teplica, therefore the buffer was chosen as such.
+
+Another important point to consider is that there are multiple ways to determine the impact of a  flood. For example, the total land area affected, the amount of built-up land affected or the amount of buildings affected. Due to the urban structure of Senica, of which a large part consists of industrial buildings with large footprints, the total amount of buildings was chosen as a measure since it more closely measures the amount of people affected by a flood. A population density map would have been preferable, however, none was found at a sufficiently high resolution.
+
+###### Criteria 3 Surface Temperature
+
+Surface temperature (unit buffer: 200m)
+
+USGS Landsat 8-9 B10 band surface temperature, thermal infrared on a sunny day in may 2025.
 
 #### Criteria Weighting
 
