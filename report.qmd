@@ -149,7 +149,7 @@ To calculate this ratio, the buffer distance is a crucial factor. A buffer of 50
 
 This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:
 
-![](image/02-06-percentage-1.png)
+![](image/percentage_1.png)
 
 Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
 
@@ -157,7 +157,7 @@ Since the green space percentages range approximately from 0% to 30%, the data w
 
 To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:
 
-![](image/02-06-percentage-2.png)
+![](image/percentage_2.png)
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
@@ -169,7 +169,7 @@ To address this, distance to green space is introduced as an additional criterio
 
 In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool (tool name to be added), the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.
 
-![](image/02-06-distance-1.png)
+![](image/distance_1.png)
 
 For normalization, the following formula was applied:
 
