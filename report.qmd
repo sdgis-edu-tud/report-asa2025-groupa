@@ -239,11 +239,17 @@ To assess the impact of flooding, the amount of buildings affected by a q100 was
 
 Another important point to consider is that there are multiple ways to determine the impact of a  flood. For example, the total land area affected, the amount of built-up land affected or the amount of buildings affected. Due to the urban structure of Senica, of which a large part consists of industrial buildings with large footprints, the total amount of buildings was chosen as a measure since it more closely measures the amount of people affected by a flood. A population density map would have been preferable, however, none was found at a sufficiently high resolution.
 
+![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\flood_impact.svg){width="312"}
+
 ###### Criteria 3 Surface Temperature
 
 Surface temperature (unit buffer: 200m)
 
-USGS Landsat 8-9 B10 band surface temperature, thermal infrared on a sunny day in may 2025.
+For the land surface temperature criterion the  data was retrieved from the USGS Landsat 8-9 Level 2 satellite data. Particularly, the B10 band measures thermal infrared and is therefore representative of land surface temperature. The data is a snapshot of on a sunny day in may 2025.
+
+The buffer was chosen according to a study by Wu, Zhijie & Zhang, Yixin. (2019) which found green spaces within 200m had a significant effect on urban land surface temperature.
+
+![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\temperature.svg){width="312"}
 
 #### Criteria Weighting
 
