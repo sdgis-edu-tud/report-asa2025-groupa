@@ -193,8 +193,10 @@ Normalise value = (max count – min count)/ min count 
 
 The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest. The resulting classification is shown below.  
 
-<<<<<<< HEAD
+
 ![Biodiversity 3\| Presence of species : Normalised](images/species with stream.png)
+
+
 ###### Quality of Life
 
 The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 4 maps: 
@@ -202,11 +204,8 @@ Proximity to Green Spaces
 Attractions between Activities and Parks
 Concentration of Points of Interest 
 
-![Biodiversity 3\| Presence of species : Normalised](images/species%20with%20stream.png)
->>>>>>> 232db8c75fbeaf1d534f0b10da0a1ebf63ba588d
 
 ###### CRITERIA 1 Proximity to Green Spaces
-How active the area is in terms of natural areas (unit buffer: 1km) 
 
 This map illustrates the distribution of green spaces in the area and their proximity to surrounding buildings. The analysis was conducted using the Attraction Reach function in QGIS, which calculates how many parks are accessible from each building within a walking distance of 500 meters. This threshold is commonly used to represent a comfortable walking distance in urban planning.
 To enhance the accuracy of the analysis, greater weight was assigned to larger green spaces, based on their total area. This weighting approach is supported by the concept of biophilia, which emphasizes the human need for connection with nature. Research shows that larger green spaces tend to be more biodiverse, thereby offering stronger biophilic benefits. This justifies prioritizing them in the accessibility calculation.
@@ -219,21 +218,11 @@ This data is further aggregated onto river segments as explained previously, to 
 The general outcome from the map is that there are not enough large green spaces close to the urban area.
 
 ![Quality of life 1 \| Proximity to Green Spaces : Buffer of 1km]()
-###### CRITERIA 2 Attraction between Activites and Parks
-How activities are connected and parks with each other (unit buffer: 500m)
-
-
-The second criterion focuses on mapping the attraction between daily activities and parks to evaluate how they promote connectivity between people and nature. More specifically, the aim was to understand whether everyday activities—and the paths that link them—are also connected to green spaces.
-To achieve this, various activity points were identified and combined with green areas into a single layer. The Attraction Betweenness tool was then used to highlight the main routes (within a 500-meter walking distance) that connect these activities and green areas.
-Next, the Join by Location tool in QGIS was used to calculate the total number of connecting roads within a 500-meter buffer zone along the stream. This buffer distance was chosen because it not only represents a walkable range from the stream but also encompasses most of the city’s parks and activity areas. The results were then aggregated by stream segments.
-On the map, combined activity and green areas are displayed in yellow, and the main connecting roads appear in black. These are further aggregated to stream segments. The analysis reveals a higher concentration of connections in the city center, with the majority of river crossings occurring along a single main street.
 
 
 
 
-
-######CRITERIA 3 Concentration of P.O.I.
-How many Points of Interest are close to the stream (unit buffer: 200m) 
+###### CRITERIA 3 Concentration of P.O.I.
 
 The third criterion used in this analysis is the concentration of Points of Interest (POIs) along the Teplica stream. These POIs encompass a wide variety of features, including recreational activities, shops, monuments, benches, public artworks, and other amenities that contribute to the vibrancy of public space.
 To evaluate their impact, only POIs located within a 200-meter buffer along the stream were considered. Additionally, POIs were graded based on their proximity to the stream, with those closer to the watercourse given a higher value. This approach reflects their potential to draw people toward the stream, thereby fostering greater interaction between the urban population and the surrounding natural environment.
@@ -252,7 +241,6 @@ Land SUrface Temperature
 
 
 ###### Criteria 1 Permaiblity of the ground
-How much space is paved around the stream (unit buffer: 200m)
 
 This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS.
 To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale.
@@ -260,9 +248,6 @@ Using the Zonal Statistics tool, the proportion of permeable versus impermeable 
 Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis.
 In the following maps the red color indicates the paved area that is later isolated into black and white (white - presence of pixels, black - absence of pixels). In the final map the buffered area is shown along with the aggregation on stream.
 
-
-
-=======
 
 
 ### Typology construction
