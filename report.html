@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vincent Vanderheeren">
+<meta name="author" content="Youjin Lee">
+<meta name="author" content="Shreya Rajmane">
+<meta name="author" content="Vasileios Letsios">
+
+<title>Title of your report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="report_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="report_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="report_files/libs/quarto-html/popper.min.js"></script>
+<script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="report_files/libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="report_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Title of your report</h1>
+<p class="subtitle lead">Project report of Group A</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Vincent Vanderheeren </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Geomatics
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Youjin Lee </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Urbanism
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Shreya Rajmane </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Urbanism
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Vasileios Letsios </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Urbanism
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This is a computational notebook
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>You can add options to executable code like this</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<p>You can delete this entire callout between and including the lines</p>
+<pre><code>::: callout</code></pre>
+<p>and</p>
+<pre><code>:::</code></pre>
+<p>and start the report from the Introduction section below.</p>
+</section>
+</div>
+</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="role-distribution" class="level4">
+<h4 class="anchored" data-anchor-id="role-distribution">Role Distribution</h4>
+<ul>
+<li><strong>Project Coordinator</strong><br>
+<em>organizes meetings and deadlines</em>
+<ul>
+<li><p>Vincent</p></li>
+<li><p>Jasper</p></li>
+<li><p>Youjin</p></li>
+<li><p>Shreya</p></li>
+<li><p>Vasileios</p></li>
+</ul></li>
+<li><strong>Research Lead</strong><br>
+<em>oversees background research</em>
+<ul>
+<li>Jasper</li>
+</ul></li>
+<li><strong>Mapping Specialist</strong><br>
+<em>creates maps and spatial visuals</em>
+<ul>
+<li><p>Vincent</p></li>
+<li><p>Vasilius</p></li>
+</ul></li>
+<li><strong>Data Analyst</strong><br>
+<em>analyzes collected data</em>
+<ul>
+<li><p>Youjin</p></li>
+<li><p>Vasilius</p></li>
+</ul></li>
+<li><strong>Writer/Editor</strong><br>
+<em>drafts and edits project texts</em>
+<ul>
+<li><p>Shreya</p></li>
+<li><p>Jasper</p></li>
+</ul></li>
+<li><strong>Presentation Lead</strong><br>
+<em>prepares group presentations</em>
+<ul>
+<li>Vincent</li>
+</ul></li>
+<li><strong>Design Lead</strong><br>
+<em>works on visual layouts and graphics</em>
+<ul>
+<li><p>Youjin</p></li>
+<li><p>Shreya</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="the-case-of-senica" class="level5">
+<h5 class="anchored" data-anchor-id="the-case-of-senica"><strong>The case of Senica</strong>&nbsp;</h5>
+<p>Through the heart of the city of Senica (a Slovak city, close to the Czech border) flows the Teplica. Due to economic pressures the stream has been heavily altered and is rendered invisible and insignificant in the urban landscape. Currently the Teplica is struggling with several problems, like poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the ‘ReBioClim-project’. This EU-project aims to restore urban streams while focusing on both biodiversity, climate change and liveability in cities (City of Senica, 2024a).&nbsp;<br>
+&nbsp;<br>
+While the Slovak water management company, SVP, focuses mainly on protecting the area against flooding due to heavy rainfall, more functional access to the water and improved water flow (City of Senica, 2024b), other focuses of the project include improving hydro morphology, ecology and diversity in urban areas and utilizing the stream for recreational purposes. Little attention is given to qualitative and experiential aspects such as human-nature connectedness.&nbsp;<br>
+&nbsp;<br>
+In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a way to determine potential for human-nature connectedness along the stream of Teplica.&nbsp;<br>
+&nbsp;</p>
+<ul>
+<li><strong>Research Question :</strong> What parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?&nbsp;&nbsp;</li>
+</ul>
+</section>
+<section id="human-nature-connectedness-and-its-relevance-to-urban-stream-restoration" class="level5">
+<h5 class="anchored" data-anchor-id="human-nature-connectedness-and-its-relevance-to-urban-stream-restoration"><strong>Human-nature connectedness and its relevance to urban stream restoration</strong>&nbsp;</h5>
+<p>Human-nature connectedness challenges the idea of human superiority over nature,&nbsp;while strengthening the outlook that humankind is a part of nature. Research has shown that this sense of connectedness cannot be created through education only (Spiller, 2024). Spatial composition plays an important role in this process where people must come into direct contact to build a strong relationship with their natural environments.&nbsp;&nbsp;&nbsp;</p>
+<p>A theory that has gained recognition in recent decades and is often associated with human-nature connectedness is the biophilia hypothesis (Bhaskar, 2023; Lefosse et al., 2023). This hypothesis states that humans have an innate tendency to seek connections to nature (Grinde &amp; Patil, 2009; Wilson, 1984). This connection is supported with evidence from multiple different fields of study (Grinde &amp; Patil, 2009). The results from several of these studies show a strong connection between human-nature connectedness and an increased human health and wellbeing. This connection is not just physical, but also cognitive, emotional and biophysical (Ives et al., 2017). &nbsp;</p>
+<p>Biophilic design, based on the biophilia hypothesis focuses on reinforcing the relationship between humans and the natural world through the creation or strengthening of biophilic places (Da Silva et al., 2021). Human-nature connectedness forms the starting point of this approach. It proposes to utilize green infrastructure to improve ecosystem health and human wellbeing. These places have shown great potential in different ways. They increase social interaction, as people view them as places of improved livability and sociability (Lefosse et al., 2023). Biophilic places also strengthen social cohesion, as they positively influence the perceived social cohesion, as well as facilitating more (semi-)social activities that strengthen community bonds. Another important effect of biophilic places, and the subsequent increase in regular experiences of nature, is that they raise environmental awareness and encourage a more sustainable way of living. Furthermore, on the long term biophilia can aid ecosystem conservation efforts (Bhaskar, 2023). People who are connected to nature and have a strong relationship to nature are more likely to participate in more sustainable behavior and to support ecosystem and biodiversity conservation efforts.&nbsp;&nbsp;&nbsp;</p>
+<p>By determining how biophilic a place is, we can derive how much it improves the human-nature connectedness of the people living around it or visiting it. A biophilic place has a great impact on the people living around it, while a place that is not biophilic lacks this character. By determining the amount of biophilic integration, we can show which places have the largest need for improvement and which places are already performing well.&nbsp;</p>
+</section>
+<section id="how-does-biodiversity-affect-human-nature-connectedness" class="level5">
+<h5 class="anchored" data-anchor-id="how-does-biodiversity-affect-human-nature-connectedness"><strong>How does biodiversity affect human-nature connectedness?</strong></h5>
+<p>While biophilic integration mainly focusses on connecting people to nature, the importance of biodiversity cannot be overlooked (Lefosse et al., 2023). Streams are complex ecosystems and all the different present species contribute to the complex system that is this ecosystem (Bhaskar, 2023). Biodiversity therefore is of vital importance in protecting this ecosystem from collapse. In assessing the need for change in the areas around streams, it is therefore important to also look at indicators for biodiversity and ecosystem functionality.&nbsp;</p>
+<p>By analysing biodiversity, we can determine where the creation or dedication of ecological networks is most necessary. So that they can provide more ecosystem services (Lefosse et al., 2023; Ranta et al., 2021a). Biophilic integration has shown great potential in reinforcing urban biomes that can act as biodiversity incubators through an increase in natural repopulation of plant and animal species (Bhaskar, 2023; Panlasigui et al., 2021).&nbsp;&nbsp;</p>
+</section>
+<section id="how-does-microclimate-affect-human-nature-connectedness" class="level5">
+<h5 class="anchored" data-anchor-id="how-does-microclimate-affect-human-nature-connectedness"><strong>How does microclimate affect human-nature connectedness?</strong>&nbsp;</h5>
+<p>Another way in which biodiversity and biophilic integration are linked is through microclimate ecosystem services (Lefosse et al., 2023). The amount of biophilic integration relies on the ecosystem services a local ecosystem can provide. Reinforcing ecological networks, increases ecosystem functionality and therefore the amount of biophilic integration. By having more diverse natural elements, both green and blue, containing multiple different species, the environmental impact of a place is enhanced. Different species have different cooling, air-, soil- and water purification, and wind regulating properties. With these species working together, and sometimes even positively affecting the properties of other species, their impact can grow even further. The more biodiverse a place is, the more biophilic it can be, and the more it can improve human-nature connectedness. By analyzing the performance of the existing microclimate we can again determine where action is needed most.&nbsp;&nbsp;</p>
+</section>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="mcda" class="level3">
+<h3 class="anchored" data-anchor-id="mcda">MCDA</h3>
+<section id="criteria" class="level4">
+<h4 class="anchored" data-anchor-id="criteria">Criteria</h4>
+<p>For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mcda%20tree.JPG" class="img-fluid figure-img"></p>
+<figcaption>MCDA hierarchy tree</figcaption>
+</figure>
+</div>
+</section>
+<section id="units" class="level4">
+<h4 class="anchored" data-anchor-id="units">Units</h4>
+<p>The units are chosen as 200m intervals on the stream</p>
+<section id="biodiversity" class="level5">
+<h5 class="anchored" data-anchor-id="biodiversity">Biodiversity</h5>
+<p>To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur &amp; Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor &amp; McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.</p>
+<section id="biodiversity-1-percentage-of-green" class="level6">
+<h6 class="anchored" data-anchor-id="biodiversity-1-percentage-of-green"><strong>Biodiversity 1</strong> | Percentage of green</h6>
+<p>The criterion used in this analysis is based on the Biophilic Planning Indicator (source to be added). The ratio of green space to total area serves as a proxy for assessing the amount of natural habitat near the Teplica stream. This method is also effective for comparing natural conditions across different spatial units.</p>
+<p>To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas within this 500m buffer were intersected with the buffered spatial units, and a new column was created to represent the amount of green space within each unit.</p>
+<p>This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:</p>
+<p><img src="image/percentage_1.png" class="img-fluid"></p>
+<p>Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.</p>
+<blockquote class="blockquote">
+<p>Normalized value = (Percentage of green)/30</p>
+</blockquote>
+<p>To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:</p>
+<p><img src="image/percentage_2.png" class="img-fluid"></p>
+<p>However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.</p>
+</section>
+<section id="biodiversity-2-distance-to-green" class="level6">
+<h6 class="anchored" data-anchor-id="biodiversity-2-distance-to-green"><strong>Biodiversity 2</strong> | Distance to green</h6>
+<p>Apart from the amount of green space, the proximity of green space to the stream is also an important factor. Even if there is a considerable area of green space, it becomes difficult to associate it with the stream if it is located too far away. This is especially critical for small animals such as frogs, for which direct connection between the stream and nearby natural areas is essential.</p>
+<p>To address this, distance to green space is introduced as an additional criterion alongside the percentage of green area. While the percentage of green reflects the amount of natural habitat, the distance represents the connectivity between the stream and nearby green areas.</p>
+<p>In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool (tool name to be added), the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.</p>
+<p><img src="image/distance_1.png" class="img-fluid"></p>
+<p>For normalization, the following formula was applied:</p>
+<blockquote class="blockquote">
+<p>Normalized value = 1 - (value - minimum) / (maximum - minimum)</p>
+</blockquote>
+<p>Since the minimum distance was 0, the formula simplifies to:</p>
+<blockquote class="blockquote">
+<p>Normalized value = 1 - (value / maximum)</p>
+</blockquote>
+<p>This method produces a normalized score between 0 and 1, where a value of 1 represents the shortest distance (i.e., highest potential connectivity), and values closer to 0 indicate increasing distance from green spaces. This approach directly reflects the inverse relationship between distance and ecological connectivity, where farther distances correspond to lower connectivity potential. Compared to the previous quantile-based method, this continuous normalization may better capture the steep decline in connectivity that occurs with increasing distance from green spaces.</p>
+<p>The final map representing the connectivity to green from stream unit is shown below: <img src="image/distance_2.png" class="img-fluid"></p>
+</section>
+<section id="biodiversity-3-presence-of-species" class="level6">
+<h6 class="anchored" data-anchor-id="biodiversity-3-presence-of-species">Biodiversity 3&nbsp;| Presence of species&nbsp;</h6>
+<p>It is worth noting that the presence of ecological corridors near or within urban areas, is one of the important things in biophilic cities (source to be added). Species present in the are a direct indicator of the presence of varied habitats and ecological areas in the city. The findings from these could then be used to find areas lacking biodiversity in order to improve diversity in these areas.&nbsp;</p>
+<p>A buffer of 2km is applied to this criterion considering the movement of fauna, which includes mammals and reptiles. This buffer area also includes parts of forest surrounding the east of Senica. Data on a total of 9 distinct faunal species (sourced from the Slovak atlas) was merged to form a layer containing count of each of the species. This was intersected with the spatial buffer to count the number of distinct species in each buffer unit. 9 indicates the highest diversity whereas 5 is the lowest count for diversity of species per unit.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/species%20numbers.png" class="img-fluid figure-img"></p>
+<figcaption>Biodiversity 3 | Presence of species : Buffer of 2km</figcaption>
+</figure>
+</div>
+<p>Normalise value = (count – min count)/ (max count - min count)&nbsp;</p>
+<p>The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest. The resulting classification is shown below. &nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/species%20with%20stream.png" class="img-fluid figure-img"></p>
+<figcaption>Biodiversity 3| Presence of species : Normalised</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/species%20with%20stream.png" class="img-fluid figure-img"></p>
+<figcaption>Biodiversity 3| Presence of species : Normalised</figcaption>
+</figure>
+</div>
+</section>
+<section id="quality-of-life" class="level6">
+<h6 class="anchored" data-anchor-id="quality-of-life">Quality of Life</h6>
+<p>The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 4 maps: Proximity to Green Spaces Attractions between Activities and Parks Concentration of Points of Interest</p>
+</section>
+<section id="criteria-1-proximity-to-green-spaces" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-1-proximity-to-green-spaces">CRITERIA 1 Proximity to Green Spaces</h6>
+<p>This map illustrates the distribution of green spaces in the area and their proximity to surrounding buildings. The analysis was conducted using the Attraction Reach function in QGIS, which calculates how many parks are accessible from each building within a walking distance of 500 meters. This threshold is commonly used to represent a comfortable walking distance in urban planning. To enhance the accuracy of the analysis, greater weight was assigned to larger green spaces, based on their total area. This weighting approach is supported by the concept of biophilia, which emphasizes the human need for connection with nature. Research shows that larger green spaces tend to be more biodiverse, thereby offering stronger biophilic benefits. This justifies prioritizing them in the accessibility calculation. On the map, buildings are displayed in graduated grayscale: Darker buildings (black) indicate higher accessibility to multiple or larger green spaces. Lighter buildings signify lower access.</p>
+<p>This data is further aggregated onto river segments as explained previously, to show how overall accessibility to green spaces relates to the river corridor. A 1000-meter buffer is used for this aggregation to encompass the majority of the built environment and to provide a broader view of green space attraction beyond immediate riverfront areas. The general outcome from the map is that there are not enough large green spaces close to the urban area.</p>
+</section>
+<section id="criteria-3-concentration-of-p.o.i." class="level6">
+<h6 class="anchored" data-anchor-id="criteria-3-concentration-of-p.o.i.">CRITERIA 3 Concentration of P.O.I.</h6>
+<p>The third criterion used in this analysis is the concentration of Points of Interest (POIs) along the Teplica stream. These POIs encompass a wide variety of features, including recreational activities, shops, monuments, benches, public artworks, and other amenities that contribute to the vibrancy of public space. To evaluate their impact, only POIs located within a 200-meter buffer along the stream were considered. Additionally, POIs were graded based on their proximity to the stream, with those closer to the watercourse given a higher value. This approach reflects their potential to draw people toward the stream, thereby fostering greater interaction between the urban population and the surrounding natural environment. To perform this analysis using the Attraction Reach function in QGIS, a series of points was generated along the geometry of the stream, spaced at 10-meter intervals. This resolution is appropriate given the scale of both the stream and the urban context. The Attraction Reach function was then applied to assess how many POIs each of these points could access, taking into account both distance and relative importance. On the resulting map, individual POIs are visible, with redder points indicating those closest to the stream. As with previous criteria, the data was then aggregated onto segments of the stream, allowing for a clearer spatial understanding of attraction levels. The outcome highlights a notable concentration of POI in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.</p>
+</section>
+<section id="climate-adaptation" class="level6">
+<h6 class="anchored" data-anchor-id="climate-adaptation">CLimate Adaptation</h6>
+<p>The third category of evaluation is Climate adaptation. This set of criteria is used to understand how well the area can adapt to extreme changes in the weather conditions. For that three maps were created:</p>
+<p>Permeability of the ground Flood Risk Land Surface Temperature</p>
+</section>
+<section id="criteria-1-permaiblity-of-the-ground" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-1-permaiblity-of-the-ground">Criteria 1 Permaiblity of the ground</h6>
+<p>This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS. To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale. Using the Zonal Statistics tool, the proportion of permeable versus impermeable surfaces was calculated for different zones along the stream. This highlighted areas with higher degrees of paving, indicating lower permeability. Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis. In the following maps the red color indicates the paved area that is later isolated into black and white (white - presence of pixels, black - absence of pixels). In the final map the buffered area is shown along with the aggregation on stream.</p>
+</section>
+<section id="criteria-2-impact-of-flooding" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-2-impact-of-flooding">Criteria 2 Impact of flooding</h6>
+<p>How many buildings are affected by q100 flood (unit buffer: 500m)</p>
+<p>To assess the impact of flooding, the amount of buildings affected by a q100 was estimated. First the flood risk map was retrieved from the mpt.svp.sk gis server. Multiple types of flood risk maps were available, namely the q10, q100 and q1000 maps. These respectively indicate the likeliness of such a flood, for example the q100 indicates a flood that would on average occur every 100 years. The q100 was chosen, since it is still a relatively common occurrence, and the impact is significant enough to take measures against. The flood basin reaches at most 500 meters away from the banks of the Teplica, therefore the buffer was chosen as such.</p>
+<p>Another important point to consider is that there are multiple ways to determine the impact of a flood. For example, the total land area affected, the amount of built-up land affected or the amount of buildings affected. Due to the urban structure of Senica, of which a large part consists of industrial buildings with large footprints, the total amount of buildings was chosen as a measure since it more closely measures the amount of people affected by a flood. A population density map would have been preferable, however, none was found at a sufficiently high resolution.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image\flood_impact.svg" class="img-fluid figure-img" width="312"></p>
+<figcaption>Climate Adaptation|Impact of Flooding: Buffer 500m</figcaption>
+</figure>
+</div>
+</section>
+<section id="criteria-3-surface-temperature" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-3-surface-temperature">Criteria 3 Surface Temperature</h6>
+<p>Surface temperature (unit buffer: 200m)</p>
+<p>For the land surface temperature criterion the data was retrieved from the USGS Landsat 8-9 Level 2 satellite data. Particularly, the B10 band measures thermal infrared and is therefore representative of land surface temperature. The data is a snapshot of on a sunny day in may 2025.</p>
+<p>The buffer was chosen according to a study by Wu, Zhijie &amp; Zhang, Yixin. (2019) which found green spaces within 200m had a significant effect on urban land surface temperature.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image\temperature.svg" class="img-fluid figure-img" width="312"></p>
+<figcaption>Climate Adaptation|Impact of Flooding: Buffer 500m</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="criteria-weighting" class="level4">
+<h4 class="anchored" data-anchor-id="criteria-weighting">Criteria Weighting</h4>
+<p>Weighting of the criteria used in MCDA is carried out using the saaty matrix (Fuzzy AHP, n.d.). This is done separately for each criterion where the three sub-criteria within each criterion are weighed against each other based on its relevance to the overall objective of creation of a biophilic environment. It is also important to note that the weighting takes into account reliability of the data source for each sub criteria. Eigenvector(non-fuzzy) calculation method is used for all the weighting.&nbsp;</p>
+<p>For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species. &nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/weighting_biodiversity.JPG" class="img-fluid figure-img" width="312"></p>
+<figcaption>Criteria Weighting - Biodiversity</figcaption>
+</figure>
+</div>
+<p>In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/weighting_QualityOfLife.JPG" class="img-fluid figure-img" width="312"></p>
+<figcaption>Criteria Weighting - Quality of Life</figcaption>
+</figure>
+</div>
+<p>For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Weighting_ClimateAdaptation.JPG" class="img-fluid figure-img" width="312"></p>
+<figcaption>Criteria Weighting - Climate Adaptation</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="typology-construction" class="level3">
+<h3 class="anchored" data-anchor-id="typology-construction">Typology construction</h3>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
