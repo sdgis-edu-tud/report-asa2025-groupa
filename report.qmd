@@ -203,17 +203,39 @@ The range of species count is classifed into ten quantile-based groups to mainta
 
 ###### Quality of Life
 
-The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 4 maps: Proximity to Green Spaces Attractions between Activities and Parks Concentration of Points of Interest
+The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 3 maps: Proximity to Green Spaces Attractions between Activities and Parks Concentration of Points of Interest
+
+These maps in order are used to describe how well connected are the people with the green spaces, what is the daily movement of the people ( to relate it with green spaces) and if there is something that attracts the people to the stream of Teplica.
 
 ###### CRITERIA 1 Proximity to Green Spaces
 
 This map illustrates the distribution of green spaces in the area and their proximity to surrounding buildings. The analysis was conducted using the Attraction Reach function in QGIS, which calculates how many parks are accessible from each building within a walking distance of 500 meters. This threshold is commonly used to represent a comfortable walking distance in urban planning. To enhance the accuracy of the analysis, greater weight was assigned to larger green spaces, based on their total area. This weighting approach is supported by the concept of biophilia, which emphasizes the human need for connection with nature. Research shows that larger green spaces tend to be more biodiverse, thereby offering stronger biophilic benefits. This justifies prioritizing them in the accessibility calculation. On the map, buildings are displayed in graduated grayscale: Darker buildings (black) indicate higher accessibility to multiple or larger green spaces. Lighter buildings signify lower access.
 
+![Quality of Life\| Proximity to Greens Spaces](image/GreenAreas_1.png)
+
 This data is further aggregated onto river segments as explained previously, to show how overall accessibility to green spaces relates to the river corridor. A 1000-meter buffer is used for this aggregation to encompass the majority of the built environment and to provide a broader view of green space attraction beyond immediate riverfront areas. The general outcome from the map is that there are not enough large green spaces close to the urban area.
+
+![Quality of Life\| Proximity to Greens Spaces (aggregated)](image/GreenAreas_2.png)
+
+###### CRITERIA 2 Proximity to Activites
+
+The second criterion examines the presence of activities within the urban area to better understand how people interact with and move through the city. Various types of activities, such as churches, commercial spaces, and offices, were taken into account. An Attraction Reach algorithm, similar to the one used for assessing proximity to parks, was applied to calculate how many activity locations are accessible within a 500-meter walking distance from each building. This method provides valuable insights into potential movement patterns and highlights areas that may attract higher foot traffic. When combined with data on green spaces and parks, it contributes to a more comprehensive understanding of urban liveliness and accessibility. On the map, activity types are represented in distinct colors, while buildings are shown in a graduated grayscale, where darker shades indicate closer proximity to a greater number of activities.
+
+![Quality of Life\| Proximity to Activites](image/Activities_1.png)
+
+Additionally, the data was aggregated into stream segments using a 1 kilometer buffer, which encompasses most of the built-up area in the city. This buffer was chosen to provide a citywide perspective on activity distribution, rather than limiting the analysis to areas immediately adjacent to the stream.
+
+![Quality of Life\| Proximity to Activites (aggregated)](image/Activities_2.png)
 
 ###### CRITERIA 3 Concentration of P.O.I.
 
-The third criterion used in this analysis is the concentration of Points of Interest (POIs) along the Teplica stream. These POIs encompass a wide variety of features, including recreational activities, shops, monuments, benches, public artworks, and other amenities that contribute to the vibrancy of public space. To evaluate their impact, only POIs located within a 200-meter buffer along the stream were considered. Additionally, POIs were graded based on their proximity to the stream, with those closer to the watercourse given a higher value. This approach reflects their potential to draw people toward the stream, thereby fostering greater interaction between the urban population and the surrounding natural environment. To perform this analysis using the Attraction Reach function in QGIS, a series of points was generated along the geometry of the stream, spaced at 10-meter intervals. This resolution is appropriate given the scale of both the stream and the urban context. The Attraction Reach function was then applied to assess how many POIs each of these points could access, taking into account both distance and relative importance. On the resulting map, individual POIs are visible, with redder points indicating those closest to the stream. As with previous criteria, the data was then aggregated onto segments of the stream, allowing for a clearer spatial understanding of attraction levels. The outcome highlights a notable concentration of POI in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.
+The third criterion used in this analysis is the concentration of Points of Interest (POIs) along the Teplica stream. These POIs encompass a wide variety of features, including recreational activities, shops, monuments, benches, public artworks, and other amenities that contribute to the vibrancy of public space. To evaluate their impact, only POIs located within a 200-meter buffer along the stream were considered. Additionally, POIs were graded based on their proximity to the stream, with those closer to the watercourse given a higher value. This approach reflects their potential to draw people toward the stream, thereby fostering greater interaction between the urban population and the surrounding natural environment. To perform this analysis a series of points was generated along the geometry of the stream, spaced at 10-meter intervals. This resolution is appropriate given the scale of both the stream and the urban context. The Attraction Reach function was then applied to assess how many POIs each of these points could access, taking into account both distance and relative importance. On the resulting map, individual POIs are visible, with redder points indicating those closest to the stream. As with previous criteria, the data was then aggregated onto segments of the stream, allowing for a clearer spatial understanding of attraction levels.
+
+![Quality of Life\| Concetration of POI](image/POI_1.png)
+
+The outcome highlights a notable concentration of POIs in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.
+
+![Quality of Life\| Concetration of POI (aggregated)](image/POI_2.png)
 
 ###### CLimate Adaptation
 
@@ -223,7 +245,13 @@ Permeability of the ground Flood Risk Land Surface Temperature
 
 ###### Criteria 1 Permaiblity of the ground
 
-This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS. To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale. Using the Zonal Statistics tool, the proportion of permeable versus impermeable surfaces was calculated for different zones along the stream. This highlighted areas with higher degrees of paving, indicating lower permeability. Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis. In the following maps the red color indicates the paved area that is later isolated into black and white (white - presence of pixels, black - absence of pixels). In the final map the buffered area is shown along with the aggregation on stream.
+This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS. To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale. Using the Zonal Statistics tool, the proportion of permeable versus impermeable surfaces was calculated for different zones along the stream. This highlighted areas with higher degrees of paving, indicating lower permeability.
+
+![Climate Adaptation\| Permeability](image/Permeabilty_1.png)
+
+Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis.
+
+![Climate Adaptation\| Permeability (aggregated)](image/Permeabilty_2.png)
 
 ###### Criteria 2 Impact of flooding
 
