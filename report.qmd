@@ -291,7 +291,219 @@ For Climate Adaptation, anticipated flood affected areas carry the highest weigh
 
 ### Typology construction
 
+#### Preparation
+
+-   **Objective**:\
+    To identify typologies of different part of urban stream itself, where local conditions affect biophilic condition of stream and nearby area and guide restoration design strategies to improve human-nature connection
+
+-   **Focused area**:\
+    The stream Teplica, which goes through the city of Senica
+
+-   **Spatial unit**:\
+    Fixed length of stream, 200m.Same as units for MCDA
+
+-   **Variables**: 3 variables are picked from criteria of MCDA. Criterion with highest weight of each part is chosen, as they can represent most important variable that determines biophilic value of each stream unit.
+
+`connectivity to green` – normalized value derived from distance from each stream unit to closest green space; related to connectivity from stream to green space nearby. As values are normalized from original numbers, actual distance in meter is turned into number between 0 to 1, and the higher number means the stream unit is more close to green space nearby.
+
+`concentration of POI` – normalized value derived from Points of Interests (POI) within 200m buffer from each stream units. Proximity of each points withing buffered unit are combined to represent concentration of points. From normalized value, the higher number means that there are more concentrated POI in certain stream unit.
+
+`Less impact from flood` – normalized value derived from impact of flooding. Number of buildings within 500m buffer that are intersecting with flood risk zone is counted. As it is normalized value to show adaptation to climate change, the higher number means that there are less impace from flooding anticipated.
+
+-   **Geometries of spatial unit**:\
+    Read in `unit_normalised.gpkg`, with a column `ID` created.
+
+-   **The value of variables in each spatial unit**:\
+    Read in `unit_normalised.gpkg`, with columns `Udistance`, `UPOI`, `UFlood.Risk` created.
+
+#### Clustering Steps
+
+#### Step 1\| Load packages and data **intall packages** for clustering, two packages are used; `sf` and `dplyr`. `sf` is for processing vector data and `dplyr` is for selecting and transforming data. In case you have not installed them yet, remove \# for each packages and run the code.
+
+```{r}
+#install.packages("sf") 
+#install.packages("dplyr")
+```
+
+**load packages**\
+library of each packages should be loaded
+
+```{r}
+library(sf) # for processing vector data 
+library(dplyr) # for selecting and transforming data
+```
+
+**load data**\
+data should be located in the root of your working directory folder. In case you are not sure where the directory folder is, use `getwd()` (remove \# before use it)
+
+```{r}
+getwd()
+```
+
+in the project `units` will be used for the name of unit. run the code to load prepared data into `units`
+
+```{r}
+units <- st_read("unit_normalised.gpkg", quiet = TRUE)
+```
+
+**view data**\
+the codes below can be used to see show how data looks like.use ctrl+enter for each line to see each aespects of data.
+
+```{r}
+
+#view first few rows of data
+head(units) 
+
+#count how many units will be used for clustering
+nrow(units) 
+
+#Plot connectivity to green
+plot(units["Udistance"], border = NA, main = "Connectivity to Green")
+
+#Plot concentration of POI
+plot(units["UPOI"], border = NA, main = "Concentration of POI") 
+
+#Plot Less impat from flood
+plot(units["UFlood.Risk"], border = NA, main = "Less impact from Flood") 
+
+```
+
+##### Step 2\| Standardization **select relevant features** for clustering, only 3 columns will be used: `Udistance`, `UPOI`, `UFlood.Risk`. for this new feature should be created.
+
+```{r}
+features <- units |> #set name of new feature
+  select(Udistance, UPOI, UFlood.Risk) |> #select relevant columns only
+  st_drop_geometry() # remove geometry column so we just keep a data table
+```
+
+**standardize**\
+then the numbers in each column will be standardized for clustering.
+
+```{r}
+#Standardize (mean=0, sd=1) 
+X_scaled <- scale(features) # set name for standardized features
+```
+
+##### Step 3\| Determine optimal k **calculate inertia** in this step, k means for every number between 2 to 9 will be tried. then, inertia will be calculated for each k, which means the total distance between points and their cluster centers. inertia will be calculated like this:
+
+```{r}
+# Initialize an empty numeric vector to store inertia values 
+inertia <- numeric() #set the name for inertia value pocket
+
+# Try k values from 2 to 9
+k_values <- 2:9 #set the name for k value 
+
+# Loop through each k value
+# tot.withinss is Total within-cluster sum of squares
+# This measures how compact the clusters are: lower is better.
+
+for (k in k_values) {
+  km <- kmeans(X_scaled, centers = k, nstart = 20) #set the name for kmeans value pocket
+  inertia <- c(inertia, km$tot.withinss)
+}
+```
+
+**elbow method**\
+to choose right k, elbow method will be used. for this we need to visualize how inertia changes while the k increases. then we can see where the inclination dramatically changes.
+
+```{r}
+# Combine the results into a data frame for plotting
+elbow_df <- data.frame(k = k_values, inertia = inertia) #set the name of data frame
+
+# Make the elbow plot
+plot(k_values, inertia,
+     type = "b",                  
+     col = "darkblue",
+     main = "Elbow Method")
+```
+
+from the plot, we can clearly see elbow formed when k is 4.As a result, the optimal k for clustering will be 4.
+
+##### Step 4\| Run K-Means Clustering Based on the elbow plot, we choose `k = 4` as a good number of clusters. We now run the K-means algorithm and assign each grid to one of the four clusters.
+
+```{r}
+# sets the random number generator to a fixed state, to show same result when re-run the code
+set.seed(0)  # set the number for fixed state
+
+# Choose the number of clusters based on the elbow plot
+k <- 4 
+
+# Run K-means clustering on the standardized data
+kmeans_result <- kmeans(X_scaled, centers = k, nstart = 20) #set name for k-means result data
+```
+
+**add cluster label to unit data**\
+After running K-Means clustering, the clustering result can be added as a new column for unit data. we will add `cluster` column of `kmeans_result` to `units`. Then you can see how many units each cluster have.
+
+```{r}
+# Add the cluster labels to the spatial data
+units$cluster <- as.factor(kmeans_result$cluster) 
+
+# Show how many units fall into each cluster
+print(table(units$cluster))
+
+# Plot clusters with base R
+plot(units["cluster"], 
+     main = "Spatial Pattern of Urban Stream Clusters",
+     border = NA)
+```
+
+to save the result, use this code. remove \# before run
+
+```{r}
+#st_write(units, "unit_cluster.gpkg")
+```
+
+##### Step 5\| Interpret Cluster Centers
+
+##### **Get cluster centers** to interpret each clusters, we need to get center values.
+
+```{r}
+# Get the cluster centers (in standardized form)
+scaled_centers <- kmeans_result$centers #set name for cluster center value pocket
+
+# Print them
+print("Cluster centers (standardized):")
+print(scaled_centers)
+
+```
+
+however, this is center in standardized number, to make numbers more readable, we can convert the numbers into original numbers.
+
+```{r}
+# Convert the centers back to original scale: x * SD + mean
+original_centers <- t(apply(
+  scaled_centers, 1, 
+  function(x) x * attr(X_scaled, "scaled:scale") + attr(X_scaled, "scaled:center")
+))
+
+# Print the original values
+print("Cluster centers (original):")
+print(original_centers)
+
+```
+
+From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria. The table below summarizes the characteristics of each cluster based on the original (normalized) values.
+
+**Typology results**\
+
+| Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
+|--------|------------|-------|------------|-------|-----------|-------|
+| 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
+| 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
+| 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
+| 4 | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
+
 ## Results
+
+### Typology Description
+
+| Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
+|---------|--------------|-------------|-------------|-------------------------|
+| 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
+| 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
+| 3 | close to green | medium-high | high | urgent need for preventing flood |
+| 4 | far from green | none | none | lots of potential for big parks and activities |
 
 ## Discussion
 
