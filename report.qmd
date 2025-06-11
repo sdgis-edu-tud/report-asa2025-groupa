@@ -133,7 +133,7 @@ Another way in which biodiversity and biophilic integration are linked is throug
 
 For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship. 
 
-![MCDA hierarchy tree](image/mcda tree.JPG)
+![MCDA hierarchy tree](image/mcda%20tree.JPG)
 
 #### Units
 
@@ -207,8 +207,6 @@ This map illustrates the distribution of green spaces in the area and their prox
 
 This data is further aggregated onto river segments as explained previously, to show how overall accessibility to green spaces relates to the river corridor. A 1000-meter buffer is used for this aggregation to encompass the majority of the built environment and to provide a broader view of green space attraction beyond immediate riverfront areas. The general outcome from the map is that there are not enough large green spaces close to the urban area.
 
-![Quality of Life\| Proximity to Greens Spaces (aggregated)](image/GreenAreas_2.png)
-
 ###### CRITERIA 2 Proximity to Activites
 
 The second criterion examines the presence of activities within the urban area to better understand how people interact with and move through the city. Various types of activities, such as churches, commercial spaces, and offices, were taken into account. An Attraction Reach algorithm, similar to the one used for assessing proximity to parks, was applied to calculate how many activity locations are accessible within a 500-meter walking distance from each building. This method provides valuable insights into potential movement patterns and highlights areas that may attract higher foot traffic. When combined with data on green spaces and parks, it contributes to a more comprehensive understanding of urban liveliness and accessibility. On the map, activity types are represented in distinct colors, while buildings are shown in a graduated grayscale, where darker shades indicate closer proximity to a greater number of activities.
@@ -217,8 +215,6 @@ The second criterion examines the presence of activities within the urban area t
 
 Additionally, the data was aggregated into stream segments using a 1 kilometer buffer, which encompasses most of the built-up area in the city. This buffer was chosen to provide a citywide perspective on activity distribution, rather than limiting the analysis to areas immediately adjacent to the stream.
 
-![Quality of Life\| Proximity to Activites (aggregated)](image/Activities_2.png)
-
 ###### CRITERIA 3 Concentration of P.O.I.
 
 The third criterion used in this analysis is the concentration of Points of Interest (POIs) along the Teplica stream. These POIs encompass a wide variety of features, including recreational activities, shops, monuments, benches, public artworks, and other amenities that contribute to the vibrancy of public space. To evaluate their impact, only POIs located within a 200-meter buffer along the stream were considered. Additionally, POIs were graded based on their proximity to the stream, with those closer to the watercourse given a higher value. This approach reflects their potential to draw people toward the stream, thereby fostering greater interaction between the urban population and the surrounding natural environment. To perform this analysis a series of points was generated along the geometry of the stream, spaced at 10-meter intervals. This resolution is appropriate given the scale of both the stream and the urban context. The Attraction Reach function was then applied to assess how many POIs each of these points could access, taking into account both distance and relative importance. On the resulting map, individual POIs are visible, with redder points indicating those closest to the stream. As with previous criteria, the data was then aggregated onto segments of the stream, allowing for a clearer spatial understanding of attraction levels.
@@ -226,8 +222,6 @@ The third criterion used in this analysis is the concentration of Points of Inte
 ![Quality of Life\| Concetration of POI](image/POI_1.png)
 
 The outcome highlights a notable concentration of POIs in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.
-
-![Quality of Life\| Concetration of POI (aggregated)](image/POI_2.png)
 
 ###### CLimate Adaptation
 
@@ -242,8 +236,6 @@ This criterion evaluates the ground’s ability to collect and absorb rainwater.
 ![Climate Adaptation\| Permeability](image/Permeabilty_1.png)
 
 Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis.
-
-![Climate Adaptation\| Permeability (aggregated)](image/Permeabilty_2.png)
 
 ###### Criteria 2 Impact of flooding
 
@@ -287,7 +279,15 @@ For Climate Adaptation, anticipated flood affected areas carry the highest weigh
 
 ![Biodiversity 2: connectivity to green](image/distance_2.png){width="330"}
 
-![Biodiversity 3: Presence of species](image/species -2.png){width="318"}
+![Biodiversity 3: Presence of species](image/species%20-2.png){width="318"}
+
+![Quality of Life\| Proximity to Greens Spaces (aggregated)](images/clipboard-89915424.png){width="330"}
+
+![Quality of Life\| Concetration of POI (aggregated)](images/clipboard-3669857891.png){width="342"}
+
+![Quality of Life\| Proximity to Activites (aggregated)](images/clipboard-3958591125.png){width="313"}
+
+![Climate Adaptation\| Permeability (aggregated)](images/clipboard-2543957735.png){width="312"}
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
@@ -492,7 +492,7 @@ From original centers, we examine the centers of each cluster in original values
 **Typology results**\
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
-|--------|------------|-------|------------|-------|-------------|-------|
+|----|----|----|----|----|----|----|
 | 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
@@ -503,7 +503,7 @@ From original centers, we examine the centers of each cluster in original values
 ### Typology Description
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
-|---------|--------------|-------------|-------------|-------------------------|
+|----|----|----|----|----|
 | 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
