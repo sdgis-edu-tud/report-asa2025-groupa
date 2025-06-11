@@ -133,7 +133,7 @@ Another way in which biodiversity and biophilic integration are linked is throug
 
 For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship. 
 
-![MCDA hierarchy tree](images/mcda%20tree.JPG)
+![MCDA hierarchy tree](image/mcda tree.JPG)
 
 #### Units
 
@@ -157,9 +157,7 @@ Since the green space percentages range approximately from 0% to 30%, the data w
 
 > Normalized value = (Percentage of green)/30
 
-To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above. The final map representing the green space percentage per unit is shown below:
-
-![](image/percentage_2.png)
+To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above.
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
@@ -183,23 +181,17 @@ Since the minimum distance was 0, the formula simplifies to:
 
 This method produces a normalized score between 0 and 1, where a value of 1 represents the shortest distance (i.e., highest potential connectivity), and values closer to 0 indicate increasing distance from green spaces. This approach directly reflects the inverse relationship between distance and ecological connectivity, where farther distances correspond to lower connectivity potential. Compared to the previous quantile-based method, this continuous normalization may better capture the steep decline in connectivity that occurs with increasing distance from green spaces.
 
-The final map representing the connectivity to green from stream unit is shown below: ![](image/distance_2.png)
-
 ###### Biodiversity 3 \| Presence of species 
 
 It is worth noting that the presence of ecological corridors near or within urban areas, is one of the important things in biophilic cities (source to be added). Species present in the are a direct indicator of the presence of varied habitats and ecological areas in the city. The findings from these could then be used to find areas lacking biodiversity in order to improve diversity in these areas. 
 
 A buffer of 2km is applied to this criterion considering the movement of fauna, which includes mammals and reptiles. This buffer area also includes parts of forest surrounding the east of Senica. Data on a total of 9 distinct faunal species (sourced from the Slovak atlas) was merged to form a layer containing count of each of the species. This was intersected with the spatial buffer to count the number of distinct species in each buffer unit. 9 indicates the highest diversity whereas 5 is the lowest count for diversity of species per unit. 
 
-![Biodiversity 3 \| Presence of species : Buffer of 2km](images/species%20numbers.png)
+![Biodiversity 3 \| Presence of species : Buffer of 2km](image/species-1.png)
 
 Normalise value = (count – min count)/ (max count - min count) 
 
-The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest. The resulting classification is shown below.  
-
-![Biodiversity 3\| Presence of species : Normalised](images/species%20with%20stream.png)
-
-![Biodiversity 3\| Presence of species : Normalised](images/species%20with%20stream.png)
+The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest.
 
 ###### Quality of Life
 
@@ -260,6 +252,18 @@ In Quality of Life, the proximity of points of interest such as cafes, park benc
 For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
 
 ![Criteria Weighting - Climate Adaptation](image/Weighting_ClimateAdaptation.JPG){width="312"}
+
+(All normalised maps to be inserted here)
+
+![Biodiversity 1 : Percentage of green](images/clipboard-1943427559.png){width="329"}
+
+![Biodiversity 2: connectivity to green](image/distance_2.png){width="330"}
+
+![Biodiversity 3: Presence of species](image/species -2.png){width="318"}
+
+The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
+
+(Resultant map to be inserted)
 
 ### Typology construction
 
