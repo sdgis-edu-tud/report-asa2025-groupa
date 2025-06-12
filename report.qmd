@@ -261,20 +261,25 @@ The buffer was chosen according to a study by Wu, Zhijie & Zhang, Yixin. (2019) 
 
 Weighting of the criteria used in MCDA is carried out using the saaty matrix (Fuzzy AHP, n.d.). This is done separately for each criterion where the three sub-criteria within each criterion are weighed against each other based on its relevance to the overall objective of creation of a biophilic environment. It is also important to note that the weighting takes into account reliability of the data source for each sub criteria. Eigenvector(non-fuzzy) calculation method is used for all the weighting. 
 
-For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species.  
+::: {layout-ncol="3"}
 
 ![Criteria Weighting - Biodiversity](image/weighting_biodiversity.JPG){width="312"}
 
-In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness. 
-
 ![Criteria Weighting - Quality of Life](image/weighting_QualityOfLife.JPG){width="312"}
-
-For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
 
 ![Criteria Weighting - Climate Adaptation](image/Weighting_ClimateAdaptation.JPG){width="312"}
 
+:::
+
+For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species.  
+
+In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness. 
+
+For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
+
 (All normalised maps to be inserted here)
 
+::: {layout-nrow="3"}
 ![Biodiversity 1 : Percentage of green](images/clipboard-1943427559.png){width="329"}
 
 ![Biodiversity 2: connectivity to green](image/distance_2.png){width="330"}
@@ -288,6 +293,7 @@ For Climate Adaptation, anticipated flood affected areas carry the highest weigh
 ![Quality of Life\| Proximity to Activites (aggregated)](images/clipboard-3958591125.png){width="313"}
 
 ![Climate Adaptation\| Permeability (aggregated)](images/clipboard-2543957735.png){width="312"}
+:::
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
@@ -492,7 +498,7 @@ From original centers, we examine the centers of each cluster in original values
 **Typology results**\
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
-|----|----|----|----|----|----|----|
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 | 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
@@ -503,7 +509,7 @@ From original centers, we examine the centers of each cluster in original values
 ### Typology Description
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
