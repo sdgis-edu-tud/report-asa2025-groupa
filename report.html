@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Vincent Vanderheeren">
+<meta name="author" content="Youjin Lee">
+<meta name="author" content="Shreya Rajmane">
+<meta name="author" content="Vasileios Letsios">
+
+<title>Title of your report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="report_files/libs/quarto-html/quarto.js"></script>
+<script src="report_files/libs/quarto-html/popper.min.js"></script>
+<script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Title of your report</h1>
+<p class="subtitle lead">Project report of Group A</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Vincent Vanderheeren </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Geomatics
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Youjin Lee </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Urbanism
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Shreya Rajmane </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Urbanism
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Vasileios Letsios </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            MSc Urbanism
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This is a computational notebook
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>You can add options to executable code like this</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<p>You can delete this entire callout between and including the lines</p>
+<pre><code>::: callout</code></pre>
+<p>and</p>
+<pre><code>:::</code></pre>
+<p>and start the report from the Introduction section below.</p>
+</section>
+</div>
+</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="role-distribution" class="level4">
+<h4 class="anchored" data-anchor-id="role-distribution">Role Distribution</h4>
+<ul>
+<li><strong>Project Coordinator</strong><br>
+<em>organizes meetings and deadlines</em>
+<ul>
+<li><p>Vincent</p></li>
+<li><p>Jasper</p></li>
+<li><p>Youjin</p></li>
+<li><p>Shreya</p></li>
+<li><p>Vasileios</p></li>
+</ul></li>
+<li><strong>Research Lead</strong><br>
+<em>oversees background research</em>
+<ul>
+<li>Jasper</li>
+</ul></li>
+<li><strong>Mapping Specialist</strong><br>
+<em>creates maps and spatial visuals</em>
+<ul>
+<li><p>Vincent</p></li>
+<li><p>Vasilius</p></li>
+</ul></li>
+<li><strong>Data Analyst</strong><br>
+<em>analyzes collected data</em>
+<ul>
+<li><p>Youjin</p></li>
+<li><p>Vasilius</p></li>
+</ul></li>
+<li><strong>Writer/Editor</strong><br>
+<em>drafts and edits project texts</em>
+<ul>
+<li><p>Shreya</p></li>
+<li><p>Jasper</p></li>
+</ul></li>
+<li><strong>Presentation Lead</strong><br>
+<em>prepares group presentations</em>
+<ul>
+<li>Vincent</li>
+</ul></li>
+<li><strong>Design Lead</strong><br>
+<em>works on visual layouts and graphics</em>
+<ul>
+<li><p>Youjin</p></li>
+<li><p>Shreya</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="the-case-of-senica" class="level5">
+<h5 class="anchored" data-anchor-id="the-case-of-senica"><strong>The case of Senica</strong>&nbsp;</h5>
+<p>Through the heart of the city of Senica (a Slovak city, close to the Czech border) flows the Teplica. Due to economic pressures the stream has been heavily altered and is rendered invisible and insignificant in the urban landscape. Currently the Teplica is struggling with several problems, like poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the ‘ReBioClim-project’. This EU-project aims to restore urban streams while focusing on both biodiversity, climate change and liveability in cities (City of Senica, 2024a).&nbsp;<br>
+&nbsp;<br>
+While the Slovak water management company, SVP, focuses mainly on protecting the area against flooding due to heavy rainfall, more functional access to the water and improved water flow (City of Senica, 2024b), other focuses of the project include improving hydro morphology, ecology and diversity in urban areas and utilizing the stream for recreational purposes. Little attention is given to qualitative and experiential aspects such as human-nature connectedness.&nbsp;<br>
+&nbsp;<br>
+In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a way to determine potential for human-nature connectedness along the stream of Teplica.&nbsp;<br>
+&nbsp;</p>
+<ul>
+<li><strong>Research Question :</strong> What parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?&nbsp;&nbsp;</li>
+</ul>
+</section>
+<section id="human-nature-connectedness-and-its-relevance-to-urban-stream-restoration" class="level5">
+<h5 class="anchored" data-anchor-id="human-nature-connectedness-and-its-relevance-to-urban-stream-restoration"><strong>Human-nature connectedness and its relevance to urban stream restoration</strong>&nbsp;</h5>
+<p>Human-nature connectedness challenges the idea of human superiority over nature,&nbsp;while strengthening the outlook that humankind is a part of nature. Research has shown that this sense of connectedness cannot be created through education only (Spiller, 2024). Spatial composition plays an important role in this process where people must come into direct contact to build a strong relationship with their natural environments.&nbsp;&nbsp;&nbsp;</p>
+<p>A theory that has gained recognition in recent decades and is often associated with human-nature connectedness is the biophilia hypothesis (Bhaskar, 2023; Lefosse et al., 2023). This hypothesis states that humans have an innate tendency to seek connections to nature (Grinde &amp; Patil, 2009; Wilson, 1984). This connection is supported with evidence from multiple different fields of study (Grinde &amp; Patil, 2009). The results from several of these studies show a strong connection between human-nature connectedness and an increased human health and wellbeing. This connection is not just physical, but also cognitive, emotional and biophysical (Ives et al., 2017). &nbsp;</p>
+<p>Biophilic design, based on the biophilia hypothesis focuses on reinforcing the relationship between humans and the natural world through the creation or strengthening of biophilic places (Da Silva et al., 2021). Human-nature connectedness forms the starting point of this approach. It proposes to utilize green infrastructure to improve ecosystem health and human wellbeing. These places have shown great potential in different ways. They increase social interaction, as people view them as places of improved livability and sociability (Lefosse et al., 2023). Biophilic places also strengthen social cohesion, as they positively influence the perceived social cohesion, as well as facilitating more (semi-)social activities that strengthen community bonds. Another important effect of biophilic places, and the subsequent increase in regular experiences of nature, is that they raise environmental awareness and encourage a more sustainable way of living. Furthermore, on the long term biophilia can aid ecosystem conservation efforts (Bhaskar, 2023). People who are connected to nature and have a strong relationship to nature are more likely to participate in more sustainable behavior and to support ecosystem and biodiversity conservation efforts.&nbsp;&nbsp;&nbsp;</p>
+<p>By determining how biophilic a place is, we can derive how much it improves the human-nature connectedness of the people living around it or visiting it. A biophilic place has a great impact on the people living around it, while a place that is not biophilic lacks this character. By determining the amount of biophilic integration, we can show which places have the largest need for improvement and which places are already performing well.&nbsp;</p>
+</section>
+<section id="how-does-biodiversity-affect-human-nature-connectedness" class="level5">
+<h5 class="anchored" data-anchor-id="how-does-biodiversity-affect-human-nature-connectedness"><strong>How does biodiversity affect human-nature connectedness?</strong></h5>
+<p>While biophilic integration mainly focusses on connecting people to nature, the importance of biodiversity cannot be overlooked (Lefosse et al., 2023). Streams are complex ecosystems and all the different present species contribute to the complex system that is this ecosystem (Bhaskar, 2023). Biodiversity therefore is of vital importance in protecting this ecosystem from collapse. In assessing the need for change in the areas around streams, it is therefore important to also look at indicators for biodiversity and ecosystem functionality.&nbsp;</p>
+<p>By analysing biodiversity, we can determine where the creation or dedication of ecological networks is most necessary. So that they can provide more ecosystem services (Lefosse et al., 2023; Ranta et al., 2021a). Biophilic integration has shown great potential in reinforcing urban biomes that can act as biodiversity incubators through an increase in natural repopulation of plant and animal species (Bhaskar, 2023; Panlasigui et al., 2021).&nbsp;&nbsp;</p>
+</section>
+<section id="how-does-microclimate-affect-human-nature-connectedness" class="level5">
+<h5 class="anchored" data-anchor-id="how-does-microclimate-affect-human-nature-connectedness"><strong>How does microclimate affect human-nature connectedness?</strong>&nbsp;</h5>
+<p>Another way in which biodiversity and biophilic integration are linked is through microclimate ecosystem services (Lefosse et al., 2023). The amount of biophilic integration relies on the ecosystem services a local ecosystem can provide. Reinforcing ecological networks, increases ecosystem functionality and therefore the amount of biophilic integration. By having more diverse natural elements, both green and blue, containing multiple different species, the environmental impact of a place is enhanced. Different species have different cooling, air-, soil- and water purification, and wind regulating properties. With these species working together, and sometimes even positively affecting the properties of other species, their impact can grow even further. The more biodiverse a place is, the more biophilic it can be, and the more it can improve human-nature connectedness. By analyzing the performance of the existing microclimate we can again determine where action is needed most.&nbsp;&nbsp;</p>
+</section>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="mcda" class="level3">
+<h3 class="anchored" data-anchor-id="mcda">MCDA</h3>
+<section id="criteria" class="level4">
+<h4 class="anchored" data-anchor-id="criteria">Criteria</h4>
+<p>For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/mcda%20tree.JPG" class="img-fluid figure-img"></p>
+<figcaption>MCDA hierarchy tree</figcaption>
+</figure>
+</div>
+</section>
+<section id="units" class="level4">
+<h4 class="anchored" data-anchor-id="units">Units</h4>
+<p>The units are chosen as 200m intervals on the stream</p>
+<section id="biodiversity" class="level5">
+<h5 class="anchored" data-anchor-id="biodiversity">Biodiversity</h5>
+<p>To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur &amp; Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor &amp; McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.</p>
+<section id="biodiversity-1-percentage-of-green" class="level6">
+<h6 class="anchored" data-anchor-id="biodiversity-1-percentage-of-green"><strong>Biodiversity 1</strong> | Percentage of green</h6>
+<p>The criterion used in this analysis is based on the Biophilic Planning Indicator (source to be added). The ratio of green space to total area serves as a proxy for assessing the amount of natural habitat near the Teplica stream. This method is also effective for comparing natural conditions across different spatial units.</p>
+<p>To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas within this 500m buffer were intersected with the buffered spatial units, and a new column was created to represent the amount of green space within each unit.</p>
+<p>This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:</p>
+<p><img src="image/percentage_1.png" class="img-fluid"></p>
+<p>Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.</p>
+<blockquote class="blockquote">
+<p>Normalized value = (Percentage of green)/30</p>
+</blockquote>
+<p>To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above.</p>
+<p>However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.</p>
+</section>
+<section id="biodiversity-2-distance-to-green" class="level6">
+<h6 class="anchored" data-anchor-id="biodiversity-2-distance-to-green"><strong>Biodiversity 2</strong> | Distance to green</h6>
+<p>Apart from the amount of green space, the proximity of green space to the stream is also an important factor. Even if there is a considerable area of green space, it becomes difficult to associate it with the stream if it is located too far away. This is especially critical for small animals such as frogs, for which direct connection between the stream and nearby natural areas is essential.</p>
+<p>To address this, distance to green space is introduced as an additional criterion alongside the percentage of green area. While the percentage of green reflects the amount of natural habitat, the distance represents the connectivity between the stream and nearby green areas.</p>
+<p>In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool (tool name to be added), the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.</p>
+<p><img src="image/distance_1.png" class="img-fluid"></p>
+<p>For normalization, the following formula was applied:</p>
+<blockquote class="blockquote">
+<p>Normalized value = 1 - (value - minimum) / (maximum - minimum)</p>
+</blockquote>
+<p>Since the minimum distance was 0, the formula simplifies to:</p>
+<blockquote class="blockquote">
+<p>Normalized value = 1 - (value / maximum)</p>
+</blockquote>
+<p>This method produces a normalized score between 0 and 1, where a value of 1 represents the shortest distance (i.e., highest potential connectivity), and values closer to 0 indicate increasing distance from green spaces. This approach directly reflects the inverse relationship between distance and ecological connectivity, where farther distances correspond to lower connectivity potential. Compared to the previous quantile-based method, this continuous normalization may better capture the steep decline in connectivity that occurs with increasing distance from green spaces.</p>
+</section>
+<section id="biodiversity-3-presence-of-species" class="level6">
+<h6 class="anchored" data-anchor-id="biodiversity-3-presence-of-species">Biodiversity 3&nbsp;| Presence of species&nbsp;</h6>
+<p>It is worth noting that the presence of ecological corridors near or within urban areas, is one of the important things in biophilic cities (source to be added). Species present in the are a direct indicator of the presence of varied habitats and ecological areas in the city. The findings from these could then be used to find areas lacking biodiversity in order to improve diversity in these areas.&nbsp;</p>
+<p>A buffer of 2km is applied to this criterion considering the movement of fauna, which includes mammals and reptiles. This buffer area also includes parts of forest surrounding the east of Senica. Data on a total of 9 distinct faunal species (sourced from the Slovak atlas) was merged to form a layer containing count of each of the species. This was intersected with the spatial buffer to count the number of distinct species in each buffer unit. 9 indicates the highest diversity whereas 5 is the lowest count for diversity of species per unit.&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/species-1.png" class="img-fluid figure-img"></p>
+<figcaption>Biodiversity 3 | Presence of species : Buffer of 2km</figcaption>
+</figure>
+</div>
+<p>Normalise value = (count – min count)/ (max count - min count)&nbsp;</p>
+<p>The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest.</p>
+</section>
+<section id="quality-of-life" class="level6">
+<h6 class="anchored" data-anchor-id="quality-of-life">Quality of Life</h6>
+<p>The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 3 maps: Proximity to Green Spaces Attractions between Activities and Parks Concentration of Points of Interest</p>
+<p>These maps in order are used to describe how well connected are the people with the green spaces, what is the daily movement of the people ( to relate it with green spaces) and if there is something that attracts the people to the stream of Teplica.</p>
+</section>
+<section id="criteria-1-proximity-to-green-spaces" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-1-proximity-to-green-spaces">CRITERIA 1 Proximity to Green Spaces</h6>
+<p>This map illustrates the distribution of green spaces in the area and their proximity to surrounding buildings. The analysis was conducted using the Attraction Reach function in QGIS, which calculates how many parks are accessible from each building within a walking distance of 500 meters. This threshold is commonly used to represent a comfortable walking distance in urban planning. To enhance the accuracy of the analysis, greater weight was assigned to larger green spaces, based on their total area. This weighting approach is supported by the concept of biophilia, which emphasizes the human need for connection with nature. Research shows that larger green spaces tend to be more biodiverse, thereby offering stronger biophilic benefits. This justifies prioritizing them in the accessibility calculation. On the map, buildings are displayed in graduated grayscale: Darker buildings (black) indicate higher accessibility to multiple or larger green spaces. Lighter buildings signify lower access.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/GreenAreas_1.png" class="img-fluid figure-img"></p>
+<figcaption>Quality of Life| Proximity to Greens Spaces</figcaption>
+</figure>
+</div>
+<p>This data is further aggregated onto river segments as explained previously, to show how overall accessibility to green spaces relates to the river corridor. A 1000-meter buffer is used for this aggregation to encompass the majority of the built environment and to provide a broader view of green space attraction beyond immediate riverfront areas. The general outcome from the map is that there are not enough large green spaces close to the urban area.</p>
+</section>
+<section id="criteria-2-proximity-to-activites" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-2-proximity-to-activites">CRITERIA 2 Proximity to Activites</h6>
+<p>The second criterion examines the presence of activities within the urban area to better understand how people interact with and move through the city. Various types of activities, such as churches, commercial spaces, and offices, were taken into account. An Attraction Reach algorithm, similar to the one used for assessing proximity to parks, was applied to calculate how many activity locations are accessible within a 500-meter walking distance from each building. This method provides valuable insights into potential movement patterns and highlights areas that may attract higher foot traffic. When combined with data on green spaces and parks, it contributes to a more comprehensive understanding of urban liveliness and accessibility. On the map, activity types are represented in distinct colors, while buildings are shown in a graduated grayscale, where darker shades indicate closer proximity to a greater number of activities.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Activities_1.png" class="img-fluid figure-img"></p>
+<figcaption>Quality of Life| Proximity to Activites</figcaption>
+</figure>
+</div>
+<p>Additionally, the data was aggregated into stream segments using a 1 kilometer buffer, which encompasses most of the built-up area in the city. This buffer was chosen to provide a citywide perspective on activity distribution, rather than limiting the analysis to areas immediately adjacent to the stream.</p>
+</section>
+<section id="criteria-3-concentration-of-p.o.i." class="level6">
+<h6 class="anchored" data-anchor-id="criteria-3-concentration-of-p.o.i.">CRITERIA 3 Concentration of P.O.I.</h6>
+<p>The third criterion used in this analysis is the concentration of Points of Interest (POIs) along the Teplica stream. These POIs encompass a wide variety of features, including recreational activities, shops, monuments, benches, public artworks, and other amenities that contribute to the vibrancy of public space. To evaluate their impact, only POIs located within a 200-meter buffer along the stream were considered. Additionally, POIs were graded based on their proximity to the stream, with those closer to the watercourse given a higher value. This approach reflects their potential to draw people toward the stream, thereby fostering greater interaction between the urban population and the surrounding natural environment. To perform this analysis a series of points was generated along the geometry of the stream, spaced at 10-meter intervals. This resolution is appropriate given the scale of both the stream and the urban context. The Attraction Reach function was then applied to assess how many POIs each of these points could access, taking into account both distance and relative importance. On the resulting map, individual POIs are visible, with redder points indicating those closest to the stream. As with previous criteria, the data was then aggregated onto segments of the stream, allowing for a clearer spatial understanding of attraction levels.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/POI_1.png" class="img-fluid figure-img"></p>
+<figcaption>Quality of Life| Concetration of POI</figcaption>
+</figure>
+</div>
+<p>The outcome highlights a notable concentration of POIs in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.</p>
+</section>
+<section id="climate-adaptation" class="level6">
+<h6 class="anchored" data-anchor-id="climate-adaptation">CLimate Adaptation</h6>
+<p>The third category of evaluation is Climate adaptation. This set of criteria is used to understand how well the area can adapt to extreme changes in the weather conditions. For that three maps were created:</p>
+<p>Permeability of the ground Flood Risk Land Surface Temperature</p>
+</section>
+<section id="criteria-1-permaiblity-of-the-ground" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-1-permaiblity-of-the-ground">Criteria 1 Permaiblity of the ground</h6>
+<p>This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS. To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale. Using the Zonal Statistics tool, the proportion of permeable versus impermeable surfaces was calculated for different zones along the stream. This highlighted areas with higher degrees of paving, indicating lower permeability.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Permeabilty_1.png" class="img-fluid figure-img"></p>
+<figcaption>Climate Adaptation| Permeability</figcaption>
+</figure>
+</div>
+<p>Finally, the results were normalized and the scale was inverted—so that higher values represent greater permeability. These values were then aggregated to the corresponding river segments for further analysis.</p>
+</section>
+<section id="criteria-2-impact-of-flooding" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-2-impact-of-flooding">Criteria 2 Impact of flooding</h6>
+<p>How many buildings are affected by q100 flood (unit buffer: 500m)</p>
+<p>To assess the impact of flooding, the amount of buildings affected by a q100 was estimated. First the flood risk map was retrieved from the mpt.svp.sk gis server. Multiple types of flood risk maps were available, namely the q10, q100 and q1000 maps. These respectively indicate the likeliness of such a flood, for example the q100 indicates a flood that would on average occur every 100 years. The q100 was chosen, since it is still a relatively common occurrence, and the impact is significant enough to take measures against. The flood basin reaches at most 500 meters away from the banks of the Teplica, therefore the buffer was chosen as such.</p>
+<p>Another important point to consider is that there are multiple ways to determine the impact of a flood. For example, the total land area affected, the amount of built-up land affected or the amount of buildings affected. Due to the urban structure of Senica, of which a large part consists of industrial buildings with large footprints, the total amount of buildings was chosen as a measure since it more closely measures the amount of people affected by a flood. A population density map would have been preferable, however, none was found at a sufficiently high resolution.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image\flood_impact.svg" class="img-fluid figure-img" width="312"></p>
+<figcaption>Climate Adaptation|Impact of Flooding: Buffer 500m</figcaption>
+</figure>
+</div>
+</section>
+<section id="criteria-3-surface-temperature" class="level6">
+<h6 class="anchored" data-anchor-id="criteria-3-surface-temperature">Criteria 3 Surface Temperature</h6>
+<p>Surface temperature (unit buffer: 200m)</p>
+<p>For the land surface temperature criterion the data was retrieved from the USGS Landsat 8-9 Level 2 satellite data. Particularly, the B10 band measures thermal infrared and is therefore representative of land surface temperature. The data is a snapshot of on a sunny day in may 2025.</p>
+<p>The buffer was chosen according to a study by Wu, Zhijie &amp; Zhang, Yixin. (2019) which found green spaces within 200m had a significant effect on urban land surface temperature.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image\temperature.svg" class="img-fluid figure-img" width="312"></p>
+<figcaption>Climate Adaptation|Impact of Flooding: Buffer 500m</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="criteria-weighting" class="level4">
+<h4 class="anchored" data-anchor-id="criteria-weighting">Criteria Weighting</h4>
+<p>Weighting of the criteria used in MCDA is carried out using the saaty matrix (Fuzzy AHP, n.d.). This is done separately for each criterion where the three sub-criteria within each criterion are weighed against each other based on its relevance to the overall objective of creation of a biophilic environment. It is also important to note that the weighting takes into account reliability of the data source for each sub criteria. Eigenvector(non-fuzzy) calculation method is used for all the weighting.&nbsp;</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/weighting_biodiversity.JPG" class="img-fluid figure-img" width="312"></p>
+<figcaption>Criteria Weighting - Biodiversity</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/weighting_QualityOfLife.JPG" class="img-fluid figure-img" width="312"></p>
+<figcaption>Criteria Weighting - Quality of Life</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Weighting_ClimateAdaptation.JPG" class="img-fluid figure-img" width="312"></p>
+<figcaption>Criteria Weighting - Climate Adaptation</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species. &nbsp;</p>
+<p>In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness.&nbsp;</p>
+<p>For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream.&nbsp;</p>
+<p>(All normalised maps to be inserted here)</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-nrow="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1943427559.png" class="img-fluid figure-img" width="329"></p>
+<figcaption>Biodiversity 1 : Percentage of green</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/distance_2.png" class="img-fluid figure-img" width="330"></p>
+<figcaption>Biodiversity 2: connectivity to green</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/species%20-2.png" class="img-fluid figure-img" width="318"></p>
+<figcaption>Biodiversity 3: Presence of species</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-89915424.png" class="img-fluid figure-img" width="330"></p>
+<figcaption>Quality of Life| Proximity to Greens Spaces (aggregated)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3669857891.png" class="img-fluid figure-img" width="342"></p>
+<figcaption>Quality of Life| Concetration of POI (aggregated)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3958591125.png" class="img-fluid figure-img" width="313"></p>
+<figcaption>Quality of Life| Proximity to Activites (aggregated)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2543957735.png" class="img-fluid figure-img" width="312"></p>
+<figcaption>Climate Adaptation| Permeability (aggregated)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.</p>
+<p>(Resultant map to be inserted)</p>
+</section>
+</section>
+<section id="typology-construction" class="level3">
+<h3 class="anchored" data-anchor-id="typology-construction">Typology construction</h3>
+<section id="preparation" class="level4">
+<h4 class="anchored" data-anchor-id="preparation">Preparation</h4>
+<ul>
+<li><p><strong>Objective</strong>:<br>
+To identify typologies of different part of urban stream itself, where local conditions affect biophilic condition of stream and nearby area and guide restoration design strategies to improve human-nature connection</p></li>
+<li><p><strong>Focused area</strong>:<br>
+The stream Teplica, which goes through the city of Senica</p></li>
+<li><p><strong>Spatial unit</strong>:<br>
+Fixed length of stream, 200m.Same as units for MCDA</p></li>
+<li><p><strong>Variables</strong>: 3 variables are picked from criteria of MCDA. Criterion with highest weight of each part is chosen, as they can represent most important variable that determines biophilic value of each stream unit.</p></li>
+</ul>
+<p><code>connectivity to green</code> – normalized value derived from distance from each stream unit to closest green space; related to connectivity from stream to green space nearby. As values are normalized from original numbers, actual distance in meter is turned into number between 0 to 1, and the higher number means the stream unit is more close to green space nearby.</p>
+<p><code>concentration of POI</code> – normalized value derived from Points of Interests (POI) within 200m buffer from each stream units. Proximity of each points withing buffered unit are combined to represent concentration of points. From normalized value, the higher number means that there are more concentrated POI in certain stream unit.</p>
+<p><code>Less impact from flood</code> – normalized value derived from impact of flooding. Number of buildings within 500m buffer that are intersecting with flood risk zone is counted. As it is normalized value to show adaptation to climate change, the higher number means that there are less impace from flooding anticipated.</p>
+<ul>
+<li><p><strong>Geometries of spatial unit</strong>:<br>
+Read in <code>unit_normalised.gpkg</code>, with a column <code>ID</code> created.</p></li>
+<li><p><strong>The value of variables in each spatial unit</strong>:<br>
+Read in <code>unit_normalised.gpkg</code>, with columns <code>Udistance</code>, <code>UPOI</code>, <code>UFlood.Risk</code> created.</p></li>
+</ul>
+</section>
+<section id="clustering-steps" class="level4">
+<h4 class="anchored" data-anchor-id="clustering-steps">Clustering Steps</h4>
+</section>
+<section id="step-1-load-packages-and-data-intall-packages-for-clustering-two-packages-are-used-sf-and-dplyr.-sf-is-for-processing-vector-data-and-dplyr-is-for-selecting-and-transforming-data.-in-case-you-have-not-installed-them-yet-remove-for-each-packages-and-run-the-code." class="level4">
+<h4 class="anchored" data-anchor-id="step-1-load-packages-and-data-intall-packages-for-clustering-two-packages-are-used-sf-and-dplyr.-sf-is-for-processing-vector-data-and-dplyr-is-for-selecting-and-transforming-data.-in-case-you-have-not-installed-them-yet-remove-for-each-packages-and-run-the-code.">Step 1| Load packages and data <strong>intall packages</strong> for clustering, two packages are used; <code>sf</code> and <code>dplyr</code>. <code>sf</code> is for processing vector data and <code>dplyr</code> is for selecting and transforming data. In case you have not installed them yet, remove # for each packages and run the code.</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("sf") </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("dplyr")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>load packages</strong><br>
+library of each packages should be loaded</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf) <span class="co"># for processing vector data </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.13.1, GDAL 3.10.2, PROJ 9.5.1; sf_use_s2() is TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># for selecting and transforming data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+</div>
+<p><strong>load data</strong><br>
+data should be located in the root of your working directory folder. In case you are not sure where the directory folder is, use <code>getwd()</code> (remove # before use it)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "C:/Users/Shreya/OneDrive - Delft University of Technology/Q4_analysis/report-asa2025-groupa"</code></pre>
+</div>
+</div>
+<p>in the project <code>units</code> will be used for the name of unit. run the code to load prepared data into <code>units</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>units <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"unit_normalised.gpkg"</span>, <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>view data</strong><br>
+the codes below can be used to see show how data looks like.use ctrl+enter for each line to see each aespects of data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#view first few rows of data</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(units) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 6 features and 14 fields
+Geometry type: MULTILINESTRING
+Dimension:     XY
+Bounding box:  xmin: 673000.8 ymin: 5394768 xmax: 677027.9 ymax: 5399683
+Projected CRS: ETRS89 / UTM zone 33N
+  ID Uspecies Upercentage Udistance UParks  UPOI UActivities UPermabilty
+1  1     0.25  0.00000000     0.105  0.000 0.000       0.000       1.000
+2  2     0.50  0.00000000     0.772  0.013 0.000       0.077       0.687
+3  3     0.25  0.09336323     1.000  0.234 1.000       1.000       0.000
+4  4     0.25  0.69824357     0.972  0.170 0.029       0.000       0.996
+5  5     0.25  0.97101530     0.926  0.248 0.000       0.000       0.956
+6  6     0.25  0.12951851     1.000  0.216 0.000       0.097       0.501
+  UFlood.Risk UTemperature UBiodiversity UQuality.of.Life UClimate     UMCDA
+1       1.000        1.000     0.1150000         0.000000 0.982000 0.3653010
+2       0.405        0.367     0.5110000         0.013554 0.467852 0.3304712
+3       0.602        0.315     0.5858408         0.754880 0.388787 0.5759261
+4       1.000        0.792     0.7230609         0.070582 0.951184 0.5810274
+5       0.992        0.810     0.7682538         0.079360 0.938470 0.5947659
+6       0.853        0.309     0.5948796         0.080954 0.665518 0.4466701
+                            geom
+1 MULTILINESTRING ((676913.7 ...
+2 MULTILINESTRING ((673165.7 ...
+3 MULTILINESTRING ((674248.5 ...
+4 MULTILINESTRING ((676638.6 ...
+5 MULTILINESTRING ((676783.3 ...
+6 MULTILINESTRING ((675286.8 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#count how many units will be used for clustering</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(units) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 54</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot connectivity to green</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(units[<span class="st">"Udistance"</span>], <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">main =</span> <span class="st">"Connectivity to Green"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="report_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot concentration of POI</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(units[<span class="st">"UPOI"</span>], <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">main =</span> <span class="st">"Concentration of POI"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="report_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot Less impat from flood</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(units[<span class="st">"UFlood.Risk"</span>], <span class="at">border =</span> <span class="cn">NA</span>, <span class="at">main =</span> <span class="st">"Less impact from Flood"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="report_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="step-2-standardization-select-relevant-features-for-clustering-only-3-columns-will-be-used-udistance-upoi-uflood.risk.-for-this-new-feature-should-be-created." class="level5">
+<h5 class="anchored" data-anchor-id="step-2-standardization-select-relevant-features-for-clustering-only-3-columns-will-be-used-udistance-upoi-uflood.risk.-for-this-new-feature-should-be-created.">Step 2| Standardization <strong>select relevant features</strong> for clustering, only 3 columns will be used: <code>Udistance</code>, <code>UPOI</code>, <code>UFlood.Risk</code>. for this new feature should be created.</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>features <span class="ot">&lt;-</span> units <span class="sc">|&gt;</span> <span class="co">#set name of new feature</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Udistance, UPOI, UFlood.Risk) <span class="sc">|&gt;</span> <span class="co">#select relevant columns only</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>() <span class="co"># remove geometry column so we just keep a data table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>standardize</strong><br>
+then the numbers in each column will be standardized for clustering.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Standardize (mean=0, sd=1) </span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>X_scaled <span class="ot">&lt;-</span> <span class="fu">scale</span>(features) <span class="co"># set name for standardized features</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-3-determine-optimal-k-calculate-inertia-in-this-step-k-means-for-every-number-between-2-to-9-will-be-tried.-then-inertia-will-be-calculated-for-each-k-which-means-the-total-distance-between-points-and-their-cluster-centers.-inertia-will-be-calculated-like-this" class="level5">
+<h5 class="anchored" data-anchor-id="step-3-determine-optimal-k-calculate-inertia-in-this-step-k-means-for-every-number-between-2-to-9-will-be-tried.-then-inertia-will-be-calculated-for-each-k-which-means-the-total-distance-between-points-and-their-cluster-centers.-inertia-will-be-calculated-like-this">Step 3| Determine optimal k <strong>calculate inertia</strong> in this step, k means for every number between 2 to 9 will be tried. then, inertia will be calculated for each k, which means the total distance between points and their cluster centers. inertia will be calculated like this:</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize an empty numeric vector to store inertia values </span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>inertia <span class="ot">&lt;-</span> <span class="fu">numeric</span>() <span class="co">#set the name for inertia value pocket</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Try k values from 2 to 9</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>k_values <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">9</span> <span class="co">#set the name for k value </span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each k value</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co"># tot.withinss is Total within-cluster sum of squares</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># This measures how compact the clusters are: lower is better.</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (k <span class="cf">in</span> k_values) {</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  km <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(X_scaled, <span class="at">centers =</span> k, <span class="at">nstart =</span> <span class="dv">20</span>) <span class="co">#set the name for kmeans value pocket</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  inertia <span class="ot">&lt;-</span> <span class="fu">c</span>(inertia, km<span class="sc">$</span>tot.withinss)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>elbow method</strong><br>
+to choose right k, elbow method will be used. for this we need to visualize how inertia changes while the k increases. then we can see where the inclination dramatically changes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the results into a data frame for plotting</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>elbow_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">k =</span> k_values, <span class="at">inertia =</span> inertia) <span class="co">#set the name of data frame</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the elbow plot</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(k_values, inertia,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">"b"</span>,                  </span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"darkblue"</span>,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Elbow Method"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="report_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>from the plot, we can clearly see elbow formed when k is 4.As a result, the optimal k for clustering will be 4.</p>
+</section>
+<section id="step-4-run-k-means-clustering-based-on-the-elbow-plot-we-choose-k-4-as-a-good-number-of-clusters.-we-now-run-the-k-means-algorithm-and-assign-each-grid-to-one-of-the-four-clusters." class="level5">
+<h5 class="anchored" data-anchor-id="step-4-run-k-means-clustering-based-on-the-elbow-plot-we-choose-k-4-as-a-good-number-of-clusters.-we-now-run-the-k-means-algorithm-and-assign-each-grid-to-one-of-the-four-clusters.">Step 4| Run K-Means Clustering Based on the elbow plot, we choose <code>k = 4</code> as a good number of clusters. We now run the K-means algorithm and assign each grid to one of the four clusters.</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sets the random number generator to a fixed state, to show same result when re-run the code</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">0</span>)  <span class="co"># set the number for fixed state</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Choose the number of clusters based on the elbow plot</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">4</span> </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Run K-means clustering on the standardized data</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>kmeans_result <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(X_scaled, <span class="at">centers =</span> k, <span class="at">nstart =</span> <span class="dv">20</span>) <span class="co">#set name for k-means result data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>add cluster label to unit data</strong><br>
+After running K-Means clustering, the clustering result can be added as a new column for unit data. we will add <code>cluster</code> column of <code>kmeans_result</code> to <code>units</code>. Then you can see how many units each cluster have.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the cluster labels to the spatial data</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>units<span class="sc">$</span>cluster <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(kmeans_result<span class="sc">$</span>cluster) </span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Show how many units fall into each cluster</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">table</span>(units<span class="sc">$</span>cluster))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ 1  2  3  4 
+ 2 38  8  6 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot clusters with base R</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(units[<span class="st">"cluster"</span>], </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Spatial Pattern of Urban Stream Clusters"</span>,</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="report_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>to save the result, use this code. remove # before run</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#st_write(units, "unit_cluster.gpkg")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-5-interpret-cluster-centers" class="level5">
+<h5 class="anchored" data-anchor-id="step-5-interpret-cluster-centers">Step 5| Interpret Cluster Centers</h5>
+</section>
+<section id="get-cluster-centers-to-interpret-each-clusters-we-need-to-get-center-values." class="level5">
+<h5 class="anchored" data-anchor-id="get-cluster-centers-to-interpret-each-clusters-we-need-to-get-center-values."><strong>Get cluster centers</strong> to interpret each clusters, we need to get center values.</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the cluster centers (in standardized form)</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>scaled_centers <span class="ot">&lt;-</span> kmeans_result<span class="sc">$</span>centers <span class="co">#set name for cluster center value pocket</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Print them</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Cluster centers (standardized):"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Cluster centers (standardized):"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(scaled_centers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Udistance        UPOI UFlood.Risk
+1  0.6919092  4.58331287  -0.9527137
+2  0.2415008 -0.19957365   0.3873995
+3  0.4823037  0.01089521  -2.0445324
+4 -2.4032132 -0.27833142   0.5900845</code></pre>
+</div>
+</div>
+<p>however, this is center in standardized number, to make numbers more readable, we can convert the numbers into original numbers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the centers back to original scale: x * SD + mean</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>original_centers <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">apply</span>(</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  scaled_centers, <span class="dv">1</span>, </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(x) x <span class="sc">*</span> <span class="fu">attr</span>(X_scaled, <span class="st">"scaled:scale"</span>) <span class="sc">+</span> <span class="fu">attr</span>(X_scaled, <span class="st">"scaled:center"</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the original values</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Cluster centers (original):"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Cluster centers (original):"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(original_centers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Udistance       UPOI UFlood.Risk
+1 1.0000000 0.73750000   0.6130000
+2 0.8922895 0.01194737   0.9491579
+3 0.9498750 0.04387500   0.3391250
+4 0.2598333 0.00000000   1.0000000</code></pre>
+</div>
+</div>
+<p>From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria. The table below summarizes the characteristics of each cluster based on the original (normalized) values.</p>
+<p><strong>Typology results</strong><br>
+</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Connectivity to green</th>
+<th>rank</th>
+<th>Concentration of POI</th>
+<th>rank</th>
+<th>Less impact from flood</th>
+<th>rank</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1.00</td>
+<td>1</td>
+<td>0.74</td>
+<td>1</td>
+<td>0.61</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>0.89</td>
+<td>3</td>
+<td>0.12</td>
+<td>3</td>
+<td>0.95</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0.95</td>
+<td>2</td>
+<td>0.44</td>
+<td>2</td>
+<td>0.34</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0.26</td>
+<td>4</td>
+<td>0.00</td>
+<td>4</td>
+<td>1.00</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="typology-description" class="level3">
+<h3 class="anchored" data-anchor-id="typology-description">Typology Description</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Connectivitity to green</th>
+<th>Concentration of POI</th>
+<th>Anticipated impact from flood</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>next to green</td>
+<td>high</td>
+<td>medium-high</td>
+<td>best condition for biophilia, need a plan for preventing flood</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>distant to green</td>
+<td>low</td>
+<td>low</td>
+<td>green space needs to be extended, more POI can be added</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>close to green</td>
+<td>medium-high</td>
+<td>high</td>
+<td>urgent need for preventing flood</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>far from green</td>
+<td>none</td>
+<td>none</td>
+<td>lots of potential for big parks and activities</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
