@@ -137,7 +137,9 @@ For the MCDA, the analyses are split into three main categories: quality of life
 
 #### Units
 
-The units are chosen as 200m intervals on the stream
+To evaluate these criteria for the Teplica stream, a spatial unit needed to be chosen. The first option was to tile the plane around the stream using either squares or hexagons, and use every tile through which the stream flows to aggregate data. However, the Teplica stream is quite small and using such units requires a very course scaleto meaningfully aggregate data, due to which the desired spatial detail could not be achieved. The second option was to use points on the stream and buffer in a set radius around them. However, this method averaged most criteria too much to the point it was hard to get a meaningful distinction between the points. In the end, a compromise was selected; the stream was divided into 200m intervals and areas were then buffered out perpendicular to the stream, without overlapping. To achieve a good result the stream was first simplified, due to which some parts might not fully align with the stream, but the overall quality of the zones was improved.
+
+An important factor to consider was that every criteria might have a different spatial influence. Some criteria work on a very local scale, like temperature, which is only relevant in a small area around a stream or a green space, while others like presence of species are require a larger area to be relevant. To account for this, different buffer distances were chosen for every criterion. How exactly these were determined is further explained in the section of the relevant criterion.
 
 ##### Biodiversity
 
@@ -245,7 +247,7 @@ To assess the impact of flooding, the amount of buildings affected by a q100 was
 
 Another important point to consider is that there are multiple ways to determine the impact of a flood. For example, the total land area affected, the amount of built-up land affected or the amount of buildings affected. Due to the urban structure of Senica, of which a large part consists of industrial buildings with large footprints, the total amount of buildings was chosen as a measure since it more closely measures the amount of people affected by a flood. A population density map would have been preferable, however, none was found at a sufficiently high resolution.
 
-![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\flood_impact.svg){width="312"}
+![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\flood_impact.svg){width="700"}
 
 ###### Criteria 3 Surface Temperature
 
@@ -255,20 +257,18 @@ For the land surface temperature criterion the data was retrieved from the USGS 
 
 The buffer was chosen according to a study by Wu, Zhijie & Zhang, Yixin. (2019) which found green spaces within 200m had a significant effect on urban land surface temperature.
 
-![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\temperature.svg){width="312"}
+![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\temperature.svg){width="700"}
 
 #### Criteria Weighting
 
 Weighting of the criteria used in MCDA is carried out using the saaty matrix (Fuzzy AHP, n.d.). This is done separately for each criterion where the three sub-criteria within each criterion are weighed against each other based on its relevance to the overall objective of creation of a biophilic environment. It is also important to note that the weighting takes into account reliability of the data source for each sub criteria. Eigenvector(non-fuzzy) calculation method is used for all the weighting. 
 
 ::: {layout-ncol="3"}
-
 ![Criteria Weighting - Biodiversity](image/weighting_biodiversity.JPG){width="312"}
 
 ![Criteria Weighting - Quality of Life](image/weighting_QualityOfLife.JPG){width="312"}
 
 ![Criteria Weighting - Climate Adaptation](image/Weighting_ClimateAdaptation.JPG){width="312"}
-
 :::
 
 For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species.  
@@ -280,20 +280,7 @@ For Climate Adaptation, anticipated flood affected areas carry the highest weigh
 (All normalised maps to be inserted here)
 
 ::: {layout-nrow="3"}
-![Biodiversity 1 : Percentage of green](images/clipboard-1943427559.png){width="329"}
-
-![Biodiversity 2: connectivity to green](image/distance_2.png){width="330"}
-
-![Biodiversity 3: Presence of species](image/species%20-2.png){width="318"}
-
-![Quality of Life\| Proximity to Greens Spaces (aggregated)](images/clipboard-89915424.png){width="330"}
-
-![Quality of Life\| Concetration of POI (aggregated)](images/clipboard-3669857891.png){width="342"}
-
-![Quality of Life\| Proximity to Activites (aggregated)](images/clipboard-3958591125.png){width="313"}
-
-![Climate Adaptation\| Permeability (aggregated)](images/clipboard-2543957735.png){width="312"}
-:::
+![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
@@ -518,3 +505,4 @@ From original centers, we examine the centers of each cluster in original values
 ## Discussion
 
 ## Conclusion
+:::
