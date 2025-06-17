@@ -279,6 +279,8 @@ For Climate Adaptation, anticipated flood affected areas carry the highest weigh
 
 ![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
+![Quintiles of the final MCDA score](image/mcda quintiles.jpg)
+
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
 ### Typology construction
