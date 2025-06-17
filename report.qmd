@@ -137,6 +137,8 @@ For the MCDA, the analyses are split into three main categories: quality of life
 
 To evaluate these criteria for the Teplica stream, a spatial unit needed to be chosen. The first option was to tile the plane around the stream using either squares or hexagons, and use every tile through which the stream flows to aggregate data. However, the Teplica stream is quite small and using such units requires a very course scaleto meaningfully aggregate data, due to which the desired spatial detail could not be achieved. The second option was to use points on the stream and buffer in a set radius around them. However, this method averaged most criteria too much to the point it was hard to get a meaningful distinction between the points. In the end, a compromise was selected; the stream was divided into 200m intervals and areas were then buffered out perpendicular to the stream, without overlapping. To achieve a good result the stream was first simplified, due to which some parts might not fully align with the stream, but the overall quality of the zones was improved.
 
+why the 200m interval was chosen...
+
 An important factor to consider was that every criteria might have a different spatial influence. Some criteria work on a very local scale, like temperature, which is only relevant in a small area around a stream or a green space, while others like presence of species are require a larger area to be relevant. To account for this, different buffer distances were chosen for every criterion. How exactly these were determined is further explained in the section of the relevant criterion.
 
 ##### Biodiversity
@@ -275,11 +277,9 @@ In Quality of Life, the proximity of points of interest such as cafes, park benc
 
 For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
 
-
 ![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
-
 
 ### Typology construction
 
@@ -500,4 +500,5 @@ From original centers, we examine the centers of each cluster in original values
 ## Discussion
 
 ## Conclusion
+
 :::
