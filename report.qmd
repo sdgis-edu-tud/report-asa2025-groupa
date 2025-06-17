@@ -54,7 +54,7 @@ and start the report from the Introduction section below.
 
 #### Role Distribution
 
--   **Project Coordinator**\
+-   **Project Coordinator**  
     *organizes meetings and deadlines*  
     -   Vincent  
     -   Jasper  
@@ -62,30 +62,30 @@ and start the report from the Introduction section below.
     -   Shreya  
     -   Vasileios
     
--   **Research Lead**\
+-   **Research Lead**  
     *oversees background research*  
     -   Jasper
     
--   **Mapping Specialist**\
+-   **Mapping Specialist**  
     *creates maps and spatial visuals*  
     -   Vincent  
     -   Vasilius
     
--   **Data Analyst**\
+-   **Data Analyst**  
     *analyzes collected data*  
     -   Youjin  
     -   Vasilius
     
--   **Writer/Editor**\
+-   **Writer/Editor**  
     *drafts and edits project texts*  
     -   Shreya  
     -   Jasper
     
--   **Presentation Lead**\
+-   **Presentation Lead**  
     *prepares group presentations*  
     -   Vincent
     
--   **Design Lead**\
+-   **Design Lead**  
     *works on visual layouts and graphics*  
     -   Youjin  
     -   Shreya
