@@ -96,11 +96,9 @@ and start the report from the Introduction section below.
 
 ##### **The case of Senica** 
 
-Through the heart of the city of Senica (a Slovak city, close to the Czech border) flows the Teplica. Due to economic pressures the stream has been heavily altered and is rendered invisible and insignificant in the urban landscape. Currently the Teplica is struggling with several problems, like poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the 'ReBioClim-project'. This EU-project aims to restore urban streams while focusing on both biodiversity, climate change and liveability in cities (City of Senica, 2024a). \
+Through the heart of the city of Slovak Senica, near the Czech border, flows the Teplica. Due to economic pressures the stream has been heavily altered and has been rendered invisible and insignificant in the urban landscape. Currently, the Teplica is struggling with several problems, namely poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam, and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the 'ReBioClim-project'. This EU project aims to restore urban streams while focusing on both biodiversity, climate change, and liveability in cities (City of Senica, 2024a). \
  \
-While the Slovak water management company, SVP, focuses mainly on protecting the area against flooding due to heavy rainfall, more functional access to the water and improved water flow (City of Senica, 2024b), other focuses of the project include improving hydro morphology, ecology and diversity in urban areas and utilizing the stream for recreational purposes. Little attention is given to qualitative and experiential aspects such as human-nature connectedness. \
- \
-In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a way to determine potential for human-nature connectedness along the stream of Teplica. \
+While the Slovak water management company (SVP) focuses mainly on protecting the area against flooding caused by heavy rainfall, more functional access to the water, and improved water flow (City of Senica, 2024b), other goals of the project include improving hydromorphology, ecology and diversity in urban areas, and utilizing the stream for recreational purposes. On the other hand, qualitative and experiential aspects such as human-nature connectedness are given little attention. In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a method to determine the potential for human-nature connectedness along the Teplica stream. \
  
 
 -   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?  
@@ -137,7 +135,9 @@ For the MCDA, the analyses are split into three main categories: quality of life
 
 #### Units
 
-The units are chosen as 200m intervals on the stream
+To evaluate these criteria for the Teplica stream, a spatial unit needed to be chosen. The first option was to tile the plane around the stream using either squares or hexagons, and use every tile through which the stream flows to aggregate data. However, the Teplica stream is quite small and using such units requires a very course scaleto meaningfully aggregate data, due to which the desired spatial detail could not be achieved. The second option was to use points on the stream and buffer in a set radius around them. However, this method averaged most criteria too much to the point it was hard to get a meaningful distinction between the points. In the end, a compromise was selected; the stream was divided into 200m intervals and areas were then buffered out perpendicular to the stream, without overlapping. To achieve a good result the stream was first simplified, due to which some parts might not fully align with the stream, but the overall quality of the zones was improved.
+
+An important factor to consider was that every criteria might have a different spatial influence. Some criteria work on a very local scale, like temperature, which is only relevant in a small area around a stream or a green space, while others like presence of species are require a larger area to be relevant. To account for this, different buffer distances were chosen for every criterion. How exactly these were determined is further explained in the section of the relevant criterion.
 
 ##### Biodiversity
 
@@ -193,7 +193,7 @@ Normalise value = (count – min count)/ (max count - min count) 
 
 The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest.
 
-###### Quality of Life
+##### Quality of Life
 
 The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 3 maps: Proximity to Green Spaces Attractions between Activities and Parks Concentration of Points of Interest
 
@@ -223,7 +223,7 @@ The third criterion used in this analysis is the concentration of Points of Inte
 
 The outcome highlights a notable concentration of POIs in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.
 
-###### CLimate Adaptation
+##### Climate Adaptation
 
 The third category of evaluation is Climate adaptation. This set of criteria is used to understand how well the area can adapt to extreme changes in the weather conditions. For that three maps were created:
 
@@ -245,7 +245,7 @@ To assess the impact of flooding, the amount of buildings affected by a q100 was
 
 Another important point to consider is that there are multiple ways to determine the impact of a flood. For example, the total land area affected, the amount of built-up land affected or the amount of buildings affected. Due to the urban structure of Senica, of which a large part consists of industrial buildings with large footprints, the total amount of buildings was chosen as a measure since it more closely measures the amount of people affected by a flood. A population density map would have been preferable, however, none was found at a sufficiently high resolution.
 
-![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\flood_impact.svg){width="312"}
+![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\flood_impact.svg){width="700"}
 
 ###### Criteria 3 Surface Temperature
 
@@ -255,7 +255,7 @@ For the land surface temperature criterion the data was retrieved from the USGS 
 
 The buffer was chosen according to a study by Wu, Zhijie & Zhang, Yixin. (2019) which found green spaces within 200m had a significant effect on urban land surface temperature.
 
-![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\temperature.svg){width="312"}
+![Climate Adaptation\|Impact of Flooding: Buffer 500m](image\temperature.svg){width="700"}
 
 #### Criteria Weighting
 
@@ -275,27 +275,11 @@ In Quality of Life, the proximity of points of interest such as cafes, park benc
 
 For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
 
-(All normalised maps to be inserted here)
 
-::: {layout-nrow="3"}
-![Biodiversity 1 : Percentage of green](images/clipboard-1943427559.png){width="329"}
-
-![Biodiversity 2: connectivity to green](image/distance_2.png){width="330"}
-
-![Biodiversity 3: Presence of species](image/species%20-2.png){width="318"}
-
-![Quality of Life\| Proximity to Greens Spaces (aggregated)](images/clipboard-89915424.png){width="330"}
-
-![Quality of Life\| Concetration of POI (aggregated)](images/clipboard-3669857891.png){width="342"}
-
-![Quality of Life\| Proximity to Activites (aggregated)](images/clipboard-3958591125.png){width="313"}
-
-![Climate Adaptation\| Permeability (aggregated)](images/clipboard-2543957735.png){width="312"}
-:::
+![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
-(Resultant map to be inserted)
 
 ### Typology construction
 
@@ -516,3 +500,4 @@ From original centers, we examine the centers of each cluster in original values
 ## Discussion
 
 ## Conclusion
+:::
