@@ -275,11 +275,9 @@ In Quality of Life, the proximity of points of interest such as cafes, park benc
 
 For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
 
-
 ![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
-
 
 ### Typology construction
 
@@ -310,7 +308,10 @@ The three main criteria - Biodiversity, Quality of Life and climate adaptation a
 
 #### Clustering Steps
 
-#### Step 1\| Load packages and data **intall packages** for clustering, two packages are used; `sf` and `dplyr`. `sf` is for processing vector data and `dplyr` is for selecting and transforming data. In case you have not installed them yet, remove \# for each packages and run the code.
+##### Step 1\| Load packages and data
+
+**intall packages**\
+for clustering, two packages are used; `sf` and `dplyr`. `sf` is for processing vector data and `dplyr` is for selecting and transforming data. In case you have not installed them yet, remove \# for each packages and run the code.
 
 ```{r}
 #install.packages("sf") 
@@ -360,7 +361,10 @@ plot(units["UFlood.Risk"], border = NA, main = "Less impact from Flood")
 
 ```
 
-##### Step 2\| Standardization **select relevant features** for clustering, only 3 columns will be used: `Udistance`, `UPOI`, `UFlood.Risk`. for this new feature should be created.
+##### Step 2\| Standardization
+
+**select relevant features**\
+for clustering, only 3 columns will be used: `Udistance`, `UPOI`, `UFlood.Risk`. for this new feature should be created.
 
 ```{r}
 features <- units |> #set name of new feature
@@ -376,7 +380,10 @@ then the numbers in each column will be standardized for clustering.
 X_scaled <- scale(features) # set name for standardized features
 ```
 
-##### Step 3\| Determine optimal k **calculate inertia** in this step, k means for every number between 2 to 9 will be tried. then, inertia will be calculated for each k, which means the total distance between points and their cluster centers. inertia will be calculated like this:
+##### Step 3\| Determine optimal k 
+
+**calculate inertia**\
+in this step, k means for every number between 2 to 9 will be tried. then, inertia will be calculated for each k, which means the total distance between points and their cluster centers. inertia will be calculated like this:
 
 ```{r}
 # Initialize an empty numeric vector to store inertia values 
@@ -411,7 +418,9 @@ plot(k_values, inertia,
 
 from the plot, we can clearly see elbow formed when k is 4.As a result, the optimal k for clustering will be 4.
 
-##### Step 4\| Run K-Means Clustering Based on the elbow plot, we choose `k = 4` as a good number of clusters. We now run the K-means algorithm and assign each grid to one of the four clusters.
+##### Step 4\| Run K-Means Clustering 
+
+Based on the elbow plot, we choose `k = 4` as a good number of clusters. We now run the K-means algorithm and assign each grid to one of the four clusters.
 
 ```{r}
 # sets the random number generator to a fixed state, to show same result when re-run the code
@@ -448,7 +457,8 @@ to save the result, use this code. remove \# before run
 
 ##### Step 5\| Interpret Cluster Centers
 
-##### **Get cluster centers** to interpret each clusters, we need to get center values.
+**Get cluster centers**\
+to interpret each clusters, we need to get center values.
 
 ```{r}
 # Get the cluster centers (in standardized form)
@@ -475,9 +485,39 @@ print(original_centers)
 
 ```
 
-From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria. The table below summarizes the characteristics of each cluster based on the original (normalized) values.
+From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria. 
 
-**Typology results**\
+
+
+
+## Results
+
+### MCDA
+
+#### Biodiversity
+
+**procedure maps**/
+**result maps with normalized values**/
+**final map of biodiversity**/
+
+#### Quality of Life
+
+**procedure maps**/
+**result  maps with normalized values**/
+**final map of quality of life**
+
+#### Climate adaptation
+
+**procedure maps**/
+**result maps with normalized values**/
+**final map of climate adaptation**/
+
+#### Combined map
+
+
+### Typology
+
+**central value of each cluster**/
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
@@ -486,9 +526,7 @@ From original centers, we examine the centers of each cluster in original values
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
 | 4 | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
 
-## Results
-
-### Typology Description
+**characteristic of each clusters**/
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
 |---------------|---------------|---------------|---------------|---------------|
@@ -500,4 +538,5 @@ From original centers, we examine the centers of each cluster in original values
 ## Discussion
 
 ## Conclusion
+
 :::
