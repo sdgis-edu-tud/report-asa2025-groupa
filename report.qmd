@@ -96,11 +96,9 @@ and start the report from the Introduction section below.
 
 ##### **The case of Senica** 
 
-Through the heart of the city of Senica (a Slovak city, close to the Czech border) flows the Teplica. Due to economic pressures the stream has been heavily altered and is rendered invisible and insignificant in the urban landscape. Currently the Teplica is struggling with several problems, like poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the 'ReBioClim-project'. This EU-project aims to restore urban streams while focusing on both biodiversity, climate change and liveability in cities (City of Senica, 2024a). \
+Through the heart of the city of Slovak Senica, near the Czech border, flows the Teplica. Due to economic pressures the stream has been heavily altered and has been rendered invisible and insignificant in the urban landscape. Currently, the Teplica is struggling with several problems, namely poor flood handling, poor morphological and ecological quality, low flow during dry periods, an upstream dam, and poorly utilized public space (Škrinár, 2025). The city of Senica is taking steps towards the restoration of this stream serving as an exemplary project within the 'ReBioClim-project'. This EU project aims to restore urban streams while focusing on both biodiversity, climate change, and liveability in cities (City of Senica, 2024a). \
  \
-While the Slovak water management company, SVP, focuses mainly on protecting the area against flooding due to heavy rainfall, more functional access to the water and improved water flow (City of Senica, 2024b), other focuses of the project include improving hydro morphology, ecology and diversity in urban areas and utilizing the stream for recreational purposes. Little attention is given to qualitative and experiential aspects such as human-nature connectedness. \
- \
-In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a way to determine potential for human-nature connectedness along the stream of Teplica. \
+While the Slovak water management company (SVP) focuses mainly on protecting the area against flooding caused by heavy rainfall, more functional access to the water, and improved water flow (City of Senica, 2024b), other goals of the project include improving hydromorphology, ecology and diversity in urban areas, and utilizing the stream for recreational purposes. On the other hand, qualitative and experiential aspects such as human-nature connectedness are given little attention. In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a method to determine the potential for human-nature connectedness along the Teplica stream. \
  
 
 -   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?  
@@ -195,7 +193,7 @@ Normalise value = (count – min count)/ (max count - min count) 
 
 The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest.
 
-###### Quality of Life
+##### Quality of Life
 
 The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also see if there is potential for future development. The criteria used to evaluate the situation are visualised in 3 maps: Proximity to Green Spaces Attractions between Activities and Parks Concentration of Points of Interest
 
@@ -225,7 +223,7 @@ The third criterion used in this analysis is the concentration of Points of Inte
 
 The outcome highlights a notable concentration of POIs in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.
 
-###### CLimate Adaptation
+##### Climate Adaptation
 
 The third category of evaluation is Climate adaptation. This set of criteria is used to understand how well the area can adapt to extreme changes in the weather conditions. For that three maps were created:
 
