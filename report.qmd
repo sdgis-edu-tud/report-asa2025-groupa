@@ -277,14 +277,11 @@ In Quality of Life, the proximity of points of interest such as cafes, park benc
 
 For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
 
-(All normalised maps to be inserted here)
 
-::: {layout-nrow="3"}
 ![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
-(Resultant map to be inserted)
 
 ### Typology construction
 
