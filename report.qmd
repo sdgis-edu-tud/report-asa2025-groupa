@@ -62,33 +62,40 @@ and start the report from the Introduction section below.
     -   Shreya  
     -   Vasileios
     
+    
 -   **Research Lead**  
-    *oversees background research*  
+    *oversees background research*
     -   Jasper
+<br>
     
 -   **Mapping Specialist**  
-    *creates maps and spatial visuals*  
+    *creates maps and spatial visuals*
     -   Vincent  
-    -   Vasilius
+    -   Vasileios
+<br>  
     
 -   **Data Analyst**  
-    *analyzes collected data*  
+    *analyzes collected data*
     -   Youjin  
-    -   Vasilius
+    -   Vasileios
+<br>   
     
 -   **Writer/Editor**  
-    *drafts and edits project texts*  
+    *drafts and edits project texts*
     -   Shreya  
     -   Jasper
+<br>    
     
 -   **Presentation Lead**  
     *prepares group presentations*  
     -   Vincent
+<br>   
     
 -   **Design Lead**  
     *works on visual layouts and graphics*  
     -   Youjin  
     -   Shreya
+    
 
 ## Introduction
 
