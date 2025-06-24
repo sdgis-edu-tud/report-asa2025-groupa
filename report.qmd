@@ -54,55 +54,48 @@ and start the report from the Introduction section below.
 
 #### Role Distribution
 
--   **Project Coordinator**  
+-   **Project Coordinator**\
     *organizes meetings and deadlines*
-    
-    -   Vincent  
-    -   Jasper  
-    -   Youjin  
-    -   Shreya  
+
+    -   Vincent\
+    -   Jasper\
+    -   Youjin\
+    -   Shreya\
     -   Vasileios
-    
-    
--   **Research Lead**  
+
+-   **Research Lead**\
     *oversees background research*
-    
-    -   Jasper
-    <br>
-    
--   **Mapping Specialist**  
+
+    -   Jasper <br>
+
+-   **Mapping Specialist**\
     *creates maps and spatial visuals*
-    
-    -   Vincent  
-    -   Vasileios
-    <br>  
-    
--   **Data Analyst**  
+
+    -   Vincent\
+    -   Vasileios <br>
+
+-   **Data Analyst**\
     *analyzes collected data*
-    
-    -   Youjin  
-    -   Vasileios
-    <br>   
-    
--   **Writer/Editor**  
+
+    -   Youjin\
+    -   Vasileios <br>
+
+-   **Writer/Editor**\
     *drafts and edits project texts*
-    
-    -   Shreya  
-    -   Jasper
-    <br>    
-    
--   **Presentation Lead**  
+
+    -   Shreya\
+    -   Jasper <br>
+
+-   **Presentation Lead**\
     *prepares group presentations*
-    
-    -   Vincent
-    <br>   
-    
--   **Design Lead**  
+
+    -   Vincent <br>
+
+-   **Design Lead**\
     *works on visual layouts and graphics*
-    
-    -   Youjin  
+
+    -   Youjin\
     -   Shreya
-    
 
 ## Introduction
 
@@ -112,14 +105,13 @@ Through the heart of the city of Slovak Senica, near the Czech border, flows the
 \
 While the Slovak water management company (SVP) focuses mainly on protecting the area against flooding caused by heavy rainfall, more functional access to the water, and improved water flow (City of Senica, 2024b), other goals of the project include improving hydromorphology, ecology and diversity in urban areas, and utilizing the stream for recreational purposes. On the other hand, qualitative and experiential aspects such as human-nature connectedness are given little attention. In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a method to determine the potential for human-nature connectedness along the Teplica stream.\
 
-
 -   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?
 
 ##### **Human-nature connectedness and its relevance to urban stream restoration**
 
 Human-nature connectedness challenges the idea of human superiority over nature,while strengthening the outlook that humankind is a part of nature. Research has shown that this sense of connectedness cannot be created through education only (Spiller, 2024). Spatial composition plays an important role in this process where people must come into direct contact to build a strong relationship with their natural environments.
 
-A theory that has gained recognition in recent decades and is often associated with human-nature connectedness is the biophilia hypothesis (Bhaskar, 2023; Lefosse et al., 2023). This hypothesis states that humans have an innate tendency to seek connections to nature (Grinde & Patil, 2009; Wilson, 1984). This connection is supported with evidence from multiple different fields of study (Grinde & Patil, 2009). The results from several of these studies show a strong connection between human-nature connectedness and an increased human health and wellbeing. This connection is not just physical, but also cognitive, emotional and biophysical (Ives et al., 2017). 
+A theory that has gained recognition in recent decades and is often associated with human-nature connectedness is the biophilia hypothesis (Bhaskar, 2023; Lefosse et al., 2023). This hypothesis states that humans have an innate tendency to seek connections to nature (Grinde & Patil, 2009; Wilson, 1984). This connection is supported with evidence from multiple different fields of study (Grinde & Patil, 2009). The results from several of these studies show a strong connection between human-nature connectedness and an increased human health and wellbeing. This connection is not just physical, but also cognitive, emotional and biophysical (Ives et al., 2017).
 
 Biophilic design, based on the biophilia hypothesis focuses on reinforcing the relationship between humans and the natural world through the creation or strengthening of biophilic places (Da Silva et al., 2021). Human-nature connectedness forms the starting point of this approach. It proposes to utilize green infrastructure to improve ecosystem health and human wellbeing. These places have shown great potential in different ways. They increase social interaction, as people view them as places of improved livability and sociability (Lefosse et al., 2023). Biophilic places also strengthen social cohesion, as they positively influence the perceived social cohesion, as well as facilitating more (semi-)social activities that strengthen community bonds. Another important effect of biophilic places, and the subsequent increase in regular experiences of nature, is that they raise environmental awareness and encourage a more sustainable way of living. Furthermore, on the long term biophilia can aid ecosystem conservation efforts (Bhaskar, 2023). People who are connected to nature and have a strong relationship to nature are more likely to participate in more sustainable behavior and to support ecosystem and biodiversity conservation efforts.
 
@@ -141,8 +133,9 @@ Another way in which biodiversity and biophilic integration are linked is throug
 
 #### Criteria
 
-For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship.
+For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship. The following table shows details for each criteria along with the buffer and weights used, these are things that are better explained later for each individual criteria.
 
+![Criteria Overview](image/MCDA_table.png)
 
 #### Units
 
@@ -152,11 +145,9 @@ The 200m interval was chosen because it divided the stream into appropriate size
 
 An important factor to consider was that every criteria might have a different spatial influence. Some criteria work on a very local scale, like temperature, which is only relevant in a small area around a stream or a green space, while others like presence of species require a larger area to be relevant. To account for this, different buffer distances were chosen for every criterion. How exactly these were determined is further explained in the section of the relevant criterion.
 
-
 ##### Biodiversity
 
 The first category of evaluation is Biodiversity. To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur & Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor & McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.
-
 
 ###### **Biodiversity 1** \| Percentage of green
 
@@ -164,16 +155,13 @@ The criterion used in this analysis is based on the Biophilic Planning Indicator
 
 To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas within this 500m buffer were intersected with the buffered spatial units, and a new column was created to represent the amount of green space within each unit.
 
-This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. The result, expressed as a percentage, is shown in the image below:
-
-Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
+This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
 
 > Normalized value = (Percentage of green)/30
 
 To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above.
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
-
 
 ###### **Biodiversity 2** \| Connectivity to green
 
@@ -193,46 +181,41 @@ Since the minimum distance was 0, the formula simplifies to:
 
 This method produces a normalized score between 0 and 1, where a value of 1 represents the shortest distance (i.e., highest potential connectivity), and values closer to 0 indicate increasing distance from green spaces. This approach directly reflects the inverse relationship between distance and ecological connectivity, where farther distances correspond to lower connectivity potential. Compared to the previous quantile-based method, this continuous normalization may better capture the steep decline in connectivity that occurs with increasing distance from green spaces.
 
-
 ###### **Biodiversity 3** \| Presence of species
 
 It is worth noting that the presence of ecological corridors near or within urban areas, is one of the important things in biophilic cities. Species present in the area are a direct indicator of the presence of varied habitats and ecological areas in the city. The findings from these could then be used to find areas lacking biodiversity in order to improve diversity in them.
 
-A buffer of 2km is applied to this criterion considering the movement of fauna, which includes mammals and reptiles. This buffer area also includes parts of forest surrounding the east of Senica. Data on a total of 9 distinct faunal species (sourced from the Slovak atlas) was merged to form a layer containing count of each of the species. This was intersected with the spatial buffer to count the number of distinct species in each buffer unit. 9 indicates the highest diversity whereas 5 is the lowest count for diversity of species per unit. While also aggregating the values to the stream segments to see how this is translated to the spatial unit.
-
+A buffer of 2km is applied to this criterion considering the movement of fauna, which includes mammals and reptiles. This buffer area also includes parts of forest surrounding the east of Senica. Data on a total of 9 distinct faunal species (sourced from the Slovak atlas) was merged to form a layer containing count of each of the species. This was intersected with the spatial buffer to count the number of distinct species in each buffer unit, 9 indicates the highest diversity whereas 5 is the lowest count for diversity of species per unit. The values were also aggregated to the stream segments to see how this is translated to the spatial unit.
 
 > Normalise value = (value – min value)/ (max value - min value)
 
-The range of species count is classifed into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest.
+The range of species count is classified into ten quantile-based groups to maintain homogenity while comparing with other criteria. A score of 0 – 1.0 is assigned to each group ranging from lowest biodiversity count to the highest.
 
 ##### Quality of Life
 
 The second category of evaluation is Quality of Life where different criteria have been created and evaluated to assess the current situation in Senica and also understand if and where there is potential for future changes. The criteria used to evaluate the situation are Proximity to Green Spaces , Proximity to Activities and Concentration of Points of Interest.
 
-These criteria  in order are used to describe how well connected are the people with the green spaces, what is the daily movement of the people and if there is something that attracts the people to the stream of Teplica.
+These criteria in order are used to describe how well connected are the people with the green spaces, what is the daily movement of the people and if there is something that attracts the people to the stream of Teplica.
 
+###### **Quality of Life 1** \| Proximity to Parks
 
-###### **Quality of Life 1** \| Proximity to Green Spaces
-
-This criteria describes  the distribution of green spaces in the area and their proximity to surrounding buildings. The analysis was conducted using the Attraction Reach function in QGIS, which calculates how many parks are accessible from each building within a walking distance of 500 meters. This threshold is commonly used to represent a comfortable walking distance in urban planning. To enhance the accuracy of the analysis, greater weight was assigned to larger green spaces, based on their total area. This weighting approach is supported by the concept of biophilia, which emphasizes the human need for connection with nature. Research shows that larger green spaces tend to be more biodiverse, thereby offering stronger biophilic benefits (Conor & McCoy, 2013). This justifies prioritizing them in the accessibility calculation. 
+This criteria describes the distribution of green spaces in the area and their proximity to surrounding buildings. The analysis was conducted using the Attraction Reach function in QGIS, which calculates how many parks are accessible from each building within a walking distance of 500 meters. This threshold is commonly used to represent a comfortable walking distance in urban planning. To enhance the accuracy of the analysis, greater weight was assigned to larger green spaces, based on their total area. This weighting approach is supported by the concept of biophilia, which emphasizes the human need for connection with nature. Research shows that larger green spaces tend to be more biodiverse, thereby offering stronger biophilic benefits (Conor & McCoy, 2013). This justifies prioritizing them in the accessibility calculation.
 
 The unit buffer used is 1000m in order to include most of the city of Senica in order to provide a broader view of green space attraction beyond immediate riverfront areas. The outcome from this analysis was later normalised to be comparable with the other criteria. The method used for normalising is:
 
-> Normalise value = (value – min value)/ (max value - min value) 
+> Normalise value = (value – min value)/ (max value - min value)
 
 This data is further aggregated onto river segments by intersecting the buffer units with the Teplica segments in order to have all the data in the same unit of analysis.
-
 
 ###### **Quality of Life 2** \| Proximity to Activities
 
 The second criterion examines the presence of activities within the urban area to better understand how people interact with and move through the city. Various types of activities, such as churches, commercial spaces, and offices, were taken into account. An Attraction Reach algorithm, similar to the one used for assessing proximity to parks, was applied to calculate how many activity locations are accessible within a 500-meter walking distance from each building. This method provides valuable insights into potential movement patterns and highlights areas that may attract higher foot traffic. When combined with data on green spaces and parks, it contributes to a more comprehensive understanding of urban liveliness and accessibility.
 
-The unit buffer used in this case was also 1000m around the stream  to provide a citywide perspective on activity distribution, rather than limiting the analysis to areas immediately adjacent to the stream.The result of the Attraction reach algorithm where joined by location summary with the 1000m buffer and later normalised using the same method as before.
+The unit buffer used in this case was also 1000m around the stream to provide a citywide perspective on activity distribution, rather than limiting the analysis to areas immediately adjacent to the stream.The result of the Attraction reach algorithm where joined by location summary with the 1000m buffer and later normalised using the same method as before.
 
-> Normalise value = (value – min value)/ (max value - min value)  
+> Normalise value = (value – min value)/ (max value - min value)
 
 Additionally, the data was aggregated into stream segments, again so that everything is on the same unit of analysis to be comparable with each other which is also the point of the MCDA method.
-
 
 ###### **Quality of Life 3** \| Concentration of P.O.I.
 
@@ -240,21 +223,19 @@ The third and final criterion used in this analysis is the concentration of Poin
 
 To perform this analysis a series of points was generated along the geometry of the stream, spaced at 10-meter intervals in order to use the Attraction Reach algorithm from POI to points along the stream. This resolution is appropriate given the scale of both the stream and the urban context. The Attraction Reach function was then applied to the POI and that was joined by location summary into the 200m buffer units. In order to be on the same threshold the units were normalised with the same method as before.
 
-> Normalise value = (value – min value)/ (max value - min value) 
+> Normalise value = (value – min value)/ (max value - min value)
 
 While also aggregated into the stream segments by interesting the buffer with the Teplica stream.
 
 The outcome highlights a notable concentration of POIs in the city center, suggesting that this area is already a focal point of activity. This also provides insight into potential zones for enhancing green infrastructure, where increasing greenery could further promote interaction with the stream and strengthen the human-nature relationship in urban settings.
 
-
 ##### Climate Adaptation
 
-TThe third category of evaluation is Climate adaptation. This set of criteria is used to understand how well the area can adapt to extreme changes in the weather conditions. This is also important to ensure that the green spaces will preserve their qualities and be available in order to maintain the connectivity with the people and to promote biophilia. 
+TThe third category of evaluation is Climate adaptation. This set of criteria is used to understand how well the area can adapt to extreme changes in the weather conditions. This is also important to ensure that the green spaces will preserve their qualities and be available in order to maintain the connectivity with the people and to promote biophilia.
 
-For climate adaptation 3 criteria were used in order to get a better understanding of the area. These criteria are Permeability of the ground, Flood Risk and  Land Surface Temperature.
+For climate adaptation 3 criteria were used in order to get a better understanding of the area. These criteria are Permeability of the ground, Flood Risk and Land Surface Temperature.
 
-
-###### **Climate Adaptation 1** \| Permeability of the ground
+###### **Climate Adaptation 1** \| Permeability
 
 This criterion evaluates the ground’s ability to collect and absorb rainwater. To estimate this, it was assumed that all non-paved areas represent permeable surfaces capable of water infiltration. A land cover image of the city of Senica was used to identify paved areas, which were then isolated using the Raster Calculator tool in QGIS. To focus the analysis on areas relevant to water absorption near the stream, a 200-meter buffer zone was created around the stream network. The land cover image was then clipped to this buffer zone, narrowing the scope to a meaningful spatial scale. Using the Zonal Statistics tool, the proportion of permeable versus impermeable surfaces was calculated for different zones along the stream by counting the pixels of the image that indicate the paved areas. Afterwards these were joined by location summary with the 200m buffer and later normalised with a similar method as before.
 
@@ -264,10 +245,9 @@ The normalised values showed the permeability of the ground however this scale i
 
 > 1 - "Normalised value"
 
-Finally, the results were aggregated to the corresponding river segments for further analysis.
-.
+Finally, the results were aggregated to the corresponding river segments for further analysis. .
 
-###### **Climate Adaptation 2** \| Impact of flooding
+###### **Climate Adaptation 2** \| Impact of Flooding
 
 To assess the impact of flooding, the amount of buildings affected by a q100 was estimated. First the flood risk map was retrieved from the mpt.svp.sk gis server. Multiple types of flood risk maps were available, namely the q10, q100 and q1000 maps. These respectively indicate the likeliness of such a flood, for example the q100 indicates a flood that would on average occur every 100 years. The q100 was chosen, since it is still a relatively common occurrence, and the impact is significant enough to take measures against. The flood basin reaches at most 500 meters away from the banks of the Teplica, therefore the buffer was chosen as such.
 
@@ -275,8 +255,7 @@ Another important point to consider is that there are multiple ways to determine
 
 So the total number of buildings was counted per unit buffer, the values were normalised as usual and the data was aggregated into the river corresponding segments by intersecting the buffer used with the stream.
 
-
-###### **Climate Adaptation 3** \| Surface Temperature
+###### **Climate Adaptation 3** \| Land Surface Temperature
 
 For the final criterion the Land Surface Temperature was calculated. The data was retrieved from the USGS Landsat 8-9 Level 2 satellite data. Particularly, the B10 band measures thermal infrared and is therefore representative of land surface temperature. The data is a snapshot of a sunny day in May 2025.
 
@@ -285,7 +264,6 @@ The buffer was chosen according to a study by Wu, Zhijie & Zhang, Yixin. (2019) 
 So the average temperature was calculated in the unit buffer of 200m around the stream and the same process with the rest of the analysis was conducted. First the values were normalised and then aggregated to find the average temperature on each stream segment.
 
 > Normalise value = (value – min value)/ (max value - min value)
-
 
 #### Criteria Weighting
 
@@ -299,19 +277,15 @@ Weighting of the criteria used in MCDA is carried out using the saaty matrix (Fu
 ![Criteria Weighting - Climate Adaptation](image/Weighting_ClimateAdaptation.JPG){width="312"}
 :::
 
-For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species.  
+For the 1st criteria of Biodiversity, distance of green spaces from the stream is rated the highest as it has a direct impact on the stream health, and potential access of human and non-human species.
 
-In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness. 
+In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness.
 
-For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream. 
+For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream.
 
-<<<<<<< HEAD
-![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
-=======
+# ![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
-
-![Quintiles of the final MCDA score](image/mcda quintiles.jpg)
->>>>>>> a514fc3534c511a31de5c3567332c1b41597059e
+![Quintiles of the final MCDA score](image/mcda%20quintiles.jpg)
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
@@ -416,7 +390,7 @@ then the numbers in each column will be standardized for clustering.
 X_scaled <- scale(features) # set name for standardized features
 ```
 
-##### Step 3\| Determine optimal k 
+##### Step 3\| Determine optimal k
 
 **calculate inertia**\
 in this step, k means for every number between 2 to 9 will be tried. then, inertia will be calculated for each k, which means the total distance between points and their cluster centers. inertia will be calculated like this:
@@ -454,7 +428,7 @@ plot(k_values, inertia,
 
 from the plot, we can clearly see elbow formed when k is 4.As a result, the optimal k for clustering will be 4.
 
-##### Step 4\| Run K-Means Clustering 
+##### Step 4\| Run K-Means Clustering
 
 Based on the elbow plot, we choose `k = 4` as a good number of clusters. We now run the K-means algorithm and assign each grid to one of the four clusters.
 
@@ -521,10 +495,7 @@ print(original_centers)
 
 ```
 
-From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria. 
-
-
-
+From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria.
 
 ## Results
 
@@ -532,32 +503,22 @@ From original centers, we examine the centers of each cluster in original values
 
 #### Procedure
 
-**Biodiversity**/
-![Biodiversity 1 \| Percentage of green](image/percentage_1.png)
-![Biodiversity 2 \| Connectivity to green](image/distance_1.png)
-![Biodiversity 3 \| Presence of species : Buffer of 2km](image/species-1.png)
+**Biodiversity**/ ![Biodiversity 1 \| Percentage of green](image/percentage_1.png) ![Biodiversity 2 \| Connectivity to green](image/distance_1.png) ![Biodiversity 3 \| Presence of species : Buffer of 2km](image/species-1.png)
 
-**Quality of Life**/
-![Quality of Life 1 \| Proximity to Greens Spaces](image/GreenAreas_1.png)
-![Quality of Life 2 \| Proximity to Activites](image/Activities_1.png)
-![Quality of Life 3 \| Concetration of POI](image/POI_1.png)
+**Quality of Life**/ ![Quality of Life 1 \| Proximity to Greens Spaces](image/GreenAreas_1.png) ![Quality of Life 2 \| Proximity to Activites](image/Activities_1.png) ![Quality of Life 3 \| Concetration of POI](image/POI_1.png)
 
-**Climate Adaptation**/
-![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_1.png)
-![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m](image\flood_impact.svg)
-![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg)
-
+**Climate Adaptation**/ ![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_1.png) ![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m](image\flood_impact.svg) ![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg)
 
 #### Normalized Result
-![Composition of MCDA](image/MCDA comp.svg){width="1000"}
 
+![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
 
 ### Typology
 
 **central value of each cluster**/
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
-|----|----|----|----|----|----|----|
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 | 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
@@ -566,7 +527,7 @@ From original centers, we examine the centers of each cluster in original values
 **characteristic of each clusters**/
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
@@ -597,4 +558,3 @@ The most important finding was that the urban segments in the center of Senica s
 Initially it was assumed that more urban areas would score better on human-nature connectedness, since they offer more facilities like parks and activities, compared to more agricultural regions. However, this is also heavily correlated with an increased risk of flooding, which offset those benefits.
 
 Overall, our research showed it was also possible in smaller communes to create a framework to assess human-nature connectedness in the context of urban stream restoration. While the data limitations introduced some uncertainty in the results, the analysis remains a valuable tool to address issues facing smaller communities and improve human wellbeing surrounding urban streams and include them into the landscape rather than ignore them.
-
