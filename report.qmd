@@ -147,31 +147,31 @@ An important factor to consider was that every criteria might have a different s
 
 ##### Biodiversity
 
-The first category of evaluation is Biodiversity. To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur & Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor & McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectivity between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. And we are analyzing the connectivity between the green areas. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.
+The first category of evaluation is Biodiversity. To determine the amount of biodiversity of the area around the stream we are focusing on three aspects. The first two of those are related to the theory of island biogeography (MacArthur & Wilson, 2001). It states that the larger a green area is, the more biodiverse it will be (Conor & McCoy, 2013). This green area size is determined by two factors: the size of a single continuous green area and the interconnectedness between green areas. To determine the potential biodiversity around the stream, we are analyzing the percentage of green space around the stream, giving us an indication of the size of the green area. For interconnectedness, the study analyzes the connectivity between green areas and streams, therby extending the concept of interconnectedness between green areas to cover interactions between land and water ecosystems. After analyzing this, we are also looking into the presence of different species in the area around the stream, as this gives us a more reliable indication of the actual biodiversity that is currently present.
 
 ###### **Biodiversity 1** \| Percentage of green
 
-The criterion used in this analysis is based on the Biophilic Planning Indicator (source to be added). The ratio of green space to total area serves as a proxy for assessing the amount of natural habitat near the Teplica stream. This method is also effective for comparing natural conditions across different spatial units.
+In this analysis, the ratio of green space to total area serves as a proxy for assessing the amount of natural habitat near the Teplica stream. Using percentage as an indicator allows for standardized comparison across spatial units with differing sizes and characteristics.
 
-To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas within this 500m buffer were intersected with the buffered spatial units, and a new column was created to represent the amount of green space within each unit.
+To calculate this ratio, the buffer distance is a crucial factor. A buffer of 500 meters was applied, as this range effectively includes most of the surrounding green spaces. Green areas were intersected with the spatial units with 500m buffer, creating new layer that represents the amount of green space within each unit. This intersected green area values were then joined to the buffer layer, enabling the calculation of the percentage of green for each unit. The formula below used for final value.
 
-This green area value was then joined to the buffer layer, enabling the calculation of the green-to-total-area ratio for each unit. Since the green space percentages range approximately from 0% to 30%, the data was categorized into ten equal intervals, each representing a 3% range. A normalized value was also calculated using the formula.
+> Percentage of green = (intersected green area) / (500m buffered unit area) \* 100
+
+Since the green space percentages approximately range from 0% to 30%, the values were normalized by dividing by 30, using the following formula.
 
 > Normalized value = (Percentage of green)/30
-
-To create a normalized map for each stream unit, the line layer representing the Teplica stream was intersected with the buffered layer containing green area percentages. The corresponding values were then normalized using the formula above.
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
 ###### **Biodiversity 2** \| Connectivity to green
 
-Apart from the amount of green space, the proximity of green space to the stream is also an important factor. Even if there is a considerable area of green space, it becomes difficult to associate it with the stream if it is located too far away. This is especially critical for small animals such as frogs, for which direct connection between the stream and nearby natural areas is essential.
+This section evaluates the interconnectivity between natural environments. As each unit corresponds to a section of the stream, the distance to the nearest green space from each stream unit is adopted as an indicator, reflecting how closely water ecosystems are linked to the land habitats.
 
-To address this, distance to green space is introduced as an additional criterion alongside the percentage of green area. While the percentage of green reflects the amount of natural habitat, the distance represents the connectivity between the stream and nearby green areas.
+Accordingly, this distance-based indicator supplements area-based criterion by capturing the spatial accessibility of natural areas from the stream. Even if a considerable amount of green space exists, it may have limited ecological value if it is located too far from the stream. This is especially critical for small animals such as frogs, which depend on direct connections between water and land habitats.
 
-In this case, no buffer is needed, as the stream line itself serves as the reference for calculating distance. Using the processing tool “Shortest Line Between Features”, the shortest distance from each stream unit to the nearest green space was calculated, based on the green space and Teplica stream layers.
+For this criterion, no buffer is needed, as the stream line itself serves as the base for calculating distance. Using the processing tool “Shortest Line Between Features”, the shortest distance from each stream unit to the nearest green space was calculated, based on the "osm_greenspace" and "units" layers.
 
-For normalization, the following formula was applied:
+However, when normalizing, larger distance indicates weaker connectivity between stream unit and green space nearby. Therefore, the values are inverted to ensure that higher normalized scores reflect stronger connectivity. As a result, the following formula was applied:
 
 > Normalized value = 1 - (value - minimum) / (maximum - minimum)
 
