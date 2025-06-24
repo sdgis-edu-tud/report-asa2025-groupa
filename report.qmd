@@ -287,110 +287,99 @@ The three main criteria - Biodiversity, Quality of Life and climate adaptation a
 
 ### Typology construction
 
-#### Preparation
+#### Objective and approach
 
--   **Objective**:\
-    To identify typologies of different part of urban stream itself, where local conditions affect biophilic condition of stream and nearby area and guide restoration design strategies to improve human-nature connection
+While the MCDA offers a structured evaluation of the Teplica stream through distinct criteria related to biodiversity, quality of life, and climate change, it has limitations in capturing how these criteria interact within each spatial unit. MCDA focuses on individual indicator performance and their weighted aggregation, but it does not reveal the relationships among indicators or the typical combinations of conditions observed along different segments of the stream.
 
--   **Focused area**:\
-    The stream Teplica, which goes through the city of Senica
+To move from evaluation toward actionable strategies for urban stream restoration, it is necessary to understand not just where the stream performs poorly or well on individual criteria, but what kinds of local conditions are present and recurring across the stream. As a result, typology construction is needed to identify meaningful patterns of combined indicator values that characterize the current state of the stream.
 
--   **Spatial unit**:\
-    Fixed length of stream, 200m.Same as units for MCDA
+In the case of the Teplica stream, we work with 54 spatial units. Ideally, each unit would be assessed individually and provided with a tailored design intervention. However, this level of resolution is often impractical in real world applications. Instead, recurring patterns of indicator combinations can be detected, grouping similar units into types and propose strategic directions for each type. To achieve this, k-means clustering will be applied, a method that forms cluster of spatial units based on the similarity of selected indicator values.
 
--   **Variables**: 3 variables are picked from criteria of MCDA. Criterion with highest weight of each part is chosen, as they can represent most important variable that determines biophilic value of each stream unit.
+This approach not only simplifies the complexity of stream conditions but also facilitates a typology-driven restoration planning process, where each cluster can inform a targeted and context-sensitive intervention strategy.
 
-`connectivity to green` – normalized value derived from distance from each stream unit to closest green space; related to connectivity from stream to green space nearby. As values are normalized from original numbers, actual distance in meter is turned into number between 0 to 1, and the higher number means the stream unit is more close to green space nearby.
+#### Script-Based Implementation
 
-`concentration of POI` – normalized value derived from Points of Interests (POI) within 200m buffer from each stream units. Proximity of each points withing buffered unit are combined to represent concentration of points. From normalized value, the higher number means that there are more concentrated POI in certain stream unit.
+The entire typology construction process was implemented in R. To support reproducibility of research, key parts of the R script are embedded throughout this section.
 
-`Less impact from flood` – normalized value derived from impact of flooding. Number of buildings within 500m buffer that are intersecting with flood risk zone is counted. As it is normalized value to show adaptation to climate change, the higher number means that there are less impace from flooding anticipated.
+Readers can follow each steps of the analysis by referring to the embedded code blocks.
 
--   **Geometries of spatial unit**:\
-    Read in `unit_normalised.gpkg`, with a column `ID` created.
+#### Typology Setup
 
--   **The value of variables in each spatial unit**:\
-    Read in `unit_normalised.gpkg`, with columns `Udistance`, `UPOI`, `UFlood.Risk` created.
+**packages for clustering**\
+Two R packages were required for this process: sf for handling spatial data and stats for performing k-means clustering.
 
-#### Clustering Steps
+* `sf` : processing vector data
+* `dplyr` : selecting and transforming data.
 
-##### Step 1\| Load packages and data
-
-**intall packages**\
-for clustering, two packages are used; `sf` and `dplyr`. `sf` is for processing vector data and `dplyr` is for selecting and transforming data. In case you have not installed them yet, remove \# for each packages and run the code.
-
-```{r}
-#install.packages("sf") 
-#install.packages("dplyr")
-```
-
-**load packages**\
-library of each packages should be loaded
-
+The following R code initializes the loading of package
 ```{r}
 library(sf) # for processing vector data 
 library(dplyr) # for selecting and transforming data
 ```
 
-**load data**\
-data should be located in the root of your working directory folder. In case you are not sure where the directory folder is, use `getwd()` (remove \# before use it)
+If the code not works, that means the packages are not installed yet. In that case, use this code (remove # when use):
+```{r}
+#install.packages("sf") 
+#install.packages("dplyr")
+```
 
+
+**spatial unit**\
+To perform the typology analysis, same spatial unit used in the MCDA is adopted: 54 segments along the Teplica stream dvided equally into 200m length. This consistent unit length ensures comparability between both analyses and allows the typology to directly build upon the evaluation framework established earlier.
+
+The following R script initializes the loading of spatial unit: 
+```{r}
+units <- st_read("MCDA.gpkg", quiet = TRUE)
+```
+
+Data file (`MCDA.gpkg`) should be located in the root of your working directory folder. If you are not sure where the directory folder is, use following script:
 ```{r}
 getwd()
 ```
 
-in the project `units` will be used for the name of unit. run the code to load prepared data into `units`
 
-```{r}
-units <- st_read("unit_normalised.gpkg", quiet = TRUE)
-```
+**variables**\
+Three variables were selected from the MCDA criteria to serve as inputs for the clustering process;
 
-**view data**\
-the codes below can be used to see show how data looks like.use ctrl+enter for each line to see each aespects of data.
+-   Connectivity to green (weighted 0.5 for biodiversity)
 
-```{r}
+-   Concentration of POI (weighted 0.558 for Quality of Life)
 
-#view first few rows of data
-head(units) 
+-   Impact of flooding (weighted 0.571 for Climate Adaptation)
 
-#count how many units will be used for clustering
-nrow(units) 
+For each of the three main categories;biodiversity, quality of life, and climate change, the criterion with the highest weight was chosen, as it best represents the most influential factor in determining the biophilic value of each stream unit.
 
-#Plot connectivity to green
-plot(units["Udistance"], border = NA, main = "Connectivity to Green")
+These variables are stored in the file `MCDA.gpkg`, with the following field names:
 
-#Plot concentration of POI
-plot(units["UPOI"], border = NA, main = "Concentration of POI") 
+* `Connectivity`: field representing connectivity to green. A normalized value based on the distance to the nearest green space.Since the values are inverted, higher values indicate closer proximity and stronger potential for connectivity.
 
-#Plot Less impat from flood
-plot(units["UFlood.Risk"], border = NA, main = "Less impact from Flood") 
+* `POI`: field representing concentration of POI. A normalized value based on concentration of Points of Interest (POI) within a 200m buffer. Higher values indicate higher concentration of POI
 
-```
+* `FloodRisk`: field representing Impact of flooding. A normalized based on number of buildings intersect with flood area. Since the values are inverted, higher values indicate less anticipated impact from flood.
 
-##### Step 2\| Standardization
-
-**select relevant features**\
-for clustering, only 3 columns will be used: `Udistance`, `UPOI`, `UFlood.Risk`. for this new feature should be created.
-
+The following R script creates feature only contains relevant variables:
 ```{r}
 features <- units |> #set name of new feature
-  select(Udistance, UPOI, UFlood.Risk) |> #select relevant columns only
+  select(Connectivity, POI, FloodRisk) |> #select relevant columns only
   st_drop_geometry() # remove geometry column so we just keep a data table
 ```
 
-**standardize**\
-then the numbers in each column will be standardized for clustering.
+**Standardization**
 
+The numbers of each variables should be standardized to be used in k-means clustering.
+
+The following R script creates data with standardized value:
 ```{r}
 #Standardize (mean=0, sd=1) 
 X_scaled <- scale(features) # set name for standardized features
 ```
 
-##### Step 3\| Determine optimal k
+#### Clustering
 
-**calculate inertia**\
-in this step, k means for every number between 2 to 9 will be tried. then, inertia will be calculated for each k, which means the total distance between points and their cluster centers. inertia will be calculated like this:
+**Determine optimal k**
+'k' in k-means clustering refers to number of clusters. Inertia is used as the indicator for finding optimal k, which means total distance between points from cluster centers. However, this does not mean that k with lowest inertia will be selected, as inertia constantly decreases while k increases. Instead, elbow method will be used. In elbow method, optimal k is where inclination dramatically changes in the graph showing relationship between k and inertia. 
 
+The following R script calculates inertia for each k, from 2 to 9:
 ```{r}
 # Initialize an empty numeric vector to store inertia values 
 inertia <- numeric() #set the name for inertia value pocket
@@ -408,9 +397,7 @@ for (k in k_values) {
 }
 ```
 
-**elbow method**\
-to choose right k, elbow method will be used. for this we need to visualize how inertia changes while the k increases. then we can see where the inclination dramatically changes.
-
+The following R script makes plot for elbow method:
 ```{r}
 # Combine the results into a data frame for plotting
 elbow_df <- data.frame(k = k_values, inertia = inertia) #set the name of data frame
@@ -421,13 +408,13 @@ plot(k_values, inertia,
      col = "darkblue",
      main = "Elbow Method")
 ```
+Based on elbow plot, the optimal number for clustering is 4, as the inclination changes dramatically at 4.
 
-from the plot, we can clearly see elbow formed when k is 4.As a result, the optimal k for clustering will be 4.
+**k-means clustering** 
 
-##### Step 4\| Run K-Means Clustering
+For clustering, k-means algorithm is used. When Combined with spatial unit data, each spatial unit will be assigned a cluster number based on the results of the k-means clustering.
 
-Based on the elbow plot, we choose `k = 4` as a good number of clusters. We now run the K-means algorithm and assign each grid to one of the four clusters.
-
+The following R script runs k-means clustering:
 ```{r}
 # sets the random number generator to a fixed state, to show same result when re-run the code
 set.seed(0)  # set the number for fixed state
@@ -439,9 +426,7 @@ k <- 4
 kmeans_result <- kmeans(X_scaled, centers = k, nstart = 20) #set name for k-means result data
 ```
 
-**add cluster label to unit data**\
-After running K-Means clustering, the clustering result can be added as a new column for unit data. we will add `cluster` column of `kmeans_result` to `units`. Then you can see how many units each cluster have.
-
+The following R script shows distribution of clusters:
 ```{r}
 # Add the cluster labels to the spatial data
 units$cluster <- as.factor(kmeans_result$cluster) 
@@ -454,31 +439,20 @@ plot(units["cluster"],
      main = "Spatial Pattern of Urban Stream Clusters",
      border = NA)
 ```
-
-to save the result, use this code. remove \# before run
-
+The following R script saves clustering into seperate geopackage file (remove # when use): 
 ```{r}
 #st_write(units, "unit_cluster.gpkg")
 ```
 
-##### Step 5\| Interpret Cluster Centers
+#### Cluster Centers
 
-**Get cluster centers**\
-to interpret each clusters, we need to get center values.
+To interpret character of each cluster, center value for each variables should be extracted. Then center values are compared to see difference between each clusters. The research focused on variable with low values for each clusters to figure out appropriate interventions needed for each clusters. 
 
+The following R script extracts cluster centers for each clusters:
 ```{r}
 # Get the cluster centers (in standardized form)
 scaled_centers <- kmeans_result$centers #set name for cluster center value pocket
 
-# Print them
-print("Cluster centers (standardized):")
-print(scaled_centers)
-
-```
-
-however, this is center in standardized number, to make numbers more readable, we can convert the numbers into original numbers.
-
-```{r}
 # Convert the centers back to original scale: x * SD + mean
 original_centers <- t(apply(
   scaled_centers, 1, 
@@ -490,9 +464,6 @@ print("Cluster centers (original):")
 print(original_centers)
 
 ```
-
-From original centers, we examine the centers of each cluster in original values. Although it is still normalized value without actual scale, we can still compare the values and see different character of each clusters, with rank for each criteria.
-
 ## Results
 
 ### MCDA
@@ -561,6 +532,12 @@ From original centers, we examine the centers of each cluster in original values
 
 ### Typology
 
+#### Clustering results
+
+**map**
+
+![Clusters](image/)
+
 **central value of each cluster**/
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
@@ -569,6 +546,8 @@ From original centers, we examine the centers of each cluster in original values
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
 | 4 | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
+
+#### Interpretation of each cluster
 
 **interpreted value and recommendation**/
 
