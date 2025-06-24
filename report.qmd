@@ -536,7 +536,7 @@ print(original_centers)
 
 **map**
 
-![Clusters](image/)
+![Clusters](image/cluster.png)
 
 **central value of each cluster**/
 
