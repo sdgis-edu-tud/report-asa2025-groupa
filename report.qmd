@@ -308,35 +308,37 @@ Readers can follow each steps of the analysis by referring to the embedded code 
 **packages for clustering**\
 Two R packages were required for this process: sf for handling spatial data and stats for performing k-means clustering.
 
-* `sf` : processing vector data
-* `dplyr` : selecting and transforming data.
+-   `sf` : processing vector data
+-   `dplyr` : selecting and transforming data.
 
 The following R code initializes the loading of package
+
 ```{r}
 library(sf) # for processing vector data 
 library(dplyr) # for selecting and transforming data
 ```
 
-If the code not works, that means the packages are not installed yet. In that case, use this code (remove # when use):
+If the code not works, that means the packages are not installed yet. In that case, use this code (remove \# when use):
+
 ```{r}
 #install.packages("sf") 
 #install.packages("dplyr")
 ```
 
-
 **spatial unit**\
 To perform the typology analysis, same spatial unit used in the MCDA is adopted: 54 segments along the Teplica stream dvided equally into 200m length. This consistent unit length ensures comparability between both analyses and allows the typology to directly build upon the evaluation framework established earlier.
 
-The following R script initializes the loading of spatial unit: 
+The following R script initializes the loading of spatial unit:
+
 ```{r}
 units <- st_read("MCDA.gpkg", quiet = TRUE)
 ```
 
 Data file (`MCDA.gpkg`) should be located in the root of your working directory folder. If you are not sure where the directory folder is, use following script:
+
 ```{r}
 getwd()
 ```
-
 
 **variables**\
 Three variables were selected from the MCDA criteria to serve as inputs for the clustering process;
@@ -351,13 +353,14 @@ For each of the three main categories;biodiversity, quality of life, and climate
 
 These variables are stored in the file `MCDA.gpkg`, with the following field names:
 
-* `Connectivity`: field representing connectivity to green. A normalized value based on the distance to the nearest green space.Since the values are inverted, higher values indicate closer proximity and stronger potential for connectivity.
+-   `Connectivity`: field representing connectivity to green. A normalized value based on the distance to the nearest green space.Since the values are inverted, higher values indicate closer proximity and stronger potential for connectivity.
 
-* `POI`: field representing concentration of POI. A normalized value based on concentration of Points of Interest (POI) within a 200m buffer. Higher values indicate higher concentration of POI
+-   `POI`: field representing concentration of POI. A normalized value based on concentration of Points of Interest (POI) within a 200m buffer. Higher values indicate higher concentration of POI
 
-* `FloodRisk`: field representing Impact of flooding. A normalized based on number of buildings intersect with flood area. Since the values are inverted, higher values indicate less anticipated impact from flood.
+-   `FloodRisk`: field representing Impact of flooding. A normalized based on number of buildings intersect with flood area. Since the values are inverted, higher values indicate less anticipated impact from flood.
 
 The following R script creates feature only contains relevant variables:
+
 ```{r}
 features <- units |> #set name of new feature
   select(Connectivity, POI, FloodRisk) |> #select relevant columns only
@@ -369,6 +372,7 @@ features <- units |> #set name of new feature
 The numbers of each variables should be standardized to be used in k-means clustering.
 
 The following R script creates data with standardized value:
+
 ```{r}
 #Standardize (mean=0, sd=1) 
 X_scaled <- scale(features) # set name for standardized features
@@ -377,9 +381,11 @@ X_scaled <- scale(features) # set name for standardized features
 #### Clustering
 
 **Determine optimal k**
-'k' in k-means clustering refers to number of clusters. Inertia is used as the indicator for finding optimal k, which means total distance between points from cluster centers. However, this does not mean that k with lowest inertia will be selected, as inertia constantly decreases while k increases. Instead, elbow method will be used. In elbow method, optimal k is where inclination dramatically changes in the graph showing relationship between k and inertia. 
+
+'k' in k-means clustering refers to number of clusters. Inertia is used as the indicator for finding optimal k, which means total distance between points from cluster centers. However, this does not mean that k with lowest inertia will be selected, as inertia constantly decreases while k increases. Instead, elbow method will be used. In elbow method, optimal k is where inclination dramatically changes in the graph showing relationship between k and inertia.
 
 The following R script calculates inertia for each k, from 2 to 9:
+
 ```{r}
 # Initialize an empty numeric vector to store inertia values 
 inertia <- numeric() #set the name for inertia value pocket
@@ -398,6 +404,7 @@ for (k in k_values) {
 ```
 
 The following R script makes plot for elbow method:
+
 ```{r}
 # Combine the results into a data frame for plotting
 elbow_df <- data.frame(k = k_values, inertia = inertia) #set the name of data frame
@@ -408,13 +415,15 @@ plot(k_values, inertia,
      col = "darkblue",
      main = "Elbow Method")
 ```
+
 Based on elbow plot, the optimal number for clustering is 4, as the inclination changes dramatically at 4.
 
-**k-means clustering** 
+**k-means clustering**
 
 For clustering, k-means algorithm is used. When Combined with spatial unit data, each spatial unit will be assigned a cluster number based on the results of the k-means clustering.
 
 The following R script runs k-means clustering:
+
 ```{r}
 # sets the random number generator to a fixed state, to show same result when re-run the code
 set.seed(0)  # set the number for fixed state
@@ -427,6 +436,7 @@ kmeans_result <- kmeans(X_scaled, centers = k, nstart = 20) #set name for k-mean
 ```
 
 The following R script shows distribution of clusters:
+
 ```{r}
 # Add the cluster labels to the spatial data
 units$cluster <- as.factor(kmeans_result$cluster) 
@@ -439,16 +449,19 @@ plot(units["cluster"],
      main = "Spatial Pattern of Urban Stream Clusters",
      border = NA)
 ```
-The following R script saves clustering into seperate geopackage file (remove # when use): 
+
+The following R script saves clustering into seperate geopackage file (remove \# when use):
+
 ```{r}
 #st_write(units, "unit_cluster.gpkg")
 ```
 
 #### Cluster Centers
 
-To interpret character of each cluster, center value for each variables should be extracted. Then center values are compared to see difference between each clusters. The research focused on variable with low values for each clusters to figure out appropriate interventions needed for each clusters. 
+To interpret character of each cluster, center value for each variables should be extracted. Then center values are compared to see difference between each clusters. The research focused on variable with low values for each clusters to figure out appropriate interventions needed for each clusters.
 
 The following R script extracts cluster centers for each clusters:
+
 ```{r}
 # Get the cluster centers (in standardized form)
 scaled_centers <- kmeans_result$centers #set name for cluster center value pocket
@@ -464,6 +477,7 @@ print("Cluster centers (original):")
 print(original_centers)
 
 ```
+
 ## Results
 
 ### MCDA
