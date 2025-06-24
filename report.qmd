@@ -157,9 +157,9 @@ To calculate this ratio, the buffer distance is a crucial factor. A buffer of 50
 
 > Percentage of green = (intersected green area) / (500m buffered unit area) \* 100
 
-Since the green space percentages approximately range from 0% to 30%, the values were normalized by dividing by 30, using the following formula.
+Since the green space percentages approximately range from 0% to 30%, the values were normalised by dividing by 30, using the following formula.
 
-> Normalized value = (Percentage of green)/30
+> Normalised value = (Percentage of green)/30
 
 However, this approach may not fully reflect the habitability for different species. The total size of contiguous green spaces might be more significant than the mere percentage within a buffer. A potential improvement would be to assign ecological value or rank to each green space patch and create a new indicator that reflects both the quality and amount of green space intersecting each unit.
 
@@ -171,13 +171,13 @@ Accordingly, this distance-based indicator supplements area-based criterion by c
 
 For this criterion, no buffer is needed, as the stream line itself serves as the base for calculating distance. Using the processing tool “Shortest Line Between Features”, the shortest distance from each stream unit to the nearest green space was calculated, based on the "osm_greenspace" and "units" layers.
 
-However, when normalizing, larger distance indicates weaker connectivity between stream unit and green space nearby. Therefore, the values are inverted to ensure that higher normalized scores reflect stronger connectivity. As a result, the following formula was applied:
+However, when normalising, larger distance indicates weaker connectivity between stream unit and green space nearby. Therefore, the values are inverted to ensure that higher normalized scores reflect stronger connectivity. As a result, the following formula was applied:
 
-> Normalized value = 1 - (value - minimum) / (maximum - minimum)
+> Normalised value = 1 - (value - minimum) / (maximum - minimum)
 
 Since the minimum distance was 0, the formula simplifies to:
 
-> Normalized value = 1 - (value / maximum)
+> Normalised value = 1 - (value / maximum)
 
 This method produces a normalized score between 0 and 1, where a value of 1 represents the shortest distance (i.e., highest potential connectivity), and values closer to 0 indicate increasing distance from green spaces. This approach directly reflects the inverse relationship between distance and ecological connectivity, where farther distances correspond to lower connectivity potential. Compared to the previous quantile-based method, this continuous normalization may better capture the steep decline in connectivity that occurs with increasing distance from green spaces.
 
@@ -282,10 +282,6 @@ For the 1st criteria of Biodiversity, distance of green spaces from the stream i
 In Quality of Life, the proximity of points of interest such as cafes, park benches, etc from the stream is rated the highest since it has the highest potential of attracting people which ensures human-nature connectedness.
 
 For Climate Adaptation, anticipated flood affected areas carry the highest weight as this directly affects the surrounding built environment. Higher risk of flood would mean people moving away from the stream which counters the objective of improved human nature connectedness with the stream.
-
-# ![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
-
-![Quintiles of the final MCDA score](image/mcda%20quintiles.jpg)
 
 The three main criteria - Biodiversity, Quality of Life and climate adaptation are considered equally important to arrive at a concluding map.
 
@@ -501,17 +497,67 @@ From original centers, we examine the centers of each cluster in original values
 
 ### MCDA
 
-#### Procedure
+#### Analysis for each category
 
-**Biodiversity**/ ![Biodiversity 1 \| Percentage of green](image/percentage_1.png) ![Biodiversity 2 \| Connectivity to green](image/distance_1.png) ![Biodiversity 3 \| Presence of species : Buffer of 2km](image/species-1.png)
+**Biodiversity**
 
-**Quality of Life**/ ![Quality of Life 1 \| Proximity to Greens Spaces](image/GreenAreas_1.png) ![Quality of Life 2 \| Proximity to Activites](image/Activities_1.png) ![Quality of Life 3 \| Concetration of POI](image/POI_1.png)
+![Biodiversity 1 - Percentage of green](image/percentage_1.png)
 
-**Climate Adaptation**/ ![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_1.png) ![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m](image\flood_impact.svg) ![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg)
+![Biodiversity 2 - Connectivity to green](image/distance_1.png)
+
+![Biodiversity 3 - Presence of species : Buffer of 2km](image/species-1.png)
+
+**Quality of Life**
+
+![Quality of Life 1 - Proximity to Greens Spaces](image/GreenAreas_1.png)
+
+![Quality of Life 2 - Proximity to Activites](image/Activities_1.png)
+
+![Quality of Life 3 - Concetration of POI](image/POI_1.png)
+
+**Climate Adaptation**
+
+![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_1.png)
+
+![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m](image\flood_impact.svg)
+
+![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg)
 
 #### Normalized Result
 
-![Composition of MCDA](image/MCDA%20comp.svg){width="1000"}
+**Biodiversity**
+
+![Biodiversity 1 - Percentage of green](image/percentage_2.png){width="312"}
+
+![Biodiversity 2 - Connectivity to green](image/distance_2.png){width="312"}
+
+![Biodiversity 3 - Presence of species : Buffer of 2km](image/species%20-2.png){width="312"}
+
+**Quality of Life**
+
+![Quality of Life 1 - Proximity to Greens Spaces](image/GreenAreas_2.png)
+
+![Quality of Life 2 - Proximity to Activites](image/Activities_2.png)
+
+![Quality of Life 3 - Concetration of POI](image/POI_2.png)
+
+**Climate Adaptation**
+
+![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_2.png)
+
+\![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m\](image)
+
+\![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m\](image)
+
+#### Aggregated result
+
+**For each category**
+
+![Composition of MCDA](image/MCDAcomp.svg)
+
+**All categories combined**
+
+![Quintiles of the final MCDA score](image/mcda_quintiles.jpg)
 
 ### Typology
 
@@ -524,7 +570,7 @@ From original centers, we examine the centers of each cluster in original values
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
 | 4 | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
 
-**characteristic of each clusters**/
+**interpreted value and recommendation**/
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
 |---------------|---------------|---------------|---------------|---------------|
@@ -532,6 +578,10 @@ From original centers, we examine the centers of each cluster in original values
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
 | 4 | far from green | none | none | lots of potential for big parks and activities |
+
+**possible example of intervention** /
+
+![interventions](image/clusters_zoomin.png)
 
 ## Discussion
 
