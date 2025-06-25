@@ -379,7 +379,13 @@ Still out of 54 units, 39 recorded a score of zero, indicating that in most case
 ![Quality of Life 3 - Concetration of POI: normalised](image/POI_2.png){width="480"}
 :::
 
-However, a key distinction of this indicator is its ability to detect localized activity potential even in areas with minimal built infrastructure.For instance, in northern stream units, where both 'Proximity to Parks' and 'Proximity to Activities' scored zero, the POI criterion assigns a small but non-zero score, acknowledging the presence of nearby activity points.
+However, a key distinction of this indicator is its ability to detect localized activity potential even in areas with minimal built infrastructure.For instance, in northern stream units, Proximity to Activities' scored zero, the POI criterion assigns a small but non-zero score, acknowledging the presence of nearby activity points.
+
+::: {layout-ncol="2"}
+![Quality of Life 2 - Proximity to Activities: buffer of 500m + normalised (zoomed in)](image/POI_compare_1.png){width="480"}
+
+![Quality of Life 3 - Concetration of POI: buffer of 200m + normalised (zoomed in)](image/POI_compare_2.png){width="480"}
+:::
 
 In this way, the POI-based metric complements the other two indicators by capturing stream-activity connections in low-dense areas, making it a valuable component in assessing overall potential of stream for improving quality of life.
 
