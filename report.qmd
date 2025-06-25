@@ -407,7 +407,6 @@ Notably, the stream unit intersecting with Námestie Oslobodenia (ID 3), which p
 
 Such zones can be priority areas for intervention, where nature-based solutions could be introduced to balance urban functionality with ecological sustainability.
 
-
 **Impact of Flooding**
 
 This criterion assesses the potential impact of flooding on the built environment, by counting the number of buildings located within anticipated flood zone.Higher scores indicate lower exposure, meaning fewer buildings are at risk, while lower normalized scores reflect a greater number of buildings within flood zones, representing higher potential vulnerability.
@@ -416,17 +415,15 @@ Similar to 'Permeability', lower scores tend to be observed in densely urbanized
 
 ![Climate Adaptation 2 \|Impact of Flooding: buffer of 500m](image\flood_impact.svg){width="960"}
 
-The stream unit intersecting the residential area near Jána Mudrocha Street (ID 13) recorded the lowest normalized score, due to a high number of small-sized buildings located within the floodplain.
-While each individual building may be small, their cumulative presence suggests a higher concentration of people or property at risk, making this zone especially vulnerable.
+The stream unit intersecting the residential area near Jána Mudrocha Street (ID 13) recorded the lowest normalized score, due to a high number of small-sized buildings located within the floodplain. While each individual building may be small, their cumulative presence suggests a higher concentration of people or property at risk, making this zone especially vulnerable.
 
 ::: {layout-ncol="2"}
 ![Climate Adaptation 2 \| Stream unit with highest score (ID 13)](image/impactofflood_highest.png){width="480"}
 
-![Climate Adaptation 2 \| Other units for comparison ](image/impactofflood_compare.png){width="480"}
+![Climate Adaptation 2 \| Other units for comparison](image/impactofflood_compare.png){width="480"}
 :::
 
 In this sense, the indicator is a meaningful proxy for social exposure to flooding, capturing the reality that a cluster of small homes have more impact on people than a few large structures.
-
 
 **Land Surface Temperature**
 
@@ -444,34 +441,29 @@ Street-level imagery reveals that these zones are dominated by bare ground and t
 
 This finding shows that undeveloped or non-urbanized land can still exhibit extreme thermal vulnerability when lacking vegetation, especially trees. In fact, the thermal stress in these units exceeds that of more densely developed areas, highlighting the critical role of vegetative cover in moderating microclimate, regardless of urban density.
 
-
 #### 3.1.2 Final aggregated result
 
 ##### MCDA result for each category
 
 Image below shows aggregated result for each category; Biodiversity, Quality of Llife, Climate adaptation, with normalised result for 3 criteria per category.
 
-![Composition of MCDA](image/MCDAcomp.svg)
-**Biodiversity**
+![Composition of MCDA](image/MCDAcomp.svg) **Biodiversity**
 
 The composite score for the Biodiversity does not follow a gradual spatial gradient but instead reveals distinct high-scoring units scattered across the study area. This pattern suggests that biodiversity potential is driven less by overall spatial trends and more by localized ecological conditions, particularly the presence and size of adjacent green spaces.
 
-The highest biodiversity score was observed in unit with ID number 5, a stream unit located between two big green spaces. 
+The highest biodiversity score was observed in unit with ID number 5, a stream unit located between two big green spaces.
 
 ![Biodiversityunit\|unit with highest value: ID 5](image/B_highest1.png){width="960"}
 
 Notably, some of the high-scoring units are located within urban areas,demonstrating that even in densely built environments, proximity to large, continuous green spaces can substantially enhance ecological value.
 
 ::: {layout-ncol="2"}
-![Biodiversityunit\|unit with highes value: ID 20](image/B_highest3.png){width="480"}
-![Biodiversityunit\|unit with highes value: ID 54](image/B_highest2.png){width="480"}
+![Biodiversityunit\|unit with highes value: ID 20](image/B_highest3.png){width="480"} ![Biodiversityunit\|unit with highes value: ID 54](image/B_highest2.png){width="480"}
 :::
-
 
 **Quality of Life**
 
-The Quality of Life category demonstrates a clear urban–peripheral gradient, with higher scores concentrated in the city center and markedly lower values toward the outer stream segments.
-This trend reflects the distribution of civic amenities, built infrastructure, and accessible services, which are typically concentrated in urban cores.
+The Quality of Life category demonstrates a clear urban–peripheral gradient, with higher scores concentrated in the city center and markedly lower values toward the outer stream segments. This trend reflects the distribution of civic amenities, built infrastructure, and accessible services, which are typically concentrated in urban cores.
 
 The highest-scoring unit (ID number 3) lies at the intersection with Námestie Oslobodenia, a central urban corridor consistently identified across different criterias, such as 'Proximity to Activities' and 'Concentration of POI'.
 
@@ -480,36 +472,32 @@ The highest-scoring unit (ID number 3) lies at the intersection with Námestie O
 In contrast, several peripheral units scored zero, particularly those at the extreme ends of the study area. These locations lack nearby buildings or points of interest and are often surrounded by vacant land, resulting in minimal contribution to human-centered livability measures.
 
 ::: {layout-ncol="2"}
-![Biodiversityunit\|units with 0 value](image/Q_lowest_1.png){width="480"}
-![Biodiversityunit\|units with 0 value](image/Q_lowest_2.png){width="480"}
+![Biodiversityunit\|units with 0 value](image/Q_lowest_1.png){width="480"} ![Biodiversityunit\|units with 0 value](image/Q_lowest_2.png){width="480"}
 :::
 
 **Climate Adaptation**
 
-The Climate Adaptation indicator shows an inverse spatial pattern compared to Quality of Life, with higher scores observed in peripheral areas and lower scores in densely developed urban zones.However, unlike the Quality of Life indicator, which shows clear graduation from city centre, the Climate Adaptation score appears to be more directly influenced by built area.For instance, even in non-central areas such as the vicinity of Kunov, units exhibit low scores due to presence of buildings and hard surfaces. 
+The Climate Adaptation indicator shows an inverse spatial pattern compared to Quality of Life, with higher scores observed in peripheral areas and lower scores in densely developed urban zones.However, unlike the Quality of Life indicator, which shows clear graduation from city centre, the Climate Adaptation score appears to be more directly influenced by built area.For instance, even in non-central areas such as the vicinity of Kunov, units exhibit low scores due to presence of buildings and hard surfaces.
 
 A particularly notable pattern is seen in several central units—such as ID 13, 17, and 20—which scored especially low.
 
 ::: {layout-ncol="2"}
-![Climate Adaptation\|unit with lowe value (ID 13)](image/C_lowest1.png){width="480"}
-![Climate Adaptation\|units with low value (ID 17, 20)](image/C_lowest2.png){width="480"}
+![Climate Adaptation\|unit with lowe value (ID 13)](image/C_lowest1.png){width="480"} ![Climate Adaptation\|units with low value (ID 17, 20)](image/C_lowest2.png){width="480"}
 :::
 
 This outcome is strongly tied to the high weighting of the 'Impact of Flood' criterion, with these units also recording the lowest scores for 'Impact of Flood'.
-
 
 ##### Combined result of 3 categoties
 
 The image below shows the final composite scores of three categories. The score reveal clear distinctions between stream units in terms of their overall performance across all selected criteria.
 
-![Quintiles of the final MCDA score](image/mcda_quintiles.jpg)
+![Quintiles of the final MCDA score](image/mcda_quintiles.jpg){width="960"}
 
 The lowest-scoring unit is ID 17, which previously showed significant vulnerability in Climate Adaptation, especially the Impact of Flood. Similarly, ID 13 and ID 20, which were also noted for their low flood resilience, ranked among the bottom-performing units in the overall evaluation.
 
 The highest overall score was recorded in ID 49, an unexpected result given that it did not dominate across most individual criteria.Its most notable strength lies in the Proximity to Park indicator, where it achieved the highest score. Interestingly, this criterion did not carry the highest weight in the Biodiversity category, also in MCDA. Still, combined with moderate to strong scores in other dimensions made score of ID 49 to the top. This outcome underscores the value of balanced multi-criteria performance, where no single dominant factor is necessary to achieve a high composite score.
 
 The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, also scored relatively high overall. Despite its low score in Climate Adaptation, its exceptionally high performance in Quality of Life compensated for those weaknesses.
-
 
 ### 3.2 Typology
 
@@ -519,10 +507,17 @@ The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, als
 
 ![Clusters](image/cluster.png)
 
+| Cluster | Number of unit |
+|---------|----------------|
+| 1       | 2              |
+| 2       | 38             |
+| 3       | 8              |
+| 4       | 6              |
+
 **central value of each cluster**/
 
-| Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Cluster | Connectivity to green | rank | Concentration of POI | rank | Impact of Flood | rank |
+|-----------|-------------|-------|-------------|-------|-------------|-------|
 | 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
@@ -532,8 +527,8 @@ The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, als
 
 **interpreted value and recommendation**/
 
-| Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
-|---------------|---------------|---------------|---------------|---------------|
+| Type | Connectivitity to green | Concentration of POI | Impact of Flood | Recommendation |
+|-------------|-------------|-------------|-------------|-------------------|
 | 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
