@@ -289,7 +289,7 @@ To interpret character of each cluster, center value for each variables should b
 
 ### 3.1 MCDA
 
-#### Analysis for each category
+#### 3.1.1 Analysis for each criterion
 
 ##### Biodiversity
 
@@ -349,9 +349,9 @@ This criterion measures the spatial proximity and connectivity between each stre
 ![Quality of Life 1 - Proximity to Parks: normalised](image/GreenAreas_2.png){width="480"}
 :::
 
-Notably, the highest proximity score is not found in the city center, but rather in a peripheral zone. In this area, the northern side of the stream have relatively high proximity with long strip of green and adjacent residential area. However, there are higher proximity in the southern side, which is industrial area with waste water treatment plant, solar farm, and warehouses. Although the area is primarily industrial, its closeness to green spaces may offer opportunities for incorporating recreational or mixed-use elements as part of broader stream regeneration strategies.
+Notably, the unit with highest proximity score (ID 49) is not found in the city center, but rather in a peripheral zone. In this area, the northern side of the stream have relatively high proximity with long strip of green and adjacent residential area. However, there are higher proximity in the southern side, which is industrial area with waste water treatment plant, solar farm, and warehouses. Although the area is primarily industrial, its closeness to green spaces may offer opportunities for incorporating recreational or mixed-use elements as part of broader stream regeneration strategies.
 
-![Qaulity of Life 1 - stream units with highest score](image/greenareas_highest.png){width="960"}
+![Qaulity of Life 1 - stream unit with highest score (ID 49)](image/greenareas_highest.png){width="960"}
 
 **Proximity to Activities**
 
@@ -445,9 +445,9 @@ Street-level imagery reveals that these zones are dominated by bare ground and t
 This finding shows that undeveloped or non-urbanized land can still exhibit extreme thermal vulnerability when lacking vegetation, especially trees. In fact, the thermal stress in these units exceeds that of more densely developed areas, highlighting the critical role of vegetative cover in moderating microclimate, regardless of urban density.
 
 
-#### Aggregated result
+#### 3.1.2 Final aggregated result
 
-##### For each category
+##### MCDA result for each category
 
 Image below shows aggregated result for each category; Biodiversity, Quality of Llife, Climate adaptation, with normalised result for 3 criteria per category.
 
@@ -498,9 +498,18 @@ A particularly notable pattern is seen in several central units—such as ID 13,
 This outcome is strongly tied to the high weighting of the 'Impact of Flood' criterion, with these units also recording the lowest scores for 'Impact of Flood'.
 
 
-##### All categories combined
+##### Combined result of 3 categoties
+
+The image below shows the final composite scores of three categories. The score reveal clear distinctions between stream units in terms of their overall performance across all selected criteria.
 
 ![Quintiles of the final MCDA score](image/mcda_quintiles.jpg)
+
+The lowest-scoring unit is ID 17, which previously showed significant vulnerability in Climate Adaptation, especially the Impact of Flood. Similarly, ID 13 and ID 20, which were also noted for their low flood resilience, ranked among the bottom-performing units in the overall evaluation.
+
+The highest overall score was recorded in ID 49, an unexpected result given that it did not dominate across most individual criteria.Its most notable strength lies in the Proximity to Park indicator, where it achieved the highest score. Interestingly, this criterion did not carry the highest weight in the Biodiversity category, also in MCDA. Still, combined with moderate to strong scores in other dimensions made score of ID 49 to the top. This outcome underscores the value of balanced multi-criteria performance, where no single dominant factor is necessary to achieve a high composite score.
+
+The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, also scored relatively high overall. Despite its low score in Climate Adaptation, its exceptionally high performance in Quality of Life compensated for those weaknesses.
+
 
 ### 3.2 Typology
 
