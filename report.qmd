@@ -389,10 +389,11 @@ However, a key distinction of this indicator is its ability to detect localized 
 
 In this way, the POI-based metric complements the other two indicators by capturing stream-activity connections in low-dense areas, making it a valuable component in assessing overall potential of stream for improving quality of life.
 
-
 ##### Climate Adaptation
 
 **Permeability**
+
+This criterion evaluates the surface permeability of the built environment as a proxy for climate adaptation capacity. It is based on the proportion of built-up area within each stream unit, with lower built density translating to higher permeability scores.
 
 ::: {layout-ncol="2"}
 ![Climate Adaptation 1 \| Permeability: buffer of 200m](image/Permeabilty_1.png){width="480"}
@@ -400,17 +401,48 @@ In this way, the POI-based metric complements the other two indicators by captur
 ![Climate Adaptation 1 \| Permeability: normalised](image/Permeabilty_2.png){width="480"}
 :::
 
+As is commonly observed, urbanized areas near the city center exhibit low permeability, while peripheral stream units show relatively high permeability.
+
+Notably, the stream unit intersecting with Námestie Oslobodenia, which previously scored highest in 'Proximity to Activity' and 'Concentration of POI', now records the lowest permeability score.This contrast highlights a critical trade-off: areas with high human activity lacks climate resilience.
+
+Such zones can be priority areas for intervention, where nature-based solutions could be introduced to balance urban functionality with ecological sustainability.
+
+
 **Impact of Flooding**
 
-::: {layout-ncol="2"}
+This criterion assesses the potential impact of flooding on the built environment, by counting the number of buildings located within anticipated flood zone.Higher scores indicate lower exposure, meaning fewer buildings are at risk, while lower normalized scores reflect a greater number of buildings within flood zones, representing higher potential vulnerability.
+
+Similar to 'Permeability', lower scores tend to be observed in densely urbanized areas, where built-up density increases the impact of direct flood exposure. However, unlike permeability, this indicator more directly reflects potential impact on human, as it accounts the presence of actual buildings with residents.
+
 ![Climate Adaptation 2 \|Impact of Flooding: buffer of 500m](image\flood_impact.svg){width="960"}
+
+The stream unit intersecting the residential area near Jána Mudrocha Street recorded the lowest normalized score, due to a high number of small-sized buildings located within the floodplain.
+While each individual building may be small, their cumulative presence suggests a higher concentration of people or property at risk, making this zone especially vulnerable.
+
+::: {layout-ncol="2"}
+![Climate Adaptation 2 \| Stream unit with highest score](image/impactofflood_highest.png){width="480"}
+
+![Climate Adaptation 2 \| Other units for comparison ](image/impactofflood_compare.png){width="480"}
 :::
+
+In this sense, the indicator is a meaningful proxy for social exposure to flooding, capturing the reality that a cluster of small homes have more impact on people than a few large structures.
+
 
 **Land Surface Temperature**
 
-::: {layout-ncol="2"}
+This criterion estimates surface-level heat intensity using Landsat data. For normalization, the values were inverted, so that lower scores reflect higher surface temperatures, indicating greater exposure to heat stress and lower thermal comfort. Align with other climate-related indicators, urbanized areas generally recorded lower scores, consistent with their built-up density and low vegetation cover.
+
 ![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg){width="960"}
-:::
+
+However, a notable exception occurs in the southern part of the study area, where several stream units show exceptionally low normalized scores,including the lowest. Interestingly, these areas are not dense urban cores but rather open lands with minimal built structures.
+
+![Climate Adaptation 2 \| stream unit with lowest score](image/temperature_lowest.png){width="960"}
+
+Street-level imagery reveals that these zones are dominated by bare ground and transmission towers, with limited vegetation cover, which likely contributes to elevated surface temperatures.
+
+![Climate Adaptation 1 \| street view of lowest unit](image/temperature_street.png){width="960"}
+
+This finding shows that undeveloped or non-urbanized land can still exhibit extreme thermal vulnerability when lacking vegetation, especially trees. In fact, the thermal stress in these units exceeds that of more densely developed areas, highlighting the critical role of vegetative cover in moderating microclimate, regardless of urban density.
 
 
 #### Aggregated result
