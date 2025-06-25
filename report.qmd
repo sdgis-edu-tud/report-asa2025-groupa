@@ -273,8 +273,7 @@ These variables are stored in the file `MCDA.gpkg`, with the following field nam
 
 'k' in k-means clustering refers to number of clusters. Inertia is used as the indicator for finding optimal k, which means total distance between points from cluster centers. However, this does not mean that k with lowest inertia will be selected, as inertia constantly decreases while k increases. Instead, elbow method will be used. In elbow method, optimal k is where inclination dramatically changes in the graph showing relationship between k and inertia.
 
-Elbow plot for this research is shown below: 
-![elbow plot](image/ElbowPlot.png)
+Elbow plot for this research is shown below: ![elbow plot](image/ElbowPlot.png)
 
 Based on elbow plot, the optimal number for clustering is 4, as the inclination changes dramatically at 4.
 
@@ -282,11 +281,9 @@ Based on elbow plot, the optimal number for clustering is 4, as the inclination 
 
 For clustering, k-means algorithm is used. The clustering result is combined with spatial unit data, assigning cluster number between 1 to 4 for each spatial unit.
 
-
 #### 2.2.5 Cluster Centers
 
 To interpret character of each cluster, center value for each variables should be extracted. Then center values are compared to see difference between each clusters. The research focused on variable with low values for each clusters to figure out appropriate interventions needed for each clusters.
-
 
 ## 3. Results
 
@@ -294,9 +291,17 @@ To interpret character of each cluster, center value for each variables should b
 
 #### Analysis for each category
 
-**Biodiversity**
+##### **Biodiversity**
 
-![Biodiversity 1 - Percentage of green](image/percentage_1.png)
+**Percentage of Green**
+
+Most of the units have a green coverage percentage below 10%. Based on biophilic planning indicators, approximately 30 units fall below the recommended standard. However, some units that intersect with larger green areas show relatively higher values, though none exceed 30%.
+
+::: {layout-ncol="2"}
+![Biodiversity 1 - Percentage of green](image/percentage_1.png){width="480"}
+
+![Biodiversity 1 - Percentage of green (normalised)](image/percentage_2.png){width="480"}
+:::
 
 ![Biodiversity 2 - Connectivity to green](image/distance_1.png)
 
@@ -321,8 +326,6 @@ To interpret character of each cluster, center value for each variables should b
 #### Normalized Result
 
 **Biodiversity**
-
-![Biodiversity 1 - Percentage of green](image/percentage_2.png)
 
 ![Biodiversity 2 - Connectivity to green](image/distance_2.png)
 
