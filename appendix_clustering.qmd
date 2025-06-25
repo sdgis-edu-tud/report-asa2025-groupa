@@ -113,6 +113,22 @@ plot(k_values, inertia,
 
 ```
 
+```{r}
+# Combine the results into a data frame for plotting
+elbow_df <- data.frame(k = k_values, inertia = inertia) #set the name of data frame
+
+# Make the elbow plot
+png("elbow_plot_2.png", width = 800, height = 600)
+
+plot(k_values, inertia,
+     type = "b",                  
+     col = "darkblue",
+     main = "Elbow Method")
+
+dev.off()
+
+```
+
 #### Clustering
 
 The following R script runs k-means clustering:
