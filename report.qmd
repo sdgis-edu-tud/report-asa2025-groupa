@@ -27,7 +27,7 @@ While the Slovak water management company (SVP) focuses mainly on protecting the
 
 -   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness to create a biophilic environment?
 
-![Figure 1. Objectives: Urban Stream Restoration](image/introduction%201.jpg)
+![Figure 1. Objectives: Urban Stream Restoration](image/introduction_1.jpg)
 
 #### 1.2 Human-nature connectedness and its relevance to urban stream restoration
 
@@ -61,7 +61,7 @@ Another way in which biodiversity and biophilic integration are linked is throug
 
 The first method of analysis for biophilic integration of the Teplica used in this report is the Multi-Criteria Decision Analysis (MCDA). This uses classification of the main objective into multiple criteria and sub-criteria to mathematically formalise and aggregate the data contained in each criteria within the definition of a spatial unit. This data is then normalised for comparison. The criteria are weighted based on urgency and their relevance to the overall objective of biophilic integration in the urban stream restoration. Resultant map which is a combination of the weighted criteria is presented in section 3 of the report.
 
-![Figure 2. MCDA hierarchy tree](image/mcda%20tree.jpg)
+![Figure 2. MCDA hierarchy tree](image/mcda_tree.jpg)
 
 ##### 2.2.1 Units
 
@@ -322,11 +322,11 @@ To interpret character of each cluster, center value for each variables should b
 
 **Biodiversity**
 
-![Biodiversity 1 - Percentage of green](image/percentage_2.png){width="312"}
+![Biodiversity 1 - Percentage of green](image/percentage_2.png)
 
-![Biodiversity 2 - Connectivity to green](image/distance_2.png){width="312"}
+![Biodiversity 2 - Connectivity to green](image/distance_2.png)
 
-![Biodiversity 3 - Presence of species : Buffer of 2km](image/species%20-2.png){width="312"}
+![Biodiversity 3 - Presence of species : Buffer of 2km](image/species-2.png)
 
 **Quality of Life**
 
