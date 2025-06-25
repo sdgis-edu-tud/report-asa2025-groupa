@@ -391,19 +391,18 @@ Three variables were selected and standardized from the MCDA criteria to serve a
 <h2 class="anchored" data-anchor-id="results">3. Results</h2>
 <section id="mcda-1" class="level3">
 <h3 class="anchored" data-anchor-id="mcda-1">3.1 MCDA</h3>
-<section id="analysis-for-each-category" class="level4">
-<h4 class="anchored" data-anchor-id="analysis-for-each-category">Analysis for each category</h4>
+<section id="analysis-for-each-criterion" class="level4">
+<h4 class="anchored" data-anchor-id="analysis-for-each-criterion">3.1.1 Analysis for each criterion</h4>
 <section id="biodiversity-1" class="level5">
-<h5 class="anchored" data-anchor-id="biodiversity-1"><strong>Biodiversity</strong></h5>
-<p><strong>Percentage of Green</strong></p>
-<p>Most of the units have a green coverage percentage below 10%. Based on biophilic planning indicators, approximately 30 units fall below the recommended standard. However, some units that intersect with larger green areas show relatively higher values, though none exceed 30%.</p>
+<h5 class="anchored" data-anchor-id="biodiversity-1">Biodiversity</h5>
+<p><strong>Percentage of Green</strong> The distribution of green coverage among the stream units varies between 0% and 30%, indicating a relatively low to moderate presence of vegetation throughout the area.</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="image/percentage_1.png" class="img-fluid figure-img" width="480"></p>
-<figcaption>Biodiversity 1 - Percentage of green</figcaption>
+<figcaption>Biodiversity 1 - Percentage of green: buffer of 500m</figcaption>
 </figure>
 </div>
 </div>
@@ -411,264 +410,560 @@ Three variables were selected and standardized from the MCDA criteria to serve a
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="image/percentage_2.png" class="img-fluid figure-img" width="480"></p>
-<figcaption>Biodiversity 1 - Percentage of green (normalised)</figcaption>
+<figcaption>Biodiversity 1 - Percentage of green: normalised</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<p>According to Biophilic Planning Indicators, a minimum of 10% of each area should be covered by trees or vegetation (source to be added shreya).In the case of Teplica, only 9 out of 54 units exceed this standard. The units with more than 10% green coverage are generally those that intersect with larger green spaces, such as gardens (Zahrádková osada Kunov), parks (Městský park), or unused open green areas.</p>
 <p><strong>Connectivity to Green</strong></p>
+<p>The shortest distances from stream units to adjacent green areas range from 0 to approximately 2,000 meters. Notably, 16 out of 54 units are located directly within green spaces, even if they are relatively small, which results in maximum connectivity scores for those segments.</p>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/distance_1.png" class="img-fluid figure-img"></p>
-<figcaption>Biodiversity 2 - Connectivity to green</figcaption>
+<p><img src="image/distance_1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Biodiversity 2 - Connectivity to green: distant to closest green</figcaption>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/distance_2.png" class="img-fluid figure-img"></p>
-<figcaption>Biodiversity 2 - Connectivity to green</figcaption>
+<p><img src="image/distance_2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Biodiversity 2 - Connectivity to green: normalised</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<p>A few unusually long distance values appear in the northeastern stream segments, which seem to result from incomplete green space information in <code>osm_greenspace</code> dataset. In these cases, presence of vegetation are shown in satelite image, but the corresponding vector data does not capture these areas. This limitation may lead to an underestimation of connectivity in those specific units.</p>
+<p>Nevertheless, overall connectivity to green space across the stream corridor is relatively strong. When assessed using normalized values, 49 out of 54 units scored above 0.5, indicating that the majority of the stream segments maintain a moderate to high level of integration with surrounding green infrastructure.</p>
+<p><strong>Presence of species</strong></p>
+<p>9 habitat data extracted from the Atlas of Slovak were overlaid to assess the cumulative presence within a 2 km buffer around each stream unit. Selected species are those whose habitat do not uniformly cover the entire Senica area. The resulting values range between 5 and 9, though only four discrete values (5, 6, 7, and 9) were observed.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/species-1.png" class="img-fluid figure-img"></p>
-<figcaption>Biodiversity 3 - Presence of species : Buffer of 2km</figcaption>
+<p><img src="image/species-1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Biodiversity 3 - Presence of species : buffer of 2km</figcaption>
 </figure>
 </div>
-<p><strong>Quality of Life</strong></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/GreenAreas_1.png" class="img-fluid figure-img"></p>
-<figcaption>Quality of Life 1 - Proximity to Greens Spaces</figcaption>
+<p><img src="image/species-2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Biodiversity 3 - Presence of species : normalised</figcaption>
 </figure>
 </div>
+</div>
+</div>
+</div>
+<p>Units in the southwestern part of the study area show the highest levels of species presence (score 9), while the values tend to gradually decline as the units extend further northeast.</p>
+<p>Interestingly, one of the lowest scoring areas (normalized value below 0.2) is located not at the most distant edge, but rather bit more southern from the edge, where the stream land overlaps with less vegetated open field.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/Activities_1.png" class="img-fluid figure-img"></p>
-<figcaption>Quality of Life 2 - Proximity to Activites</figcaption>
+<p><img src="image/species_lowestpart.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Biodiversity 3 - stream units with lowest score</figcaption>
 </figure>
 </div>
+<p>From Google map street view, this area contains tall transmission towers and high-voltage power lines, which may negatively affect species habitat suitability due to noise, electromagnetic fields, and habitat fragmentation.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/POI_1.png" class="img-fluid figure-img"></p>
-<figcaption>Quality of Life 3 - Concetration of POI</figcaption>
+<p><img src="image/species_powerline.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Biodiversity 3 - street view of lowest unit</figcaption>
 </figure>
 </div>
-<p><strong>Climate Adaptation</strong></p>
+</section>
+<section id="quality-of-life-1" class="level5">
+<h5 class="anchored" data-anchor-id="quality-of-life-1">Quality of Life</h5>
+<p><strong>Proximity to Parks</strong></p>
+<p>This criterion measures the spatial proximity and connectivity between each stream unit and nearby parks within a 500-meter buffer zone. Among the 54 stream units analyzed, 31 units recorded a proximity score below 0.1, indicating buildings around stream unit have limited or no direct access to park infrastructure. Units with higher proximity values are mostly concentrated in urbanized areas in the centre, where parks more well-integrated into urban fabric.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/Permeabilty_1.png" class="img-fluid figure-img"></p>
-<figcaption>Climate Adaptation 1 | Permeability of the ground</figcaption>
+<p><img src="image/GreenAreas_1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 1 - Proximity to Parks: buffer of 1km</figcaption>
 </figure>
 </div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image\flood_impact.svg" class="img-fluid figure-img"></p>
-<figcaption>Climate Adaptation 2 |Impact of Flooding: Buffer 500m</figcaption>
+<p><img src="image/GreenAreas_2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 1 - Proximity to Parks: normalised</figcaption>
 </figure>
 </div>
+</div>
+</div>
+</div>
+<p>Notably, the unit with highest proximity score (ID 49) is not found in the city center, but rather in a peripheral zone. In this area, the northern side of the stream have relatively high proximity with long strip of green and adjacent residential area. However, there are higher proximity in the southern side, which is industrial area with waste water treatment plant, solar farm, and warehouses. Although the area is primarily industrial, its closeness to green spaces may offer opportunities for incorporating recreational or mixed-use elements as part of broader stream regeneration strategies.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image\temperature.svg" class="img-fluid figure-img"></p>
+<p><img src="image/greenareas_highest.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Qaulity of Life 1 - stream unit with highest score (ID 49)</figcaption>
+</figure>
+</div>
+<p><strong>Proximity to Activities</strong></p>
+<p>This criterion captures the spatial proximity between stream units and nearby buildings with different activities such as churches, commercial facilities, and offices. Among the 54 stream units, 29 units recorded a proximity score of zero, indicating no meaningful nearby human activity nodes within the defined buffer zone. Furthermore, only 8 units achieved a normalized score above 0.2, underscoring the limited distribution of such structures outside urban areas.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Activities_1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 2 - Proximity to Activities: buffer of 1km</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Activities_2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 2 - Proximity to Activities normalised</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The highest scoring unit(ID 3) is located around Námestie Oslobodenia, a key urban road corridor. The stream unit intersecting this road recorded the maximum proximity value, suggesting a strong spatial integration between the stream and surrounding civic or commercial infrastructure in that zone.</p>
+<p>This pattern emphasizes that active built functions remain highly centralized, and the majority of stream segments outside the core urban fabric are only marginally connected to concentrated buildings with activities.</p>
+<p><strong>Concentration of POI</strong></p>
+<p>Unlike the previous two indicators in quality of life category, this criterion measures the direct spatial proximity between stream units and nearby Points of Interest (POIs).As such, it captures more relevant interactions between the stream itself and surrounding landmarks, making the result less influenced by the density or presence of built structures around the stream.</p>
+<p>Still out of 54 units, 39 recorded a score of zero, indicating that in most cases, stream segments are not spatially connected to POIs. Also, as with previous proximity indicators, the highest scoring unit(ID 3) is located near Námestie Oslobodenia, reflecting the concentration of urban functions in that corridor.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/POI_1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 3 - Concetration of POI: buffer of 200m</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/POI_2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 3 - Concetration of POI: normalised</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>However, a key distinction of this indicator is its ability to detect localized activity potential even in areas with minimal built infrastructure.For instance, in northern stream units, Proximity to Activities’ scored zero, the POI criterion assigns a small but non-zero score, acknowledging the presence of nearby activity points.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/POI_compare_1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 2 - Proximity to Activities: buffer of 500m + normalised (zoomed in)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/POI_compare_2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Quality of Life 3 - Concetration of POI: buffer of 200m + normalised (zoomed in)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>In this way, the POI-based metric complements the other two indicators by capturing stream-activity connections in low-dense areas, making it a valuable component in assessing overall potential of stream for improving quality of life.</p>
+</section>
+<section id="climate-adaptation-1" class="level5">
+<h5 class="anchored" data-anchor-id="climate-adaptation-1">Climate Adaptation</h5>
+<p><strong>Permeability</strong></p>
+<p>This criterion evaluates the surface permeability of the built environment as a proxy for climate adaptation capacity. It is based on the proportion of built-up area within each stream unit, with lower built density translating to higher permeability scores.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Permeabilty_1.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Climate Adaptation 1 | Permeability: buffer of 200m</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/Permeabilty_2.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Climate Adaptation 1 | Permeability: normalised</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>As is commonly observed, urbanized areas near the city center exhibit low permeability, while peripheral stream units show relatively high permeability.</p>
+<p>Notably, the stream unit intersecting with Námestie Oslobodenia (ID 3), which previously scored highest in ‘Proximity to Activity’ and ‘Concentration of POI’, now records the lowest permeability score.This contrast highlights a critical trade-off: areas with high human activity lacks climate resilience.</p>
+<p>Such zones can be priority areas for intervention, where nature-based solutions could be introduced to balance urban functionality with ecological sustainability.</p>
+<p><strong>Impact of Flooding</strong></p>
+<p>This criterion assesses the potential impact of flooding on the built environment, by counting the number of buildings located within anticipated flood zone.Higher scores indicate lower exposure, meaning fewer buildings are at risk, while lower normalized scores reflect a greater number of buildings within flood zones, representing higher potential vulnerability.</p>
+<p>Similar to ‘Permeability’, lower scores tend to be observed in densely urbanized areas, where built-up density increases the impact of direct flood exposure. However, unlike permeability, this indicator more directly reflects potential impact on human, as it accounts the presence of actual buildings with residents.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image\flood_impact.svg" class="img-fluid figure-img" width="960"></p>
+<figcaption>Climate Adaptation 2 |Impact of Flooding: buffer of 500m</figcaption>
+</figure>
+</div>
+<p>The stream unit intersecting the residential area near Jána Mudrocha Street (ID 13) recorded the lowest normalized score, due to a high number of small-sized buildings located within the floodplain. While each individual building may be small, their cumulative presence suggests a higher concentration of people or property at risk, making this zone especially vulnerable.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/impactofflood_highest.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Climate Adaptation 2 | Stream unit with highest score (ID 13)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/impactofflood_compare.png" class="img-fluid figure-img" width="480"></p>
+<figcaption>Climate Adaptation 2 | Other units for comparison</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>In this sense, the indicator is a meaningful proxy for social exposure to flooding, capturing the reality that a cluster of small homes have more impact on people than a few large structures.</p>
+<p><strong>Land Surface Temperature</strong></p>
+<p>This criterion estimates surface-level heat intensity using Landsat data. For normalization, the values were inverted, so that lower scores reflect higher surface temperatures, indicating greater exposure to heat stress and lower thermal comfort. Align with other climate-related indicators, urbanized areas generally recorded lower scores, consistent with their built-up density and low vegetation cover.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image\temperature.svg" class="img-fluid figure-img" width="960"></p>
 <figcaption>Climate Adaptation 3 |Impact of Flooding: Buffer 500m</figcaption>
 </figure>
 </div>
-</section>
-</section>
-<section id="normalized-result" class="level4">
-<h4 class="anchored" data-anchor-id="normalized-result">Normalized Result</h4>
-<p><strong>Biodiversity</strong></p>
+<p>However, a notable exception occurs in the southern part of the study area, where several stream units show exceptionally low normalized scores,including the lowest. Interestingly, these areas are not dense urban cores but rather open lands with minimal built structures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/species-2.png" class="img-fluid figure-img"></p>
-<figcaption>Biodiversity 3 - Presence of species : Buffer of 2km</figcaption>
+<p><img src="image/temperature_lowest.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Climate Adaptation 2 | stream unit with lowest score</figcaption>
 </figure>
+</div>
+<p>Street-level imagery reveals that these zones are dominated by bare ground and transmission towers, with limited vegetation cover, which likely contributes to elevated surface temperatures.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/temperature_street.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Climate Adaptation 1 | street view of lowest unit</figcaption>
+</figure>
+</div>
+<p>This finding shows that undeveloped or non-urbanized land can still exhibit extreme thermal vulnerability when lacking vegetation, especially trees. In fact, the thermal stress in these units exceeds that of more densely developed areas, highlighting the critical role of vegetative cover in moderating microclimate, regardless of urban density.</p>
+</section>
+</section>
+<section id="final-aggregated-result" class="level4">
+<h4 class="anchored" data-anchor-id="final-aggregated-result">3.1.2 Final aggregated result</h4>
+<section id="mcda-result-for-each-category" class="level5">
+<h5 class="anchored" data-anchor-id="mcda-result-for-each-category">MCDA result for each category</h5>
+<p>Image below shows aggregated result for each category; Biodiversity, Quality of Llife, Climate adaptation, with normalised result for 3 criteria per category.</p>
+<p><img src="image/MCDAcomp.svg" class="img-fluid" alt="Composition of MCDA"> <strong>Biodiversity</strong></p>
+<p>The composite score for the Biodiversity does not follow a gradual spatial gradient but instead reveals distinct high-scoring units scattered across the study area. This pattern suggests that biodiversity potential is driven less by overall spatial trends and more by localized ecological conditions, particularly the presence and size of adjacent green spaces.</p>
+<p>The highest biodiversity score was observed in unit with ID number 5, a stream unit located between two big green spaces.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image/B_highest1.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Biodiversityunit|unit with highest value: ID 5</figcaption>
+</figure>
+</div>
+<p>Notably, some of the high-scoring units are located within urban areas,demonstrating that even in densely built environments, proximity to large, continuous green spaces can substantially enhance ecological value.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img src="image/B_highest3.png" class="img-fluid" width="480" alt="Biodiversityunit|unit with highes value: ID 20"> <img src="image/B_highest2.png" class="img-fluid" width="480" alt="Biodiversityunit|unit with highes value: ID 54"></p>
+</div>
+</div>
 </div>
 <p><strong>Quality of Life</strong></p>
+<p>The Quality of Life category demonstrates a clear urban–peripheral gradient, with higher scores concentrated in the city center and markedly lower values toward the outer stream segments. This trend reflects the distribution of civic amenities, built infrastructure, and accessible services, which are typically concentrated in urban cores.</p>
+<p>The highest-scoring unit (ID number 3) lies at the intersection with Námestie Oslobodenia, a central urban corridor consistently identified across different criterias, such as ‘Proximity to Activities’ and ‘Concentration of POI’.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/GreenAreas_2.png" class="img-fluid figure-img"></p>
-<figcaption>Quality of Life 1 - Proximity to Greens Spaces</figcaption>
+<p><img src="image/Q_highest.png" class="img-fluid figure-img" width="960"></p>
+<figcaption>Biodiversityunit|unit with highest value: ID 3</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image/Activities_2.png" class="img-fluid figure-img"></p>
-<figcaption>Quality of Life 2 - Proximity to Activites</figcaption>
-</figure>
+<p>In contrast, several peripheral units scored zero, particularly those at the extreme ends of the study area. These locations lack nearby buildings or points of interest and are often surrounded by vacant land, resulting in minimal contribution to human-centered livability measures.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img src="image/Q_lowest_1.png" class="img-fluid" width="480" alt="Biodiversityunit|units with 0 value"> <img src="image/Q_lowest_2.png" class="img-fluid" width="480" alt="Biodiversityunit|units with 0 value"></p>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image/POI_2.png" class="img-fluid figure-img"></p>
-<figcaption>Quality of Life 3 - Concetration of POI</figcaption>
-</figure>
+</div>
 </div>
 <p><strong>Climate Adaptation</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image/Permeabilty_2.png" class="img-fluid figure-img"></p>
-<figcaption>Climate Adaptation 1 | Permeability of the ground</figcaption>
-</figure>
+<p>The Climate Adaptation indicator shows an inverse spatial pattern compared to Quality of Life, with higher scores observed in peripheral areas and lower scores in densely developed urban zones.However, unlike the Quality of Life indicator, which shows clear graduation from city centre, the Climate Adaptation score appears to be more directly influenced by built area.For instance, even in non-central areas such as the vicinity of Kunov, units exhibit low scores due to presence of buildings and hard surfaces.</p>
+<p>A particularly notable pattern is seen in several central units—such as ID 13, 17, and 20—which scored especially low.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img src="image/C_lowest1.png" class="img-fluid" width="480" alt="Climate Adaptation|unit with lowe value (ID 13)"> <img src="image/C_lowest2.png" class="img-fluid" width="480" alt="Climate Adaptation|units with low value (ID 17, 20)"></p>
 </div>
-<p>![Climate Adaptation 2 |Impact of Flooding: Buffer 500m](image)</p>
-<p>![Climate Adaptation 3 |Impact of Flooding: Buffer 500m](image)</p>
+</div>
+</div>
+<p>This outcome is strongly tied to the high weighting of the ‘Impact of Flood’ criterion, with these units also recording the lowest scores for ‘Impact of Flood’.</p>
 </section>
-<section id="aggregated-result" class="level4">
-<h4 class="anchored" data-anchor-id="aggregated-result">Aggregated result</h4>
-<p><strong>For each category</strong></p>
+<section id="combined-result-of-3-categoties" class="level5">
+<h5 class="anchored" data-anchor-id="combined-result-of-3-categoties">Combined result of 3 categoties</h5>
+<p>The image below shows the final composite scores of three categories. The score reveal clear distinctions between stream units in terms of their overall performance across all selected criteria.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="image/MCDAcomp.svg" class="img-fluid figure-img"></p>
-<figcaption>Composition of MCDA</figcaption>
-</figure>
-</div>
-<p><strong>All categories combined</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image/mcda_quintiles.jpg" class="img-fluid figure-img"></p>
+<p><img src="image/mcda_quintiles.jpg" class="img-fluid figure-img" width="960"></p>
 <figcaption>Quintiles of the final MCDA score</figcaption>
 </figure>
 </div>
+<p>The lowest-scoring unit is ID 17, which previously showed significant vulnerability in Climate Adaptation, especially the Impact of Flood. Similarly, ID 13 and ID 20, which were also noted for their low flood resilience, ranked among the bottom-performing units in the overall evaluation.</p>
+<p>The highest overall score was recorded in ID 49, an unexpected result given that it did not dominate across most individual criteria.Its most notable strength lies in the Proximity to Park indicator, where it achieved the highest score. Interestingly, this criterion did not carry the highest weight in the Biodiversity category, also in MCDA. Still, combined with moderate to strong scores in other dimensions made score of ID 49 to the top. This outcome underscores the value of balanced multi-criteria performance, where no single dominant factor is necessary to achieve a high composite score.</p>
+<p>The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, also scored relatively high overall. Despite its low score in Climate Adaptation, its exceptionally high performance in Quality of Life compensated for those weaknesses.</p>
+</section>
 </section>
 </section>
 <section id="typology" class="level3">
 <h3 class="anchored" data-anchor-id="typology">3.2 Typology</h3>
 <section id="clustering-results" class="level4">
-<h4 class="anchored" data-anchor-id="clustering-results">Clustering results</h4>
-<p><strong>map</strong></p>
+<h4 class="anchored" data-anchor-id="clustering-results">3.2.1 Clustering results</h4>
+<p>Based on the results of elbow method, the 54 stream units were categorized into four distinct clusters, each representing a recurring combination of ecological connectivity, human activity concentration, and exposure to climate-related hazards.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="image/cluster.png" class="img-fluid figure-img"></p>
 <figcaption>Clusters</figcaption>
 </figure>
 </div>
-<p><strong>central value of each cluster</strong>/</p>
+<p>The distribution of units across the four clusters is highly uneven, indicating that while some typologies are widespread, others represent specialized conditions. Cluster 2 have most common condition, comprising 38 out of 54 units.Conversely, Cluster 1 includes only 2 units, which suggests that these may be extreme or exceptional cases.Likely, Cluster 3 (8 units) and Cluster 4 (6 units) represent intermediate or transitional typologies, capturing zones with distinct but less common combinations of conditions.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Type</th>
-<th>Connectivity to green</th>
-<th>rank</th>
-<th>Concentration of POI</th>
-<th>rank</th>
-<th>Less impact from flood</th>
-<th>rank</th>
+<th>Cluster</th>
+<th>Number of unit</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
+<td><strong>1</strong></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>38</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>The unbalanced distribution highlights the fact that urban stream conditions are not evenly diverse, and that targeted strategies will be necessary for the smaller, more specialized areas.</p>
+<p><strong>central value of each cluster</strong></p>
+<p>The clustering yielded four distinct typologies based on the central values of three key criteria: (1)connectivity to green, (2)concentration of POI, and (3)impact of flood.</p>
+<p>These clusters vary significantly in both their internal characteristics and their relative strengths, as shown in the central value and rank in comparison.The overall results are shown in two tables below:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cluster</th>
+<th>Connectivity to green</th>
+<th>Concentration of POI</th>
+<th>Impact of Flood</th>
+<th>sum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
 <td>1.00</td>
-<td>1</td>
 <td>0.74</td>
-<td>1</td>
 <td>0.61</td>
+<td>2.35</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>0.89</td>
+<td>0.12</td>
+<td>0.95</td>
+<td>1.96</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>0.95</td>
+<td>0.44</td>
+<td>0.34</td>
+<td>1.73</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>0.26</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>1.26</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cluster</th>
+<th>Connectivity to green</th>
+<th>Concentration of POI</th>
+<th>Impact of Flood</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>1</td>
+<td>1</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>0.89</td>
+<td><strong>2</strong></td>
 <td>3</td>
-<td>0.12</td>
 <td>3</td>
-<td>0.95</td>
 <td>2</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>0.95</td>
+<td><strong>3</strong></td>
 <td>2</td>
-<td>0.44</td>
 <td>2</td>
-<td>0.34</td>
 <td>4</td>
 </tr>
 <tr class="even">
+<td><strong>4</strong></td>
 <td>4</td>
-<td>0.26</td>
 <td>4</td>
-<td>0.00</td>
-<td>4</td>
-<td>1.00</td>
 <td>1</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="interpretation-of-each-cluster" class="level4">
-<h4 class="anchored" data-anchor-id="interpretation-of-each-cluster">Interpretation of each cluster</h4>
-<p><strong>interpreted value and recommendation</strong>/</p>
+<section id="interpretation-of-clusters-and" class="level4">
+<h4 class="anchored" data-anchor-id="interpretation-of-clusters-and">3.2.2 Interpretation of clusters and</h4>
+<p>Based on central value and rank for three variables, character of each type can be interpreted like this:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 48%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Type</th>
-<th>Connectivitity to green</th>
+<th>Connectivity to green</th>
 <th>Concentration of POI</th>
-<th>Anticipated impact from flood</th>
-<th>Description</th>
+<th>Impact of Flood</th>
+<th>Interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>next to green</td>
+<td><strong>1</strong></td>
+<td>right next to green</td>
 <td>high</td>
-<td>medium-high</td>
-<td>best condition for biophilia, need a plan for preventing flood</td>
+<td>medium</td>
+<td>best condition for biophilia</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>distant to green</td>
+<td><strong>2</strong></td>
+<td>distant from green</td>
 <td>low</td>
 <td>low</td>
-<td>green space needs to be extended, more POI can be added</td>
+<td>most common condition with moderate values</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>close to green</td>
-<td>medium-high</td>
+<td><strong>3</strong></td>
+<td>very close to green</td>
+<td>medium</td>
 <td>high</td>
-<td>urgent need for preventing flood</td>
+<td>good condition for biophilia, high risk from flood</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>far from green</td>
+<td><strong>4</strong></td>
+<td>far away from green</td>
 <td>none</td>
 <td>none</td>
-<td>lots of potential for big parks and activities</td>
+<td>no impact from flood, but no condition for biophilia</td>
 </tr>
 </tbody>
 </table>
-<p><strong>possible example of intervention</strong> /</p>
+<p><strong>Type 1</strong>: best condition for biophilia</p>
+<p>This cluster demonstrates the strongest overall performance, ranking first in both connectivity to green (1.00) and POI concentration (0.74).A 1.00 in connectivity suggests that both units in this type are fully adjacent to green space. This type also has outstanding value for POI, with a score nearly double that of the next highest cluster.The result confirms high access to activity nodes from stream.</p>
+<p>Despite ranking only third in flood impact, the overall sum of medians and rank-based scores places Cluster 1 clearly above the rest. The rarity of type, with only 2 units belonging to the cluster, may reflect ideal but uncommon spatial conditions, making it a reference type for best-case scenario for urban stream restoration.</p>
+<p><strong>Type 2</strong>: most common and basic condition</p>
+<p>As the type with largest cluster,Type 2 likely represents the prevailing condition along the stream. It shows moderate flood resilience, but ranks third in connectivity and POI concentration, indicating that most units in this group have few nearby amenities and weak ecological connection.</p>
+<p>This typical, but relatively underperforming typology will be suitable for creating broad-scale baseline improvement strategies, especially in terms of green infrastructure and concentration of different activity around stream.</p>
+<p><strong>Type 3</strong>: good condition, but high risk from flood</p>
+<p>Type 3 shows moderate to strong performance in both connectivity (0.95) and POI access (0.44), ranking second in both. However, it ranks last in flood impact, with noticably low value compared to other types (0.34).This indicates that while these areas benefit from ecological and functional proximity, they are also highly exposed to flood risk.</p>
+<p>In planning terms, this cluster represents areas with potential for improvement through targeted flood adaptation measures, such as permeable surfaces or flood-tolerant green buffers.</p>
+<p><strong>Type 4</strong>: isolated area with no risk from flood</p>
+<p>This type has zero POI concentration and lowest connectivity to green, placing it last in both. However, it ranks first in flood impact, with a central value of 0.00, suggesting either no overlap with flood zones or no built structures at risk, or even no built structures around. In essence, Cluster 4 represents spatially disconnected, undeveloped zones—possibly agricultural, or vacant lands.</p>
+<p>Despite their current isolation, these areas present a valuable opportunity for large-scale, transformative interventions, due to the absence of flood risk and existing land-use constraints. Their “blank” condition makes them well-suited for long-term ecological or multi-functional development.</p>
+</section>
+<section id="recommended-intervention-for-each-typology" class="level4">
+<h4 class="anchored" data-anchor-id="recommended-intervention-for-each-typology">3.2.3 Recommended intervention for each typology</h4>
+<p>Based on the characteristics of each cluster derived from the typology analysis, tailored intervention strategies are proposed to enhance ecological connectivity, socio-functional quality, and flood resilience, for each stream unit. These recommendations reflect the distinct strengths and vulnerabilities of each cluster type.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>Minimal interventions needed, consider minor adjustments for enhancing flood resilience</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>Expand existing green areas and introduce new activities to improve ecological and social quality</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>High priority for flood adaptation measures needed due to high vulnerability</td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>Strong potential for large-scale recreational green space development</td>
+</tr>
+</tbody>
+</table>
+<p>To visualize how the recommendations may be applied in context, representative units from each typology were selected. The examples demonstrate how spatial and functional improvements could be implemented based on each cluster’s characteristics.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="image/clusters_zoomin.png" class="img-fluid figure-img"></p>
-<figcaption>interventions</figcaption>
+<figcaption>Suggested interventions for representative units</figcaption>
 </figure>
 </div>
 </section>
@@ -687,8 +982,10 @@ Three variables were selected and standardized from the MCDA criteria to serve a
 <p>In the context of urban stream restoration, a case study was performed to assess “what parts of the Teplica stream have the most potential for human-nature connectedness and to create a biophilic environment?”. To translate this complex question into a measurable index, two methods were employed, namely a Multi-Criteria Decision Analysis (MCDA) and a Typology Analysis using k-means clustering.</p>
 <p>First, three equally important domains were established: biodiversity, quality of life, and climate adaptation. Each of these domains contributes in their own specific way to the main topic of the research. For each domain, measurable sub-criteria were decided upon and weighted based on importance. Data was aggregated on 200m segments of the Teplica stream.</p>
 <p>Afterwards a Typology Analysis was performed, using the three most important criteria from the MCDA, based on relative weight. Using a k-means clustering approach, the stream segments were divided into four distinct clusters</p>
-<p>The most important finding was that the urban segments in the center of Senica scored worst on human-nature connectedness. These areas correlated with the third typology, which featured close proximity to green spaces, but only medium proximity to points of interest and high impact flooding. This indicates the need to improve flood prevention in these areas, which then could create more opportunities for urban development.</p>
+<p>The most important finding was that the urban segments in the center of Senica scored worst on human-nature connectedness. These areas correlated with the third typology, which featured close proximity to green spaces, but only medium proximity to points of interest and high impact flooding. This indicates the need to improve flood prevention in these areas, which then could create more opportunities for urban development. This could be seen better in the following image.</p>
+<p><img src="image/Combined.png" class="img-fluid"></p>
 <p>Initially it was assumed that more urban areas would score better on human-nature connectedness, since they offer more facilities like parks and activities, compared to more agricultural regions. However, this is also heavily correlated with an increased risk of flooding, which offset those benefits.</p>
+<p>Moreover though the typology construction it is easier to identify different interventions in different parts of the stream, so not only improve the the parts that scored low on the MCDA analysis but also upgrade the existing qualities of the area.</p>
 <p>Overall, our research showed it was also possible in smaller communes to create a framework to assess human-nature connectedness in the context of urban stream restoration. While the data limitations introduced some uncertainty in the results, the analysis remains a valuable tool to address issues facing smaller communities and improve human wellbeing surrounding urban streams and include them into the landscape rather than ignore them.</p>
 </section>
 <section id="bibliography" class="level2">
