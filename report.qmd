@@ -577,14 +577,19 @@ Despite their current isolation, these areas present a valuable opportunity for 
 
 
 #### 3.2.3 Recommended intervention for each typology
-| Type  | Recommendation                                            |
-|-------|-----------------------------------------------------------|
-| **1** | little improvement for flood adaptation suggested         |
-| **2** | extend green space, add attraction points                 |
-| **3** | urgent need for flood adaptiation improvement             |
-| **4** | lots of potential for creating recreational natural space |
 
-![interventions](image/clusters_zoomin.png)
+Based on the characteristics of each cluster derived from the typology analysis, tailored intervention strategies are proposed to enhance ecological connectivity, socio-functional quality, and flood resilience, for each stream unit. These recommendations reflect the distinct strengths and vulnerabilities of each cluster type.
+
+| Type  | Recommendation                                          |
+|-------|---------------------------------------------------------|
+| **1** | Minimal interventions needed, consider minor adjustments for enhancing flood resilience          |
+| **2** | Expand existing green areas and introduce new activities to improve ecological and social quality|
+| **3** | High priority for flood adaptation measures needed due to high vulnerability                     |
+| **4** | Strong potential for large-scale recreational green space development                            |
+
+To visualize how the recommendations may be applied in context, representative units from each typology were selected. The examples demonstrate how spatial and functional improvements could be implemented based on each cluster’s characteristics.
+
+![Suggested interventions for representative units](image/clusters_zoomin.png)
 
 ## 4. Discussion
 
