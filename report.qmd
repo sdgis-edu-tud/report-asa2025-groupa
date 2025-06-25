@@ -368,7 +368,7 @@ Most of the units have a green coverage percentage below 10%. Based on biophilic
 **central value of each cluster**/
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
-|----|----|----|----|----|----|----|
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 | 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
@@ -379,7 +379,7 @@ Most of the units have a green coverage percentage below 10%. Based on biophilic
 **interpreted value and recommendation**/
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
@@ -409,9 +409,13 @@ First, three equally important domains were established: biodiversity, quality o
 
 Afterwards a Typology Analysis was performed, using the three most important criteria from the MCDA, based on relative weight. Using a k-means clustering approach, the stream segments were divided into four distinct clusters
 
-The most important finding was that the urban segments in the center of Senica scored worst on human-nature connectedness. These areas correlated with the third typology, which featured close proximity to green spaces, but only medium proximity to points of interest and high impact flooding. This indicates the need to improve flood prevention in these areas, which then could create more opportunities for urban development.
+The most important finding was that the urban segments in the center of Senica scored worst on human-nature connectedness. These areas correlated with the third typology, which featured close proximity to green spaces, but only medium proximity to points of interest and high impact flooding. This indicates the need to improve flood prevention in these areas, which then could create more opportunities for urban development. This could be seen better in the following image.
+
+![](image/Combined.png)
 
 Initially it was assumed that more urban areas would score better on human-nature connectedness, since they offer more facilities like parks and activities, compared to more agricultural regions. However, this is also heavily correlated with an increased risk of flooding, which offset those benefits.
+
+Moreover though the typology construction it is easier to identify different interventions in different parts of the stream, so not only improve the the parts that scored low on the MCDA analysis but also upgrade the existing qualities of the area.
 
 Overall, our research showed it was also possible in smaller communes to create a framework to assess human-nature connectedness in the context of urban stream restoration. While the data limitations introduced some uncertainty in the results, the analysis remains a valuable tool to address issues facing smaller communities and improve human wellbeing surrounding urban streams and include them into the landscape rather than ignore them.
 
