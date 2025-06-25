@@ -291,7 +291,7 @@ To interpret character of each cluster, center value for each variables should b
 
 #### Analysis for each category
 
-##### **Biodiversity**
+##### Biodiversity
 
 **Percentage of Green** The distribution of green coverage among the stream units varies between 0% and 30%, indicating a relatively low to moderate presence of vegetation throughout the area.
 
@@ -301,7 +301,7 @@ To interpret character of each cluster, center value for each variables should b
 ![Biodiversity 1 - Percentage of green: normalised](image/percentage_2.png){width="480"}
 :::
 
-According to Biophilic Planning Indicators, a minimum of 10% of each area should be covered by trees or vegetation (source: XXXX).In the case of Teplica, only 9 out of 54 units exceed this standard. The units with more than 10% green coverage are generally those that intersect with larger green spaces, such as gardens (Zahrádková osada Kunov), parks (Městský park), or unused open green areas.
+According to Biophilic Planning Indicators, a minimum of 10% of each area should be covered by trees or vegetation (source to be added shreya).In the case of Teplica, only 9 out of 54 units exceed this standard. The units with more than 10% green coverage are generally those that intersect with larger green spaces, such as gardens (Zahrádková osada Kunov), parks (Městský park), or unused open green areas.
 
 **Connectivity to Green**
 
@@ -337,41 +337,75 @@ From Google map street view, this area contains tall transmission towers and hig
 
 ![Biodiversity 3 - street view of lowest unit](image/species_powerline.png){width="960"}
 
-**Quality of Life**
+##### Quality of Life
 
-![Quality of Life 1 - Proximity to Greens Spaces](image/GreenAreas_1.png)
+**Proximity to Parks**
 
-![Quality of Life 2 - Proximity to Activites](image/Activities_1.png)
+This criterion measures the spatial proximity and connectivity between each stream unit and nearby parks within a 500-meter buffer zone. Among the 54 stream units analyzed, 31 units recorded a proximity score below 0.1, indicating buildings around stream unit have limited or no direct access to park infrastructure. Units with higher proximity values are mostly concentrated in urbanized areas in the centre, where parks more well-integrated into urban fabric.
 
-![Quality of Life 3 - Concetration of POI](image/POI_1.png)
+::: {layout-ncol="2"}
+![Quality of Life 1 - Proximity to Parks: buffer of 1km](image/GreenAreas_1.png){width="480"}
 
-**Climate Adaptation**
+![Quality of Life 1 - Proximity to Parks: normalised](image/GreenAreas_2.png){width="480"}
+:::
 
-![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_1.png)
+Notably, the highest proximity score is not found in the city center, but rather in a peripheral zone. In this area, the northern side of the stream have relatively high proximity with long strip of green and adjacent residential area. However, there are higher proximity in the southern side, which is industrial area with waste water treatment plant, solar farm, and warehouses. Although the area is primarily industrial, its closeness to green spaces may offer opportunities for incorporating recreational or mixed-use elements as part of broader stream regeneration strategies.
 
-![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m](image\flood_impact.svg)
+![Qaulity of Life 1 - stream units with highest score](image/greenareas_highest.png){width="960"}
 
-![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg)
+**Proximity to Activities**
 
-#### Normalized Result
+This criterion captures the spatial proximity between stream units and nearby buildings with different activities such as churches, commercial facilities, and offices. Among the 54 stream units, 29 units recorded a proximity score of zero, indicating no meaningful nearby human activity nodes within the defined buffer zone. Furthermore, only 8 units achieved a normalized score above 0.2, underscoring the limited distribution of such structures outside urban areas.
 
-**Biodiversity**
+::: {layout-ncol="2"}
+![Quality of Life 2 - Proximity to Activities: buffer of 1km](image/Activities_1.png){width="480"}
 
-**Quality of Life**
+![Quality of Life 2 - Proximity to Activities normalised](image/Activities_2.png){width="480"}
+:::
 
-![Quality of Life 1 - Proximity to Greens Spaces](image/GreenAreas_2.png)
+The highest scoring units are located around Námestie Oslobodenia, a key urban road corridor. The stream unit intersecting this road recorded the maximum proximity value, suggesting a strong spatial integration between the stream and surrounding civic or commercial infrastructure in that zone.
 
-![Quality of Life 2 - Proximity to Activites](image/Activities_2.png)
+This pattern emphasizes that active built functions remain highly centralized, and the majority of stream segments outside the core urban fabric are only marginally connected to concentrated buildings with activities.
 
-![Quality of Life 3 - Concetration of POI](image/POI_2.png)
+**Concentration of POI**
 
-**Climate Adaptation**
+Unlike the previous two indicators in quality of life category, this criterion measures the direct spatial proximity between stream units and nearby Points of Interest (POIs).As such, it captures more relevant interactions between the stream itself and surrounding landmarks, making the result less influenced by the density or presence of built structures around the stream.
 
-![Climate Adaptation 1 \| Permeability of the ground](image/Permeabilty_2.png)
+Still out of 54 units, 39 recorded a score of zero, indicating that in most cases, stream segments are not spatially connected to POIs. Also, as with previous proximity indicators, the highest scoring units are located near Námestie Oslobodenia, reflecting the concentration of urban functions in that corridor.
 
-\![Climate Adaptation 2 \|Impact of Flooding: Buffer 500m\](image)
+::: {layout-ncol="2"}
+![Quality of Life 3 - Concetration of POI: buffer of 200m](image/POI_1.png){width="480"}
 
-\![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m\](image)
+![Quality of Life 3 - Concetration of POI: normalised](image/POI_2.png){width="480"}
+:::
+
+However, a key distinction of this indicator is its ability to detect localized activity potential even in areas with minimal built infrastructure.For instance, in northern stream units, where both 'Proximity to Parks' and 'Proximity to Activities' scored zero, the POI criterion assigns a small but non-zero score, acknowledging the presence of nearby activity points.
+
+In this way, the POI-based metric complements the other two indicators by capturing stream-activity connections in low-dense areas, making it a valuable component in assessing overall potential of stream for improving quality of life.
+
+
+##### Climate Adaptation
+
+**Permeability**
+
+::: {layout-ncol="2"}
+![Climate Adaptation 1 \| Permeability: buffer of 200m](image/Permeabilty_1.png){width="480"}
+
+![Climate Adaptation 1 \| Permeability: normalised](image/Permeabilty_2.png){width="480"}
+:::
+
+**Impact of Flooding**
+
+::: {layout-ncol="2"}
+![Climate Adaptation 2 \|Impact of Flooding: buffer of 500m](image\flood_impact.svg){width="960"}
+:::
+
+**Land Surface Temperature**
+
+::: {layout-ncol="2"}
+![Climate Adaptation 3 \|Impact of Flooding: Buffer 500m](image\temperature.svg){width="960"}
+:::
+
 
 #### Aggregated result
 
