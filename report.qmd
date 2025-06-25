@@ -293,19 +293,49 @@ To interpret character of each cluster, center value for each variables should b
 
 ##### **Biodiversity**
 
-**Percentage of Green**
-
-Most of the units have a green coverage percentage below 10%. Based on biophilic planning indicators, approximately 30 units fall below the recommended standard. However, some units that intersect with larger green areas show relatively higher values, though none exceed 30%.
+**Percentage of Green** The distribution of green coverage among the stream units varies between 0% and 30%, indicating a relatively low to moderate presence of vegetation throughout the area.
 
 ::: {layout-ncol="2"}
-![Biodiversity 1 - Percentage of green](image/percentage_1.png){width="480"}
+![Biodiversity 1 - Percentage of green: buffer of 500m](image/percentage_1.png){width="480"}
 
-![Biodiversity 1 - Percentage of green (normalised)](image/percentage_2.png){width="480"}
+![Biodiversity 1 - Percentage of green: normalised](image/percentage_2.png){width="480"}
 :::
 
-![Biodiversity 2 - Connectivity to green](image/distance_1.png)
+According to Biophilic Planning Indicators, a minimum of 10% of each area should be covered by trees or vegetation (source: XXXX).In the case of Teplica, only 9 out of 54 units exceed this standard. The units with more than 10% green coverage are generally those that intersect with larger green spaces, such as gardens (Zahrádková osada Kunov), parks (Městský park), or unused open green areas.
 
-![Biodiversity 3 - Presence of species : Buffer of 2km](image/species-1.png)
+**Connectivity to Green**
+
+The shortest distances from stream units to adjacent green areas range from 0 to approximately 2,000 meters. Notably, 16 out of 54 units are located directly within green spaces, even if they are relatively small, which results in maximum connectivity scores for those segments.
+
+::: {layout-ncol="2"}
+![Biodiversity 2 - Connectivity to green: distant to closest green](image/distance_1.png){width="480"}
+
+![Biodiversity 2 - Connectivity to green: normalised](image/distance_2.png){width="480"}
+:::
+
+A few unusually long distance values appear in the northeastern stream segments, which seem to result from incomplete green space information in `osm_greenspace` dataset. In these cases, presence of vegetation are shown in satelite image, but the corresponding vector data does not capture these areas. This limitation may lead to an underestimation of connectivity in those specific units.
+
+Nevertheless, overall connectivity to green space across the stream corridor is relatively strong. When assessed using normalized values, 49 out of 54 units scored above 0.5, indicating that the majority of the stream segments maintain a moderate to high level of integration with surrounding green infrastructure.
+
+**Presence of species**
+
+9 habitat data extracted from the Atlas of Slovak were overlaid to assess the cumulative presence within a 2 km buffer around each stream unit. Selected species are those whose habitat do not uniformly cover the entire Senica area. The resulting values range between 5 and 9, though only four discrete values (5, 6, 7, and 9) were observed.
+
+::: {layout-ncol="2"}
+![Biodiversity 3 - Presence of species : buffer of 2km](image/species-1.png){width="480"}
+
+![Biodiversity 3 - Presence of species : normalised](image/species-2.png){width="480"}
+:::
+
+Units in the southwestern part of the study area show the highest levels of species presence (score 9), while the values tend to gradually decline as the units extend further northeast.
+
+Interestingly, one of the lowest scoring areas (normalized value below 0.2) is located not at the most distant edge, but rather bit more southern from the edge, where the stream land overlaps with less vegetated open field.
+
+![Biodiversity 3 - stream units with lowest score](image/species_lowestpart.png){width="960"}
+
+From Google map street view, this area contains tall transmission towers and high-voltage power lines, which may negatively affect species habitat suitability due to noise, electromagnetic fields, and habitat fragmentation.
+
+![Biodiversity 3 - street view of lowest unit](image/species_powerline.png){width="960"}
 
 **Quality of Life**
 
@@ -326,10 +356,6 @@ Most of the units have a green coverage percentage below 10%. Based on biophilic
 #### Normalized Result
 
 **Biodiversity**
-
-![Biodiversity 2 - Connectivity to green](image/distance_2.png)
-
-![Biodiversity 3 - Presence of species : Buffer of 2km](image/species-2.png)
 
 **Quality of Life**
 
