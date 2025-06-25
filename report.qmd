@@ -503,38 +503,86 @@ The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, als
 
 #### 3.2.1 Clustering results
 
-**map**
+Based on the results of elbow method, the 54 stream units were categorized into four distinct clusters, each representing a recurring combination of ecological connectivity, human activity concentration, and exposure to climate-related hazards.
 
 ![Clusters](image/cluster.png)
 
+The distribution of units across the four clusters is highly uneven, indicating that while some typologies are widespread, others represent specialized conditions. Cluster 2 have most common condition, comprising 38 out of 54 units.Conversely, Cluster 1 includes only 2 units, which suggests that these may be extreme or exceptional cases.Likely, Cluster 3 (8 units) and Cluster 4 (6 units) represent intermediate or transitional typologies, capturing zones with distinct but less common combinations of conditions.
+
 | Cluster | Number of unit |
 |---------|----------------|
-| **1**   | 2              |
-| **2**   | 38             |
-| **3**   | 8              |
-| **4**   | 6              |
+|  **1**  | 2              |
+|  **2**  | 38             |
+|  **3**  | 8              |
+|  **4**  | 6              |
 
-**central value of each cluster**/
+The unbalanced distribution highlights the fact that urban stream conditions are not evenly diverse, and that targeted strategies will be necessary for the smaller, more specialized areas.
 
-| Cluster | Connectivity to green | rank | Concentration of POI | rank | Impact of Flood | rank |
-|-----------|-------------|-------|-------------|-------|-------------|-------|
-| **1** | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
-| **2** | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
-| **3** | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
-| **4** | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
+**central value of each cluster**
 
-#### 3.2.2 Interpretation of clusters
+The clustering yielded four distinct typologies based on the central values of three key criteria: 
+(1)connectivity to green, (2)concentration of POI, and (3)impact of flood.
 
-**interpreted value and recommendation**/
+These clusters vary significantly in both their internal characteristics and their relative strengths, as shown in the central value and rank in comparison.The overall results are shown in two tables below:
 
-| Cluster | Connectivitity to green | Concentration of POI | Impact of Flood | Recommendation |
-|----------|-------------|-------------|-------------|-------------------|
-| **1** | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
-| **2** | distant to green | low | low | green space needs to be extended, more POI can be added |
-| **3** | close to green | medium-high | high | urgent need for preventing flood |
-| **4** | far from green | none | none | lots of potential for big parks and activities |
+| Cluster | Connectivity to green | Concentration of POI | Impact of Flood | sum |
+|---------|--------------|--------------|--------------|--------------| 
+|  **1**  | 1.00         | 0.74         | 0.61         | 2.35         |
+|  **2**  | 0.89         | 0.12         | 0.95         | 1.96         |
+|  **3**  | 0.95         | 0.44         | 0.34         | 1.73         |
+|  **4**  | 0.26         | 0.00         | 1.00         | 1.26         |
 
-**possible example of intervention** /
+| Cluster | Connectivity to green | Concentration of POI | Impact of Flood |
+|---------|--------------|--------------|--------------|
+|  **1**  | 1            | 1            | 3            |
+|  **2**  | 3            | 3            | 2            |
+|  **3**  | 2            | 2            | 4            |
+|  **4**  | 4            | 4            | 1            |
+
+
+#### 3.2.2 Interpretation of clusters and 
+
+Based on central value and rank for three variables, character of each type can be interpreted like this:
+
+| Type  | Connectivity to green | Concentration of POI | Impact of Flood | Interpretation |
+|-------|--------------|--------------|--------------|----------------------------------------------|
+| **1** | right next to green | high   | medium | best condition for biophilia                        |
+| **2** | distant from green  | low    | low    | most common condition with moderate values          |
+| **3** | very close to green | medium | high   | good condition for biophilia, high risk from flood  |
+| **4** | far away from green | none   | none   | no impact from flood, but no condition for biophilia|
+
+**Type 1**: best condition for biophilia
+
+This cluster demonstrates the strongest overall performance, ranking first in both connectivity to green (1.00) and POI concentration (0.74).A 1.00 in connectivity suggests that both units in this type are fully adjacent to green space. This type also has outstanding value for POI, with a score nearly double that of the next highest cluster.The result confirms high access to activity nodes from stream.
+
+Despite ranking only third in flood impact, the overall sum of medians and rank-based scores places Cluster 1 clearly above the rest. The rarity of type, with only 2 units belonging to the cluster, may reflect ideal but uncommon spatial conditions, making it a reference type for best-case scenario for urban stream restoration.
+
+**Type 2**: most common and basic condition
+
+As the type with largest cluster,Type 2 likely represents the prevailing condition along the stream. It shows moderate flood resilience, but ranks third in connectivity and POI concentration, indicating that most units in this group have few nearby amenities and weak ecological connection.
+
+This typical, but relatively underperforming typology will be suitable for creating broad-scale baseline improvement strategies, especially in terms of green infrastructure and concentration of different activity around stream.
+
+**Type 3**: good condition, but high risk from flood
+
+Type 3 shows moderate to strong performance in both connectivity (0.95) and POI access (0.44), ranking second in both. However, it ranks last in flood impact, with noticably low value compared to other types (0.34).This indicates that while these areas benefit from ecological and functional proximity, they are also highly exposed to flood risk.
+
+In planning terms, this cluster represents areas with potential for improvement through targeted flood adaptation measures, such as permeable surfaces or flood-tolerant green buffers.
+
+**Type 4**: isolated area with no risk from flood
+
+This type has zero POI concentration and lowest connectivity to green, placing it last in both. However, it ranks first in flood impact, with a central value of 0.00, suggesting either no overlap with flood zones or no built structures at risk, or even no built structures around. In essence, Cluster 4 represents spatially disconnected, undeveloped zones—possibly agricultural, or vacant lands.
+
+Despite their current isolation, these areas present a valuable opportunity for large-scale, transformative interventions, due to the absence of flood risk and existing land-use constraints. Their “blank" condition makes them well-suited for long-term ecological or multi-functional development.
+
+
+#### 3.2.3 Recommended intervention for each typology
+| Type  | Recommendation                                            |
+|-------|-----------------------------------------------------------|
+| **1** | little improvement for flood adaptation suggested         |
+| **2** | extend green space, add attraction points                 |
+| **3** | urgent need for flood adaptiation improvement             |
+| **4** | lots of potential for creating recreational natural space |
 
 ![interventions](image/clusters_zoomin.png)
 
