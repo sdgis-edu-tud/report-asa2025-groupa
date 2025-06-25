@@ -509,30 +509,30 @@ The frequently mentioned ID 3 unit, which is crossing Námestie Oslobodenia, als
 
 | Cluster | Number of unit |
 |---------|----------------|
-| 1       | 2              |
-| 2       | 38             |
-| 3       | 8              |
-| 4       | 6              |
+| **1**   | 2              |
+| **2**   | 38             |
+| **3**   | 8              |
+| **4**   | 6              |
 
 **central value of each cluster**/
 
 | Cluster | Connectivity to green | rank | Concentration of POI | rank | Impact of Flood | rank |
 |-----------|-------------|-------|-------------|-------|-------------|-------|
-| 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
-| 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
-| 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
-| 4 | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
+| **1** | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
+| **2** | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
+| **3** | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
+| **4** | 0.26 | 4 | 0.00 | 4 | 1.00 | 1 |
 
 #### Interpretation of each cluster
 
 **interpreted value and recommendation**/
 
-| Type | Connectivitity to green | Concentration of POI | Impact of Flood | Recommendation |
+| Cluster | Connectivitity to green | Concentration of POI | Impact of Flood | Recommendation |
 |-------------|-------------|-------------|-------------|-------------------|
-| 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
-| 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
-| 3 | close to green | medium-high | high | urgent need for preventing flood |
-| 4 | far from green | none | none | lots of potential for big parks and activities |
+| **1** | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
+| **2** | distant to green | low | low | green space needs to be extended, more POI can be added |
+| **3** | close to green | medium-high | high | urgent need for preventing flood |
+| **4** | far from green | none | none | lots of potential for big parks and activities |
 
 **possible example of intervention** /
 
