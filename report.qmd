@@ -518,7 +518,7 @@ From original centers, we examine the centers of each cluster in original values
 **central value of each cluster**/
 
 | Type | Connectivity to green | rank | Concentration of POI | rank | Less impact from flood | rank |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+|----|----|----|----|----|----|----|
 | 1 | 1.00 | 1 | 0.74 | 1 | 0.61 | 3 |
 | 2 | 0.89 | 3 | 0.12 | 3 | 0.95 | 2 |
 | 3 | 0.95 | 2 | 0.44 | 2 | 0.34 | 4 |
@@ -527,7 +527,7 @@ From original centers, we examine the centers of each cluster in original values
 **characteristic of each clusters**/
 
 | Type | Connectivitity to green | Concentration of POI | Anticipated impact from flood | Description |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | 1 | next to green | high | medium-high | best condition for biophilia, need a plan for preventing flood |
 | 2 | distant to green | low | low | green space needs to be extended, more POI can be added |
 | 3 | close to green | medium-high | high | urgent need for preventing flood |
