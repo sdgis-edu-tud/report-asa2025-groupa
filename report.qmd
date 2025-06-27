@@ -14,7 +14,7 @@ format:
  html:
    toc: true
    toc-location: left
-   toc-depth: 4
+   toc-depth: 3
 ---
 
 ## 1. Introduction
@@ -27,7 +27,7 @@ While the Slovak water management company (SVP) focuses mainly on protecting the
 
 -   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness to create a biophilic environment?
 
-![Figure 1. Objectives: Urban Stream Restoration](image/introduction_1.jpg)
+![Objectives: Urban Stream Restoration](image/introduction_1.jpg)
 
 #### 1.2 Human-nature connectedness and its relevance to urban stream restoration
 
@@ -61,7 +61,7 @@ Another way in which biodiversity and biophilic integration are linked is throug
 
 The first method of analysis for biophilic integration of the Teplica used in this report is the Multi-Criteria Decision Analysis (MCDA). This uses classification of the main objective into multiple criteria and sub-criteria to mathematically formalise and aggregate the data contained in each criteria within the definition of a spatial unit. This data is then normalised for comparison. The criteria are weighted based on urgency and their relevance to the overall objective of biophilic integration in the urban stream restoration. Resultant map which is a combination of the weighted criteria is presented in section 3 of the report.
 
-![Figure 2. MCDA hierarchy tree](image/mcda_tree.jpg)
+![MCDA hierarchy tree](image/mcda_tree.jpg)
 
 ##### 2.2.1 Units
 
@@ -71,13 +71,13 @@ The 200m interval was chosen because it divided the stream into appropriate size
 
 An important factor to consider was that every criteria might have a different spatial influence. Some criteria work on a very local scale, like temperature, which is only relevant in a small area around a stream or a green space, while others like presence of species require a larger area to be relevant. To account for this, different buffer distances were chosen for every criterion. How exactly these were determined is further explained in the following section of the relevant criterion.
 
-![figure 3. Spatial Units](image/units.jpg)
+![Spatial Units](image/units.jpg)
 
-##### 2.1.2 Criteria 
+##### 2.1.2 Criteria
 
 For the MCDA, the analyses are split into three main categories: quality of life, biodiversity and climate change. For each category a couple of analyses are done that give an indication of the human-nature connectedness around the stream. Based on that we can give an indication of where change is needed the most to improve this relationship. The following table shows details for each criteria along with the buffer and weights used.The data sets used for each sub-criteria, its processing and normalisation are explained under the following sections.
 
-![Figure 4. Criteria Overview](image/MCDA_table.png)
+![Criteria Overview](image/MCDA_table.png)
 
 ###### 2.1.2.1 Biodiversity
 
@@ -204,7 +204,7 @@ So the average temperature was calculated in the unit buffer of 200m around the 
 Weighting of the criteria used in MCDA is carried out using the saaty matrix (Fuzzy AHP, n.d.). This is done separately for each criterion where the three sub-criteria within each criterion are weighed against each other based on its relevance to the overall objective of creation of a biophilic environment. It is also important to note that the weighting takes into account reliability of the data source for each sub criteria. Eigenvector(non-fuzzy) calculation method is used for all the weighting. 
 
 ::: {layout-ncol="3"}
-![Figure 6: Criteria Weighting](image/weighting_biodiversity.JPG){width="312"}
+![Criteria Weighting](image/weighting_biodiversity.JPG){width="312"}
 
 ![](image/weighting_QualityOfLife.JPG){width="312"}
 
@@ -293,7 +293,7 @@ To interpret character of each cluster, center value for each variables should b
 
 ###### 3.1.1.1 Biodiversity
 
-**Biodiversity 1** \| Percentage of green 
+**Biodiversity 1** \| Percentage of green
 
 The distribution of green coverage among the stream units varies between 0% and 30%, indicating a relatively low to moderate presence of vegetation throughout the area.
 
@@ -449,7 +449,9 @@ This finding shows that undeveloped or non-urbanized land can still exhibit extr
 
 Image below shows aggregated result for each category; Biodiversity, Quality of Llife, Climate adaptation, with normalised result for 3 criteria per category.
 
-![Composition of MCDA](image/MCDAcomp.svg) **Biodiversity**
+![Composition of MCDA](image/MCDAcomp.svg)
+
+**Biodiversity**
 
 The composite score for the Biodiversity does not follow a gradual spatial gradient but instead reveals distinct high-scoring units scattered across the study area. This pattern suggests that biodiversity potential is driven less by overall spatial trends and more by localized ecological conditions, particularly the presence and size of adjacent green spaces.
 
@@ -460,7 +462,9 @@ The highest biodiversity score was observed in unit with ID number 5, a stream u
 Notably, some of the high-scoring units are located within urban areas,demonstrating that even in densely built environments, proximity to large, continuous green spaces can substantially enhance ecological value.
 
 ::: {layout-ncol="2"}
-![Biodiversityunit\|unit with highes value: ID 20](image/B_highest3.png){width="480"} ![Biodiversityunit\|unit with highes value: ID 54](image/B_highest2.png){width="480"}
+![Biodiversityunit\|unit with highes value: ID 20](image/B_highest3.png)
+
+![Biodiversityunit\|unit with highes value: ID 54](image/B_highest2.png)
 :::
 
 **Quality of Life**
@@ -474,7 +478,8 @@ The highest-scoring unit (ID number 3) lies at the intersection with Námestie O
 In contrast, several peripheral units scored zero, particularly those at the extreme ends of the study area. These locations lack nearby buildings or points of interest and are often surrounded by vacant land, resulting in minimal contribution to human-centered livability measures.
 
 ::: {layout-ncol="2"}
-![Biodiversityunit\|units with 0 value](image/Q_lowest_1.png){width="480"} ![Biodiversityunit\|units with 0 value](image/Q_lowest_2.png){width="480"}
+![Biodiversityunit\|units with 0 value](image/Q_lowest_1.png)
+![Biodiversityunit\|units with 0 value](image/Q_lowest_2.png)
 :::
 
 **Climate Adaptation**
@@ -484,7 +489,8 @@ The Climate Adaptation indicator shows an inverse spatial pattern compared to Qu
 A particularly notable pattern is seen in several central units—such as ID 13, 17, and 20—which scored especially low.
 
 ::: {layout-ncol="2"}
-![Climate Adaptation\|unit with lowe value (ID 13)](image/C_lowest1.png){width="480"} ![Climate Adaptation\|units with low value (ID 17, 20)](image/C_lowest2.png){width="480"}
+![Climate Adaptation\|unit with lowe value (ID 13)](image/C_lowest1.png)
+![Climate Adaptation\|units with low value (ID 17, 20)](image/C_lowest2.png)
 :::
 
 This outcome is strongly tied to the high weighting of the 'Impact of Flood' criterion, with these units also recording the lowest scores for 'Impact of Flood'.
@@ -513,45 +519,43 @@ The distribution of units across the four clusters is highly uneven, indicating 
 
 | Cluster | Number of unit |
 |---------|----------------|
-|  **1**  | 2              |
-|  **2**  | 38             |
-|  **3**  | 8              |
-|  **4**  | 6              |
+| **1**   | 2              |
+| **2**   | 38             |
+| **3**   | 8              |
+| **4**   | 6              |
 
 The unbalanced distribution highlights the fact that urban stream conditions are not evenly diverse, and that targeted strategies will be necessary for the smaller, more specialized areas.
 
 **central value of each cluster**
 
-The clustering yielded four distinct typologies based on the central values of three key criteria: 
-(1)connectivity to green, (2)concentration of POI, and (3)impact of flood.
+The clustering yielded four distinct typologies based on the central values of three key criteria: (1)connectivity to green, (2)concentration of POI, and (3)impact of flood.
 
 These clusters vary significantly in both their internal characteristics and their relative strengths, as shown in the central value and rank in comparison.The overall results are shown in two tables below:
 
-| Cluster | Connectivity to green | Concentration of POI | Impact of Flood | sum |
-|---------|--------------|--------------|--------------|--------------| 
-|  **1**  | 1.00         | 0.74         | 0.61         | 2.35         |
-|  **2**  | 0.89         | 0.12         | 0.95         | 1.96         |
-|  **3**  | 0.95         | 0.44         | 0.34         | 1.73         |
-|  **4**  | 0.26         | 0.00         | 1.00         | 1.26         |
+| Cluster | Connectivity to green | Concentration of POI | Impact of Flood | sum  |
+|---------------|---------------|---------------|---------------|---------------|
+| **1**   | 1.00                  | 0.74                 | 0.61            | 2.35 |
+| **2**   | 0.89                  | 0.12                 | 0.95            | 1.96 |
+| **3**   | 0.95                  | 0.44                 | 0.34            | 1.73 |
+| **4**   | 0.26                  | 0.00                 | 1.00            | 1.26 |
 
 | Cluster | Connectivity to green | Concentration of POI | Impact of Flood |
-|---------|--------------|--------------|--------------|
-|  **1**  | 1            | 1            | 3            |
-|  **2**  | 3            | 3            | 2            |
-|  **3**  | 2            | 2            | 4            |
-|  **4**  | 4            | 4            | 1            |
+|---------|-----------------------|----------------------|-----------------|
+| **1**   | 1                     | 1                    | 3               |
+| **2**   | 3                     | 3                    | 2               |
+| **3**   | 2                     | 2                    | 4               |
+| **4**   | 4                     | 4                    | 1               |
 
-
-##### 3.2.2 Interpretation of clusters and 
+##### 3.2.2 Interpretation of clusters and
 
 Based on central value and rank for three variables, character of each type can be interpreted like this:
 
-| Type  | Connectivity to green | Concentration of POI | Impact of Flood | Interpretation |
-|-------|--------------|--------------|--------------|----------------------------------------------|
-| **1** | right next to green | high   | medium | best condition for biophilia                        |
-| **2** | distant from green  | low    | low    | most common condition with moderate values          |
-| **3** | very close to green | medium | high   | good condition for biophilia, high risk from flood  |
-| **4** | far away from green | none   | none   | no impact from flood, but no condition for biophilia|
+| Type | Connectivity to green | Concentration of POI | Impact of Flood | Interpretation |
+|------------|------------|------------|------------|---------------------------|
+| **1** | right next to green | high | medium | best condition for biophilia |
+| **2** | distant from green | low | low | most common condition with moderate values |
+| **3** | very close to green | medium | high | good condition for biophilia, high risk from flood |
+| **4** | far away from green | none | none | no impact from flood, but no condition for biophilia |
 
 **Type 1**: best condition for biophilia
 
@@ -577,17 +581,16 @@ This type has zero POI concentration and lowest connectivity to green, placing i
 
 Despite their current isolation, these areas present a valuable opportunity for large-scale, transformative interventions, due to the absence of flood risk and existing land-use constraints. Their “blank" condition makes them well-suited for long-term ecological or multi-functional development.
 
-
 ##### 3.2.3 Recommended intervention for each typology
 
 Based on the characteristics of each cluster derived from the typology analysis, tailored intervention strategies are proposed to enhance ecological connectivity, socio-functional quality, and flood resilience, for each stream unit. These recommendations reflect the distinct strengths and vulnerabilities of each cluster type.
 
-| Type  | Recommendation                                          |
-|-------|---------------------------------------------------------|
-| **1** | Minimal interventions needed, consider minor adjustments for enhancing flood resilience          |
-| **2** | Expand existing green areas and introduce new activities to improve ecological and social quality|
-| **3** | High priority for flood adaptation measures needed due to high vulnerability                     |
-| **4** | Strong potential for large-scale recreational green space development                            |
+| Type | Recommendation |
+|--------------|----------------------------------------------------------|
+| **1** | Minimal interventions needed, consider minor adjustments for enhancing flood resilience |
+| **2** | Expand existing green areas and introduce new activities to improve ecological and social quality |
+| **3** | High priority for flood adaptation measures needed due to high vulnerability |
+| **4** | Strong potential for large-scale recreational green space development |
 
 To visualize how the recommendations may be applied in context, representative units from each typology were selected. The examples demonstrate how spatial and functional improvements could be implemented based on each cluster’s characteristics.
 
@@ -615,7 +618,7 @@ Afterwards a Typology Analysis was performed, using the three most important cri
 
 The most important finding was that the urban segments in the center of Senica scored worst on human-nature connectedness. These areas correlated with the third typology, which featured close proximity to green spaces, but only medium proximity to points of interest and high impact flooding. This indicates the need to improve flood prevention in these areas, which then could create more opportunities for urban development. This could be seen better in the following image.
 
-![](image/Combined.png)
+![Comparison - MCDA and Typology construction result maps](image/Combined.png)
 
 Initially it was assumed that more urban areas would score better on human-nature connectedness, since they offer more facilities like parks and activities, compared to more agricultural regions. However, this is also heavily correlated with an increased risk of flooding, which offset those benefits.
 
