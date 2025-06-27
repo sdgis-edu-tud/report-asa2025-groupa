@@ -237,7 +237,7 @@ This approach not only simplifies the complexity of stream conditions but also f
 
 The entire typology construction process was implemented in R. To support reproducibility of research, key parts of the R script are embedded throughout this section.
 
-Readers can open appendix_clustering follow each steps of the analysis by referring to the embedded code blocks.
+Readers can open `appendix_clustering,qmd` follow each steps of the analysis by referring to the embedded code blocks.
 
 ##### 2.2.3 Typology Setup
 
