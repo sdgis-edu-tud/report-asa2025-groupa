@@ -25,11 +25,14 @@ Through the Slovak city of Senica, near the Czech border, flows the water stream
 \
 While the Slovak water management company (SVP) focuses mainly on protecting the area against flooding caused by heavy rainfall, more functional access to the water, and improved water flow (City of Senica, 2024b), other goals of the project include improving hydromorphology, ecology and diversity in urban areas, and utilizing the stream for recreational purposes. On the other hand, qualitative and experiential aspects such as human-nature connectedness are given little attention. In order to bridge this gap and ensure a lasting impact of the urban stream restoration, the enquiry in this report is focused on a method to determine the potential for human-nature connectedness along the Teplica stream.\
 
--   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness to create a biophilic environment?
 
 ![Objectives: Urban Stream Restoration](image/introduction_1.jpg)
 
-#### 1.2 Human-nature connectedness and its relevance to urban stream restoration
+#### 1.2 Research Questions
+
+-   **Research Question :** What parts of the Teplica stream have the most potential for human-nature connectedness to create a biophilic environment?
+
+##### 1.2.1 Human-nature connectedness and its relevance to urban stream restoration
 
 Human-nature connectedness challenges the idea of human superiority over nature,while strengthening the outlook that humankind is a part of nature. Research has shown that this sense of connectedness cannot be created through education only (Spiller, 2024). Spatial composition plays an important role in this process where people must come into direct contact to build a strong relationship with their natural environments.
 
@@ -39,19 +42,19 @@ Biophilic design, based on the biophilia hypothesis focuses on reinforcing the r
 
 By determining how biophilic a place is, its degree of human-nature connectedness for the people inhabiting the space can be analysed. The amount of biophilic integration can show which places have the largest need for improvement and which places are already performing well. Three sub-research questions stemming from the objectives of urban stream restoration - Biodiversity, Quality of life and climate adaptation are explored through the lens of biophilic integration for the Teplica.
 
-#### 1.3 What is the effect of biodiversity on biophilic integration?
+##### 1.2.2 What is the effect of biodiversity on biophilic integration?
 
 While biophilic integration mainly focusses on connecting people to nature, the importance of biodiversity cannot be overlooked (Lefosse et al., 2023). Streams are complex ecosystems and all the different present species contribute to the complex system that makes this ecosystem (Bhaskar, 2023). Biodiversity therefore is of vital importance in protecting this ecosystem from collapse. In assessing the need for change in the areas around streams, it is thus important to also look at indicators for biodiversity and ecosystem functionality.
 
 By analysing biodiversity, the necessary creation or dedication of ecological networks that can provide more ecosystem services can be determined (Lefosse et al., 2023; Ranta et al., 2021a). Biophilic integration has shown great potential in reinforcing urban biomes that can act as biodiversity incubators through an increase in natural repopulation of plant and animal species (Bhaskar, 2023; Panlasigui et al., 2021).
 
-#### 1.4 How can quality of life be enhanced through biophilic integration?
+##### 1.2.3 How can quality of life be enhanced through biophilic integration?
 
 As explored in the earlier sections, the biophilia hypothesis essentially advocated for a stronger relationship between people and their natural environments. With the growing climate risks in urban areas, many cities are adapting a more nature inclusive approach towards urban development. The biophilic cities movement provides a vision of a future where citizens’ ethos has shifted to embrace nature, through positive daily engagement with nature, re-establishment of social and cultural connections with nature, and participation in stewardship (Panlasigu et.al, 2021).
 
 To ensure a long term sustainability of the urban stream restoration, it is important to identify the people living around the stream as its custodians, who would gain numerous benifits to health, well-being, fostering a sense of community and an improved recreational life. Improved quality of life will in turn ensure a more aware generation of people that show an attitude of responsibility towards the stream and its surroundings.By analysing the existing modes of human-nature connectedness along the stream, areas for potential action can be determined.
 
-#### 1.5 How does microclimate affect biophilic integration?
+##### 1.2.4 How does microclimate affect biophilic integration?
 
 Another way in which biodiversity and biophilic integration are linked is through microclimate ecosystem services (Lefosse et al., 2023). The amount of biophilic integration relies on the ecosystem services a local ecosystem can provide. Reinforcing ecological networks, increases ecosystem functionality and therefore the amount of biophilic integration. By having more diverse natural elements, both green and blue, containing multiple different species, the environmental impact of a place is enhanced. Different species have different cooling, air-, soil- and water purification, and wind regulating properties. With these species working together, and sometimes even positively affecting the properties of other species, their impact can grow even further. The more biodiverse a place is, the more biophilic it can be, and the more it can improve human-nature connectedness. By analyzing the performance of the existing microclimate areas that need action can be determined.
 
